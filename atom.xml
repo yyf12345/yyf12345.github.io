@@ -6,7 +6,7 @@
   <link href="https://yyf12345.github.io/atom.xml" rel="self"/>
   
   <link href="https://yyf12345.github.io/"/>
-  <updated>2021-05-28T07:44:11.283Z</updated>
+  <updated>2021-07-03T05:55:37.373Z</updated>
   <id>https://yyf12345.github.io/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>常用HTML5</title>
+    <link href="https://yyf12345.github.io/2021/07/03/HTML5/"/>
+    <id>https://yyf12345.github.io/2021/07/03/HTML5/</id>
+    <published>2021-07-03T05:29:29.491Z</published>
+    <updated>2021-07-03T05:55:37.373Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;HTML5&quot;&gt;&lt;a href=&quot;#HTML5&quot; class=&quot;headerlink&quot; title=&quot;HTML5&quot;&gt;&lt;/a&gt;HTML5&lt;/h1&gt;&lt;h3 id=&quot;新增语义化标签&quot;&gt;&lt;a href=&quot;#新增语义化标签&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="https://yyf12345.github.io/2021/05/28/hello-world/"/>
     <id>https://yyf12345.github.io/2021/05/28/hello-world/</id>
     <published>2021-05-28T04:28:10.767Z</published>
-    <updated>2021-05-28T07:44:11.283Z</updated>
+    <updated>2021-07-03T05:26:27.787Z</updated>
     
     
       
