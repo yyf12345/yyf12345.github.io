@@ -104,7 +104,7 @@ theme: butterfly
 deploy:
   type: git
   repo: https://github.com/yyf12345/yyf12345.github.io.git
-  branch: main 
+  branch: master 
 
 # hexo-generator-searchdb
 search:
