@@ -6,7 +6,7 @@
   <link href="https://yyf12345.github.io/atom.xml" rel="self"/>
   
   <link href="https://yyf12345.github.io/"/>
-  <updated>2022-01-07T08:22:13.807Z</updated>
+  <updated>2022-01-07T15:36:51.173Z</updated>
   <id>https://yyf12345.github.io/</id>
   
   <author>
@@ -21,11 +21,28 @@
     <link href="https://yyf12345.github.io/2022/01/07/Markdown%E6%96%87%E6%A1%A3/"/>
     <id>https://yyf12345.github.io/2022/01/07/Markdown%E6%96%87%E6%A1%A3/</id>
     <published>2022-01-07T08:22:13.000Z</published>
-    <updated>2022-01-07T08:22:13.807Z</updated>
+    <updated>2022-01-07T15:36:51.173Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;本文章主要是为了整理Markdown的书写格式，方便以后书写md文档，并整理一下butterfly主题的一些特殊标签的使用方法&lt;/p&gt;
+&lt;p&gt;文章主要参考自：&lt;/p&gt;
+&lt;h2</summary>
+        
+      
     
     
     
+    <category term="文档" scheme="https://yyf12345.github.io/categories/%E6%96%87%E6%A1%A3/"/>
     
+    
+    <category term="md" scheme="https://yyf12345.github.io/tags/md/"/>
+    
+    <category term="文档" scheme="https://yyf12345.github.io/tags/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
@@ -41,7 +58,12 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;HTML5&quot;&gt;&lt;a href=&quot;#HTML5&quot; class=&quot;headerlink&quot; title=&quot;HTML5&quot;&gt;&lt;/a&gt;HTML5&lt;/h1&gt;&lt;h3 id=&quot;新增语义化标签&quot;&gt;&lt;a href=&quot;#新增语义化标签&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1&gt;HTML5&lt;/h1&gt;
+&lt;h3 id=&quot;新增语义化标签&quot;&gt;新增语义化标签&lt;/h3&gt;
+&lt;p&gt;以前布局，我们基本都是用div来做。div对于搜索引擎来说，是没有语义的、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;pre&gt;&lt;code</summary>
         
       
     
@@ -68,7 +90,7 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;1-查看版本号&quot;&gt;&lt;a href=&quot;#1-查看版本号&quot; class=&quot;headerlink&quot; title=&quot;1. 查看版本号&quot;&gt;&lt;/a&gt;1.</summary>
+    <summary type="html">&lt;h2 id=&quot;1-查看版本号&quot;&gt;1.</summary>
         
       
     
@@ -84,14 +106,16 @@
     <link href="https://yyf12345.github.io/2022/01/04/python%E7%88%AC%E8%99%AB/"/>
     <id>https://yyf12345.github.io/2022/01/04/python%E7%88%AC%E8%99%AB/</id>
     <published>2022-01-04T04:39:43.000Z</published>
-    <updated>2022-01-07T06:48:51.453Z</updated>
+    <updated>2022-01-07T14:59:39.789Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;python爬虫&quot;&gt;&lt;a href=&quot;#python爬虫&quot; class=&quot;headerlink&quot; title=&quot;python爬虫&quot;&gt;&lt;/a&gt;python爬虫&lt;/h1&gt;&lt;h2 id=&quot;准备阶段&quot;&gt;&lt;a href=&quot;#准备阶段&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1&gt;python爬虫&lt;/h1&gt;
+&lt;h2 id=&quot;准备阶段&quot;&gt;准备阶段&lt;/h2&gt;
+&lt;h3</summary>
         
       
     
@@ -109,14 +133,16 @@
     <link href="https://yyf12345.github.io/2021/07/03/JS/"/>
     <id>https://yyf12345.github.io/2021/07/03/JS/</id>
     <published>2021-07-03T07:46:06.000Z</published>
-    <updated>2022-01-07T06:42:58.130Z</updated>
+    <updated>2022-01-07T15:40:32.944Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;JS&quot;&gt;&lt;a href=&quot;#JS&quot; class=&quot;headerlink&quot; title=&quot;JS&quot;&gt;&lt;/a&gt;JS&lt;/h2&gt;&lt;h3 id=&quot;编程语言&quot;&gt;&lt;a href=&quot;#编程语言&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;JS&quot;&gt;JS&lt;/h2&gt;
+&lt;h3 id=&quot;编程语言&quot;&gt;编程语言&lt;/h3&gt;
+&lt;h4</summary>
         
       
     
@@ -143,7 +169,8 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;CSS&quot;&gt;&lt;a href=&quot;#CSS&quot; class=&quot;headerlink&quot; title=&quot;CSS&quot;&gt;&lt;/a&gt;CSS&lt;/h2&gt;&lt;h3 id=&quot;CSS简介&quot;&gt;&lt;a href=&quot;#CSS简介&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;CSS&quot;&gt;CSS&lt;/h2&gt;
+&lt;h3</summary>
         
       
     
