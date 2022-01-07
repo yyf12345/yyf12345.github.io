@@ -1,0 +1,1615 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JS | 菜鸡庄园</title><meta name="keywords" content="前端,js"><meta name="author" content="yangyufan"><meta name="copyright" content="yangyufan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="JS编程语言编程 编程：就是让计算机为解决某个问题而使用某种程序设计语言编写程序代码，并最终得到结果的过程 计算机程序：就是计算机所执行的一系列的指令集合，而程序全部都是用我们所掌握的语言来编写的，所以人们要控制计算机一定要通过计算机语言向计算机发出命令  计算机语言 计算机语言指用于人与计算机之间通讯的语言，他是人与计算机之间传递信息的媒介 分类： 机器语言：计算机最终所执行的都是机器语言，他是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS">
+<meta property="og:url" content="https://yyf12345.github.io/2021/07/03/JS/index.html">
+<meta property="og:site_name" content="菜鸡庄园">
+<meta property="og:description" content="JS编程语言编程 编程：就是让计算机为解决某个问题而使用某种程序设计语言编写程序代码，并最终得到结果的过程 计算机程序：就是计算机所执行的一系列的指令集合，而程序全部都是用我们所掌握的语言来编写的，所以人们要控制计算机一定要通过计算机语言向计算机发出命令  计算机语言 计算机语言指用于人与计算机之间通讯的语言，他是人与计算机之间传递信息的媒介 分类： 机器语言：计算机最终所执行的都是机器语言，他是">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://w.wallhaven.cc/full/96/wallhaven-96ylld.jpg">
+<meta property="article:published_time" content="2021-07-03T07:46:06.000Z">
+<meta property="article:modified_time" content="2022-01-07T06:42:58.130Z">
+<meta property="article:author" content="yangyufan">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="js">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://w.wallhaven.cc/full/96/wallhaven-96ylld.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://yyf12345.github.io/2021/07/03/JS/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/img/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/img/pwa/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/pwa/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/pwa/16.png"/><link rel="mask-icon" href="/img/pwa/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: yangyufan","link":"链接: ","source":"来源: 菜鸡庄园","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'JS',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-01-07 14:42:58'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="菜鸡庄园" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://i02piccdn.sogoucdn.com/3908b4a611f5e07d" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://w.wallhaven.cc/full/96/wallhaven-96ylld.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">菜鸡庄园</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">JS</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-07-03T07:46:06.000Z" title="发表于 2021-07-03 15:46:06">2021-07-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-01-07T06:42:58.130Z" title="更新于 2022-01-07 14:42:58">2022-01-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">17k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>60分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="JS"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2021/07/03/JS/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2021/07/03/JS/" itemprop="commentCount"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h2><h3 id="编程语言"><a href="#编程语言" class="headerlink" title="编程语言"></a>编程语言</h3><h4 id="编程"><a href="#编程" class="headerlink" title="编程"></a>编程</h4><ul>
+<li><strong>编程：</strong>就是让计算机为解决某个问题而使用某种程序设计语言编写程序代码，并最终得到结果的过程</li>
+<li><strong>计算机程序</strong>：就是计算机所执行的一系列的<strong>指令集合</strong>，而程序全部都是用我们所掌握的语言来编写的，所以人们要控制计算机一定要通过计算机语言向计算机发出命令</li>
+</ul>
+<h4 id="计算机语言"><a href="#计算机语言" class="headerlink" title="计算机语言"></a>计算机语言</h4><ul>
+<li>计算机语言指用于人与计算机之间通讯的语言，他是人与计算机之间传递信息的媒介</li>
+<li>分类：<ol>
+<li><strong>机器语言</strong>：计算机最终所执行的都是机器语言，他是由0和1组成的二进制数，二进制是计算机语言的基础</li>
+<li><strong>汇编语言</strong>：和机器语言实质是相同的，都是直接对硬件操作，只不过指令采用了英文缩写的 标识符，容易识别和记忆</li>
+<li><strong>高级语言</strong>：主要是相对于低级语言而言，它并不是特指某一种具体的语言，而是包括了很多编程语言</li>
+</ol>
+</li>
+</ul>
+<h4 id="编程语言-1"><a href="#编程语言-1" class="headerlink" title="编程语言"></a>编程语言</h4><ul>
+<li>定义：可以通过类似于人类语言的“语言”来控制计算机，让计算机为我们做事，这样的语言就叫做编程语言</li>
+<li>编程语言是用来控制计算机的一系列指令，他有固定的格式和词汇，必须遵守 </li>
+<li>如今的编程语言有两种形式：汇编语言和高级语言</li>
+</ul>
+<h4 id="编程语言和标记语言的区别"><a href="#编程语言和标记语言的区别" class="headerlink" title="编程语言和标记语言的区别"></a>编程语言和标记语言的区别</h4><ul>
+<li>编程语言有很强的逻辑和行为能力。在编程语言里，你会看到i很多的  if else 、for、while等具有逻辑性和行为能力的指令，这是主动的</li>
+<li>标记语言（html)不同于向计算机发出指令，常用于格式化和链接。标记语言的存在是用来被读取的，他是被动的</li>
+</ul>
+<h3 id="计算机基础"><a href="#计算机基础" class="headerlink" title="计算机基础"></a>计算机基础</h3><h3 id="初识Javascript"><a href="#初识Javascript" class="headerlink" title="初识Javascript"></a>初识Javascript</h3><ul>
+<li><p>js是运行在客户端的脚本语言</p>
+</li>
+<li><p>脚本语言：不需要编译，运行过程中由js解释器（js引擎）逐行来进行解释并执行</p>
+</li>
+<li><p>现在也可以基于Node.js技术进行服务器端编程</p>
+</li>
+<li><p>作用：</p>
+<ol>
+<li>表单动态效验（密码强度检测）（js产生最初的目的）</li>
+<li>网页特效</li>
+<li>服务端开发（Node.js）</li>
+<li>桌面程序（Electron）</li>
+<li>APP（Cordova）</li>
+<li>控制硬件-物联网（Ruff）</li>
+<li>游戏开发（cocos2d-js)</li>
+</ol>
+</li>
+<li><p>浏览器执行js简介</p>
+<ul>
+<li>浏览器分为两部分<ol>
+<li>渲染引擎：用来解析HTML与CSS，俗称内核，比如chrome浏览器的blink，老版本的webkit</li>
+<li>js引擎：也称为JS解释器。用来读取网页中的Javascript代码，对齐处理后运行，比如chrome浏览器的v8</li>
+</ol>
+</li>
+<li>浏览器本身不会执行js代码，而是通过内置Javascript引擎来执行JS代码。JS引擎执行代码时逐行解释每一句源码（转换为机器语言），然后由计算机去执行，所以Javascript语言归为脚本语言，会逐行解释执行。</li>
+</ul>
+</li>
+<li><p>JS的组成</p>
+<ul>
+<li>Javascript语法       ECMAScript</li>
+<li>页面文档对象模型   DOM</li>
+<li>浏览器对象模型       BOM</li>
+</ul>
+</li>
+<li><p>Js的书写位置</p>
+<ul>
+<li>行内式</li>
+<li>内嵌式<ul>
+<li>外部JS，新建.js文件    </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Js输入输出语句"><a href="#Js输入输出语句" class="headerlink" title="Js输入输出语句"></a>Js输入输出语句</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+<th>归属</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>alert(msg)</td>
+<td>浏览器弹出警示框</td>
+<td>浏览器</td>
+</tr>
+<tr>
+<td>console.log(msg)</td>
+<td>浏览器控制台打印输出信息</td>
+<td>浏览器</td>
+</tr>
+<tr>
+<td>prompt(info)</td>
+<td>浏览框弹出输入框，用户可以输入</td>
+<td>浏览器</td>
+</tr>
+</tbody></table>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p><strong>类似于其他编程语言</strong></p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><ul>
+<li><p>```javascript<br>var age;//声明一个名称为age的变量</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- var是一个JS关键字，用来声明变量。使用该关键字声明变量后，计算机会自动为变量分配内存空间，不需要程序员管</span><br><span class="line"></span><br><span class="line">#### 声明的特殊情况</span><br><span class="line"></span><br><span class="line">| 情况                       | 说明                   | 结果                |</span><br><span class="line">| -------------------------- | ---------------------- | ------------------- |</span><br><span class="line">| var age ;console.log(age); | 只声明 不赋值          | undefined(未定义的) |</span><br><span class="line">| console.log(age)           | 不声明 不赋值 直接使用 | 报错                |</span><br><span class="line">| age =10;console.log(age);  | 不声明 只赋值          | 10                  |</span><br><span class="line"></span><br><span class="line">#### 变量命名规范</span><br><span class="line"></span><br><span class="line">![变量命名规范](D:\前端\笔记\前端照片\变量命名规范.png)</span><br><span class="line"></span><br><span class="line">### 数据类型</span><br><span class="line"></span><br><span class="line">#### 变量的数据类型</span><br><span class="line"></span><br><span class="line">- Javascript是一种弱类型的语言或者说动态语言。这意味着不用以前声明变量的类型，在程序运行过程中，类型会被自动确定</span><br><span class="line">- js的变量数据类型是只有程序在运行过程中，根据等号右边的值来确定的</span><br><span class="line">- js拥有动态类型，同时也意味着相同的变量可用作不同的类型</span><br><span class="line"></span><br><span class="line">#### 分类</span><br><span class="line"></span><br><span class="line">##### 简单型</span><br><span class="line"></span><br><span class="line">- | 简单数据类型 | 说明                                               | 默认值    |</span><br><span class="line">  | ------------ | -------------------------------------------------- | --------- |</span><br><span class="line">  | Number       | 数字型，包含整数型和浮点型值，如 21、0.21          | 0         |</span><br><span class="line">  | Boolean      | 布尔值类型，如true、false，等价于1和0              | false     |</span><br><span class="line">  | String       | 字符串类型，如张三，注意咱们js里面，字符串都带引号 | “   ”     |</span><br><span class="line">  | Undefined    | var a; 声明了变量a但没有给值，此时a=undefined      | undefined |</span><br><span class="line">  | Null         | var a =null ;声明了变量a为空值                     | null      |</span><br><span class="line"></span><br><span class="line">- ###### 数字型</span><br><span class="line"></span><br><span class="line">  1. 前面加0是八进制，加ox是十六进制 </span><br><span class="line"></span><br><span class="line">  2. 范围：</span><br><span class="line"></span><br><span class="line">     ```javascript</span><br><span class="line">     alert(Number.MAX_VALUE);//1.7976931348623157e+308</span><br><span class="line">     alert(Number.MIN_VALUE);//5e-324</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><p>三个特殊值</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">alert(<span class="literal">Infinity</span>);<span class="comment">//代表无穷大，大于任何数值</span></span><br><span class="line">alert(<span class="literal">Infinity</span>);<span class="comment">//代表无穷小，小于任何数值</span></span><br><span class="line">alert(<span class="literal">NaN</span>);<span class="comment">//代表一个分数值</span></span><br></pre></td></tr></table></figure></li>
+<li><p>isNaN()这个方法用来判断一个变量是否为非数字的类型，返回true或者false</p>
+<ul>
+<li>x是数字，返回false</li>
+<li>x不是数字，返回true</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><h6 id="字符串型"><a href="#字符串型" class="headerlink" title="字符串型"></a>字符串型</h6><ol>
+<li><p>单双都可以用，但Js这里推荐用单引号</p>
+</li>
+<li><p>js可以做到单引号嵌套双引号，或者双引号嵌套单引号（外单内双，外双内单）</p>
+</li>
+<li><p>字符串转义型</p>
+<table>
+<thead>
+<tr>
+<th>转义符</th>
+<th>解释说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\n</td>
+<td>换行符，n是newline的意思</td>
+</tr>
+<tr>
+<td>\\</td>
+<td>斜杠\</td>
+</tr>
+<tr>
+<td>\‘</td>
+<td>‘单引号</td>
+</tr>
+<tr>
+<td>\“</td>
+<td>”双引号</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>tab缩进</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>空格，b是blank的意思</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>字符串长度</p>
+<ul>
+<li>字符串是由若干字符组成的，这些字符的数量就是字符串的长度。通过字符串的length属性可以获取整个字符串的长度 </li>
+</ul>
+</li>
+<li><p>字符串的拼接</p>
+<ul>
+<li>多个字符串之间可以使用+号进行拼接，其拼接方式为<strong>字符串+任何类型=拼接之后的新字符串</strong></li>
+<li>拼接前会把与字符串相加的任何类型转换为字符串，在拼接成一个新的字符串</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="获取数据类型"><a href="#获取数据类型" class="headerlink" title="获取数据类型"></a>获取数据类型</h4><ul>
+<li><p>typeof可用来获取检测变量的数据类型</p>
+</li>
+<li><p>```javascript<br>console.log(typeof flag);</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- **prompt取过来的值是字符型的**</span><br><span class="line"></span><br><span class="line">#### 数据类型转换</span><br><span class="line"></span><br><span class="line">##### 转换为字符串</span><br><span class="line"></span><br><span class="line">- | 方式               | 说明                         | 案例                                 |</span><br><span class="line">  | ------------------ | ---------------------------- | ------------------------------------ |</span><br><span class="line">  | toString()         | 转成字符串                   | var num =1; alert(num.toString());   |</span><br><span class="line">  | String()强制转换   | 转成字符串                   | var num =1; alert(String());         |</span><br><span class="line">  | **加号拼接字符串** | 和字符串拼接的结果都是字符串 | var num =1; alert(num+&quot;我是字符串&quot;); |</span><br><span class="line"></span><br><span class="line">##### 转换为数字型</span><br><span class="line"></span><br><span class="line">| 方式                   | 说明                                                  | 案例                |</span><br><span class="line">| ---------------------- | ----------------------------------------------------- | ------------------- |</span><br><span class="line">| parselnt(string)函数   | 将string类型转成整数数值型,取整（直接舍弃后面的小数） | parselnt(&#x27;78&#x27;)      |</span><br><span class="line">| parseFloat(string)函数 | 将string类型转成浮点数数值型                          | parseFloat(&#x27;78.21&#x27;) |</span><br><span class="line">| Number()强制转换函数   | 将string类型转成数值型                                | Number(&#x27;12&#x27;)        |</span><br><span class="line">| js隐式转换(-*/)        | 利用算术运算隐式转换为数值型                          | &#x27;12&#x27;-0              |</span><br><span class="line"></span><br><span class="line">##### 转换为布尔型</span><br><span class="line"></span><br><span class="line">- | 方式          | 说明                 | 案例             |</span><br><span class="line">  | ------------- | -------------------- | ---------------- |</span><br><span class="line">  | Boolean()函数 | 其他类型转换为布尔值 | Boolean(&#x27;true&#x27;); |</span><br><span class="line"></span><br><span class="line">- 代表空、否定的值会被转换为false，如‘ ’、0、NaN、null、undefined</span><br><span class="line"></span><br><span class="line">- 其余值会被转换为true</span><br><span class="line"></span><br><span class="line">### 运算符</span><br><span class="line"></span><br><span class="line">#### 算数运算符</span><br><span class="line"></span><br><span class="line">- 类似于C和C++</span><br><span class="line">- 浮点数值的最高精度是17位小数，但在进行算数计算时其精度远远不如整数</span><br><span class="line">- 不要直接判断两个浮点数是否相等</span><br><span class="line"></span><br><span class="line">#### 比较运算符</span><br><span class="line"></span><br><span class="line">- 大部分和C类似</span><br><span class="line"></span><br><span class="line">- | 运算符名称  | 说明                        | 案例      | 结果  |</span><br><span class="line">  | ----------- | --------------------------- | --------- | ----- |</span><br><span class="line">  | ==          | 判等号（会转型）            | 37==37    | true  |</span><br><span class="line">  | ===     !== | 全等 要求值和数据类型都一致 | 37===&#x27;37&#x27; | false |</span><br><span class="line"></span><br><span class="line">#### 逻辑运算符</span><br><span class="line"></span><br><span class="line">- 类似于C</span><br><span class="line">- 短路运算（逻辑中断）</span><br><span class="line">  1. 逻辑与</span><br><span class="line">     - 语法：表达式1&amp;&amp;表达式2</span><br><span class="line">     - 如果第一个表达式的值为真，则返回表达式2</span><br><span class="line">     - 如果第一个表达式的值玩为假，则返回表达式1</span><br><span class="line">  2. 逻辑或</span><br><span class="line">     - 语法：表达式1&amp;&amp;表达式2</span><br><span class="line">     - 如果第一个表达式的值为真，则返回表达式1</span><br><span class="line">     - 如果第一个表达式的值玩为假，则返回表达式2</span><br><span class="line"></span><br><span class="line">#### 运算符优先级</span><br><span class="line"></span><br><span class="line">![运算符优先级](D:\前端\笔记\前端照片\运算符优先级.png) </span><br><span class="line"></span><br><span class="line">### 数组</span><br><span class="line"></span><br><span class="line">#### 创建数组的方式</span><br><span class="line"></span><br><span class="line">- 利用new创建数组</span><br><span class="line"></span><br><span class="line">  ```javascript</span><br><span class="line">  var 数组名 =new Array();</span><br><span class="line">  var arr=new Array();//创建一个新的空数组</span><br></pre></td></tr></table></figure></li>
+<li><p>利用数组字面量创建数组</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1.使用数组字面量方式创建空的数组</span></span><br><span class="line"><span class="keyword">var</span> 数组名 = [];</span><br><span class="line"><span class="comment">//2.使用数组字面量方式创建带初始值的数组</span></span><br><span class="line"><span class="keyword">var</span> 数组名 = [<span class="string">&#x27;小白&#x27;</span>,<span class="string">&#x27;小黑&#x27;</span>,<span class="string">&#x27;大黄&#x27;</span>,<span class="string">&#x27;瑞奇&#x27;</span>];</span><br></pre></td></tr></table></figure></li>
+<li><p>里面可以放任意类型的变量</p>
+</li>
+</ul>
+<h4 id="数组的长度"><a href="#数组的长度" class="headerlink" title="数组的长度"></a>数组的长度</h4><ul>
+<li>使用“数组名.length”可以访问数组元素的数量（数组长度）</li>
+<li>动态监测数组元素的个数</li>
+<li>想要输出多个变量，用逗号分隔开即可</li>
+</ul>
+<h4 id="数组中新增元素"><a href="#数组中新增元素" class="headerlink" title="数组中新增元素"></a>数组中新增元素</h4><ul>
+<li><p>通过修改length长度来实现数组扩容的目的</p>
+</li>
+<li><p>length属性时可读写的</p>
+</li>
+<li><p>新增数组元素，修改索引号，追加数组元素</p>
+</li>
+<li><p>```javascript<br>var arr[‘red’,’green’,’blue’];<br>arr[3]=’pink’;<br>console.log(arr);<br>arr[4]=’hotpinl’;<br>console.log(arr);</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 不要直接给数组名赋值，否则会提换原来的数组内容</span><br><span class="line"></span><br><span class="line">### 函数</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  function 函数名 () &#123;</span><br><span class="line">  	函数;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>如果实参的个数和形参个数一致，则输出正常结果</p>
+</li>
+<li><p>如果实参的个数多于形参的个数 ，会取的形参的个数</p>
+</li>
+<li><p>如果实参的个数小于形参的个数，多于的形参定义为undefined 最终的结果就是NaN</p>
+</li>
+</ul>
+<h4 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h4><ul>
+<li>return语句之后的代码不被执行</li>
+<li>return只能返回一个值，如果用多个逗号隔开多个值，以最后一个为准</li>
+</ul>
+<h4 id="arguments的使用"><a href="#arguments的使用" class="headerlink" title="arguments的使用"></a>arguments的使用</h4><ul>
+<li>当我们不确定有多少个参数传递时，可以使用arguments来获取，在JavaScript中，arguments实际上他还当前函数的一个内置对象，所以函数都内置了一个arguments对象，arguments对象中存储了传递的所有实参</li>
+<li>arguments展示形式是一个伪数组，因此可以进行遍历，伪数组具有以下特点：<ul>
+<li>具有length属性</li>
+<li>按索引的方式储存数据</li>
+<li>不具备数组的push，pop等方法</li>
+</ul>
+</li>
+</ul>
+<h4 id="第二种函数表达方式"><a href="#第二种函数表达方式" class="headerlink" title="第二种函数表达方式"></a>第二种函数表达方式</h4><ul>
+<li><p>var fun = function(aru) {</p>
+<p>​        函数内容；</p>
+<p>}</p>
+<p>//调用</p>
+<p>fun();</p>
+</li>
+<li><p>fun是变量名，不是函数名</p>
+</li>
+<li><p>函数表达式声明方式跟声明变量差不多，只不过变量里面存的是值而函数表达式里面存的是函数</p>
+</li>
+<li><p>函数表达式也可以进行传递参数</p>
+</li>
+</ul>
+<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><h4 id="作用域-es5"><a href="#作用域-es5" class="headerlink" title="作用域(es5)"></a>作用域(es5)</h4><ul>
+<li><p>全局作用域</p>
+<ol>
+<li>整个script标签里，和.js文件里</li>
+</ol>
+</li>
+<li><p>局部作用域</p>
+<ol>
+<li>在函数内部就是局部作用域</li>
+<li>又叫<strong>函数作用域</strong></li>
+</ol>
+</li>
+</ul>
+<h4 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h4><ul>
+<li><p>全局变量</p>
+<ol>
+<li>在全局作用域下的变量</li>
+<li><strong>在函数内部没有声明直接赋值的变量也属于全局变量</strong></li>
+<li>只有在关闭浏览器的时候才会销毁，比较占内存</li>
+</ol>
+</li>
+<li><p>局部变量</p>
+<ol>
+<li>在函数内部声明的变量，只能在函数内部使用</li>
+<li>函数形参也属于局部变量</li>
+<li>当我们程序执行完毕就会销毁，比较节约内存资源</li>
+</ol>
+</li>
+</ul>
+<h4 id="块级作用域"><a href="#块级作用域" class="headerlink" title="块级作用域"></a>块级作用域</h4><ul>
+<li>目前js没有块级作用域</li>
+<li>js在es6的时候新增的块级作用域</li>
+</ul>
+<h4 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h4><ul>
+<li>内部函数访问外部函数的变量，采用的是链式查找的方式来决定取那个值，这种结构我们称之为作用域链</li>
+<li>就近原则</li>
+</ul>
+<h3 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h3><h4 id="预解析-1"><a href="#预解析-1" class="headerlink" title="预解析"></a>预解析</h4><ul>
+<li><p>js引擎运行分为两步：</p>
+<ol>
+<li><strong>预解析</strong>：js引擎会把js里面所有的var还有function提升到当前作用域的最前面</li>
+<li><strong>代码执行</strong>：按照代码书写顺序从上往下执行</li>
+</ol>
+</li>
+<li><p>预解析分为</p>
+<ol>
+<li><strong>变量预解析（变量提升）</strong>：把所有的变量声明提升到当前作用域的最前面   不提升赋值操作</li>
+<li><strong>函数预解析（函数提升）</strong>：把所有的函数声明提升到当前作用域的最前面    不调用函数</li>
+</ol>
+</li>
+</ul>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><h4 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h4><ul>
+<li>属性：事物的特征，在对象中用属性来表示</li>
+<li>方法：事物的行为，在对象中用方法来表示</li>
+</ul>
+<h4 id="创建方式"><a href="#创建方式" class="headerlink" title="创建方式"></a>创建方式</h4><ul>
+<li><p>利用字面量创建数组</p>
+<ol>
+<li>```javascript<br>var obj {<pre><code>uname: &#39;张三丰&#39;，
+age:18,
+sex:&#39;男&#39;，
+sayHi: function () &#123;
+    console.log(Hi~);
+&#125;
+</code></pre>
+}<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">2. 里面属性或者方法我们采取键值对的形式 键 属性 ：值  属性值</span><br><span class="line"></span><br><span class="line">3. 多个属性或者方法中间用逗号隔开的</span><br><span class="line"></span><br><span class="line">4. 方法冒号后面跟的是一个匿名函数</span><br><span class="line"></span><br><span class="line">5. 使用对象的两种方式：</span><br><span class="line"></span><br><span class="line">   ```javascript</span><br><span class="line">   1.console.log(obj.uname);</span><br><span class="line">   2.console.log(obj[&#x27;age&#x27;]);</span><br><span class="line">   3.obj.sayHi();</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>利用new Object创建对象</p>
+<ol>
+<li><p>```javascript<br>var obj= new Object();//创建了一个空的对象<br>obj.uname=’张三丰’；<br>obj.age=18;<br>obj.sex=’男’;<br>obj.sayHi=function() {</p>
+<pre><code>console.log(&#39;Hi~&#39;);
+</code></pre>
+<p>}</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 利用构造函数创建对象</span><br><span class="line"></span><br><span class="line">  1. 就是把 我们对象里面的一些相同属性和方法抽象出来封装到函数里面</span><br><span class="line"></span><br><span class="line">  2. ```javascript</span><br><span class="line">     function Star (uname,age,sex)&#123;</span><br><span class="line">         this.name=uname;</span><br><span class="line">         this.age=age;</span><br><span class="line">         this.sex=sex;</span><br><span class="line">     &#125;</span><br><span class="line">     var ldh =new Star(&#x27;刘德华&#x27;,18,&#x27;男&#x27;);//</span><br></pre></td></tr></table></figure></li>
+<li><p>构造函数名字首字母要大写</p>
+</li>
+<li><p>我们构造函数不需要return就可以返回结果</p>
+</li>
+<li><p>new的一个作用就是返回对象</p>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="遍历对象"><a href="#遍历对象" class="headerlink" title="遍历对象"></a>遍历对象</h4><ul>
+<li><p>for…in语句用于对数组或者对象的属性进行循环操作</p>
+</li>
+<li><p>```javascript<br>for(var k in obj){</p>
+<pre><code>console.log(k);//k 变量 输出 得到的是属性名
+console.log(obj[k]);//obj[k]得到的是属性值
+</code></pre>
+<p>}</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### 内置对象</span><br><span class="line"></span><br><span class="line">JS语言自带的一些对象，这些对象供开发者使用，并提供了一些常用的或者最基本而必要的功能（属性和方法）</span><br><span class="line"></span><br><span class="line">##### 查文档</span><br><span class="line"></span><br><span class="line">- 通过MDN/W3C来查询</span><br><span class="line"></span><br><span class="line">##### math内置对象</span><br><span class="line"></span><br><span class="line">![Math内置对象](D:\前端\笔记\前端照片\Math内置对象.png)</span><br><span class="line"></span><br><span class="line">- Math.random()</span><br><span class="line"></span><br><span class="line">  返回一个随机小数</span><br><span class="line"></span><br><span class="line">- 返回两个数之间的随机整数并且包含这两个整数	</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  function geRandom(min,max)</span><br><span class="line">  &#123;</span><br><span class="line">      return Math.floor(Math.random()*(max-min+1))+min;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="Date内置对象"><a href="#Date内置对象" class="headerlink" title="Date内置对象"></a>Date内置对象</h5><ul>
+<li><p>```javascript<br>//Date()日期对象 是一个构造函数必须使用new来调用创建我们的日期对象<br>var arr = new Array();//创建一个数组对象<br>var obj = new Object();//创建一个对象实例<br>//1.使用Date如果没有参数 返回当前系统的当前时间<br>var date = new Date();<br>console.log(date);<br>//2.参数常用的写法 数字型 2019，10，01或者是字符串型’2019-10-1 8:8:8’<br>var date1 = new Date(2019,10,1);<br>comsole.log(date1);//返回对不是11月是10月<br>var date2 = new Date(‘2019-10-1 8:8:8’);<br>console.log(date2);</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- </span><br><span class="line"></span><br><span class="line">![日期格式化](D:\前端\笔记\前端照片\日期格式化.png)</span><br><span class="line"></span><br><span class="line">- 写星期的最好方法就是写一个数组，然后调用</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  var=[&#x27;星期日&#x27;,&#x27;星期一&#x27;,&#x27;星期二&#x27;,&#x27;星期三&#x27;,&#x27;星期四&#x27;,&#x27;星期五&#x27;,&#x27;星期六&#x27;]；</span><br><span class="line">  var day=date。getDay();</span><br><span class="line">  console.log(&#x27;今天是:&#x27;+arr[day]);</span><br></pre></td></tr></table></figure></li>
+<li><p>获取日期的总的毫秒数(时间戳)</p>
+<ul>
+<li><p>Date对象是基于1970年1月1日（世界标准时间）起的毫秒数</p>
+</li>
+<li><p>通过valueOf()  getTime()获取</p>
+</li>
+<li><p>直接写date </p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> date1=+<span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="built_in">console</span>.log(date1);</span><br></pre></td></tr></table></figure></li>
+<li><p>H5新增方法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Date</span>.now());</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h5 id="数组对象Array"><a href="#数组对象Array" class="headerlink" title="数组对象Array"></a>数组对象Array</h5><ul>
+<li><p>创建方式</p>
+<ol>
+<li><p>字面量方式   var arr =[1,2,3];</p>
+</li>
+<li><p>new Array()   </p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = <span class="keyword">new</span> <span class="built_in">Array</span>();<span class="comment">//创建一个空数组</span></span><br><span class="line"><span class="keyword">var</span> arr1 = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">2</span>);<span class="comment">//创建一个有两个空元素的数组，2时数组长度</span></span><br><span class="line"><span class="keyword">var</span> arr1 = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">2</span>，<span class="number">3</span>);<span class="comment">//等价于[2，3]</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>检测是否为数组</p>
+<ul>
+<li><p>instanceof 运算符  它可以用来检测是否为数组</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=[];</span><br><span class="line"><span class="built_in">console</span>.log(arr <span class="keyword">instanceof</span> <span class="built_in">Array</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>Array.isArray()        //H5新增的方法  ie9以上版本才支持</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr=[];</span><br><span class="line"><span class="built_in">Array</span>.isArray(arr);<span class="comment">//true</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>添加删除数组元素的方法</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>push(参数1,…)</td>
+<td>末尾添加一个或者多个元素，注意修改原数组</td>
+<td>并返回新的长度</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>删除数组最后一个元素，把数组元素长度减一无参数，修改原数组</td>
+<td>返回它删除元素的值</td>
+</tr>
+<tr>
+<td>unshift(参数1，….)</td>
+<td>向数组的开头添加一个或者更多元素，注意修改原数组</td>
+<td>并返回新的长度</td>
+</tr>
+<tr>
+<td>shift()</td>
+<td>删除数组的第一个元素，数组元素减1无参数，修改原数组</td>
+<td>并返回第一个元素的值</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>数组排序</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+<th>是否修改原数组</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>reverse()</td>
+<td>颠倒数组中元素的顺序，无参数</td>
+<td>该方法会改变原理的数组 返回新数组</td>
+</tr>
+<tr>
+<td>sort()</td>
+<td>对数组的元素进行排序</td>
+<td>该方法会改变原来的数组 返回新数组</td>
+</tr>
+</tbody></table>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr1 = [<span class="number">13</span>,<span class="number">4</span>,<span class="number">77</span>,<span class="number">1</span>,<span class="number">7</span>];</span><br><span class="line">arr1.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a-b;<span class="comment">//按照升序排列</span></span><br><span class="line">    <span class="keyword">return</span> b-a;<span class="comment">//按照降序排列</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(arr1);</span><br></pre></td></tr></table></figure></li>
+<li><p>数组索引方法</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>indexOf(“寻找的元素”,开始的位置)</td>
+<td>数组中查找给定元素的第一个索引</td>
+<td>如果存在返回索引号，如果不存在，则返回-1</td>
+</tr>
+<tr>
+<td>IastindexOf()</td>
+<td>在数组中的最后一个索引</td>
+<td>如果存在返回索引号，如果不存在，则返回-1</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>数组转化为字符串</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>toString()</td>
+<td>把数组转换为字符串，逗号分隔每一项</td>
+<td>返回一个字符串</td>
+</tr>
+<tr>
+<td>join(‘分隔符’)</td>
+<td>方法用于把数组中的所有元素转化为一个字符串</td>
+<td>返回一个字符串</td>
+</tr>
+</tbody></table>
+</li>
+<li><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>concat()</td>
+<td>连接两个或多个数组 不影响原数组</td>
+<td>返回一个新的项目</td>
+</tr>
+<tr>
+<td>slice()</td>
+<td>数组截胡slice(begin,end)</td>
+<td>返回被截胡项目的新数组</td>
+</tr>
+<tr>
+<td>splice()</td>
+<td>数组删除splic(第几个开始，要删除的个数)</td>
+<td>返回被删除项目的新数组，注意，这个会影响原数组</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h5 id="字符串对象"><a href="#字符串对象" class="headerlink" title="字符串对象"></a>字符串对象</h5><ul>
+<li><p>基本包装类型</p>
+<ul>
+<li><p>为了方便操作基本数据类型，js还提供了三个特殊引用类型：String、Number、Boolean</p>
+</li>
+<li><p>基本包装类型就是把简单数据类型包装为复杂数据类型，这样基本数据类型就有了属性和方法</p>
+</li>
+<li><p>```javascript<br>//下面代码有什么问题？<br>var str = ‘andy’;<br>console.log(str.length);</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  基本数据类型是没有属性和方法，而对象才有属性和方法，但上面代码却可以执行，这是因为js会把基本数据类型包裹为复杂数据类型，其执行过程如下：</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  //1.生成临时变量，把简单类型包装为复杂数据类型</span><br><span class="line">  var temp = new String(&#x27;andy&#x27;);</span><br><span class="line">  //2.赋值给我们声明的字符变量</span><br><span class="line">  str = temp;</span><br><span class="line">  //3.销毁临时变量</span><br><span class="line">  temp = null;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>字符串的不可变</p>
+</li>
+<li><p>不要大量拼接字符串</p>
+</li>
+<li><p>根据字符返回位置</p>
+<ul>
+<li><p>字符串所有的方法，都不会修改字符串本身（字符串是不可变的），操作完成会返回一个新的字符串</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>indexOf(‘要查找的字符’,’开始的位置’)；</td>
+<td>返回指定内容在元字符串中的位置，如果找不到就返回-1，开始的位置是index索引号</td>
+</tr>
+<tr>
+<td>lastIndexOf()</td>
+<td>从后i往前找，只找第一个匹配的</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>根据位置返回串</p>
+<ul>
+<li><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+<th>使用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>charAt(index)</td>
+<td>获取指定位置的字符(index  字符的索引号)</td>
+<td>str.charAt(0)</td>
+</tr>
+<tr>
+<td>charCodeAt(index)</td>
+<td>获取指定位置字符的ASCll码（index索引号）</td>
+<td>str,charCodeAt()</td>
+</tr>
+<tr>
+<td>str[index]</td>
+<td>获取指定位置的字符</td>
+<td>HTML5,IE8+支持和charAt()等效</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+<li><p>字符串操作方法</p>
+<p><img src="/.io//前端\笔记\前端照片\字符串操作方法.png" alt="字符串操作方法"></p>
+</li>
+</ul>
+<h4 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h4><h5 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h5><ul>
+<li>```javascript<pre><code>function Person(name, age) &#123;
+    this.name = name;
+    this.age = age;
+    this.sayHello = function() &#123;
+        alert(this.name);
+    &#125;
+&#125;
+      Person(&#39;vcedqwa&#39;,14);//构造函数
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">##### 继承</span><br><span class="line"></span><br><span class="line">- 通过普通函数调用this指向window</span><br><span class="line"></span><br><span class="line">- 通过对象的成员函数调用this指向对象</span><br><span class="line"></span><br><span class="line">- 继承时二选一就可</span><br><span class="line"></span><br><span class="line">  - apply传递的是this和以数组形式</span><br><span class="line"></span><br><span class="line">  - call传递的是单个的值</span><br><span class="line"></span><br><span class="line">  - ```javascript</span><br><span class="line">    Person.apply(this, [name, age]);</span><br><span class="line">    Person.call(this, name, age);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h5><ul>
+<li><p>原型propotype </p>
+</li>
+<li><p>```javascript<br>//使用new创建对象执行了那几步<br>//1.创建一个对象<br>//属性—__proto__，指向了构造函数的原型<br>//2.将this指向这个对象<br>//3.执行构造函数<br>//4.返回这个对象<br>var p = new Person();</p>
+<p>p.sayHello();</p>
+<p>//当访问一定一个对象的属性的时候，首先在这个对象本身进行查找<br>//如果找到，就直接返回这个属性，且停止查找<br>//如果没找到，会继续在原型上找，也就是__proto__指向的那个对象</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">##### 混合继承</span><br><span class="line"></span><br><span class="line">- 属性放到对象上，方法放到原型上	</span><br><span class="line"></span><br><span class="line">- 属性既不会子类或者某个对象给改变，也保证了所有的函数能被所以的对象所共享</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">      function Person(name, age) &#123;</span><br><span class="line">          this.name = nmae;</span><br><span class="line">          this.age = age;</span><br><span class="line">      &#125;</span><br><span class="line">      Person.prototype.sayHello = function() &#123;</span><br><span class="line">          alert(this.name);</span><br><span class="line">      &#125;</span><br><span class="line">    </span><br><span class="line">      function Student(name, age, id) &#123;</span><br><span class="line">          Person.apply(this, [name, age]);</span><br><span class="line">          this.id = id;</span><br><span class="line">      &#125;</span><br><span class="line">    </span><br><span class="line">      Student.prototype = Object.create(Person.prototype);</span><br><span class="line">      Student.prototype.study = function() &#123;</span><br><span class="line">    </span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="简单数据类型和复杂数据类型"><a href="#简单数据类型和复杂数据类型" class="headerlink" title="简单数据类型和复杂数据类型"></a>简单数据类型和复杂数据类型</h3><h4 id="简单数据类型"><a href="#简单数据类型" class="headerlink" title="简单数据类型"></a>简单数据类型</h4><ul>
+<li>值类型：在存储时变量中存在的是值的本身，如：string，number，boolean，undefined，null</li>
+<li>null返回的是一个空的对象object，如果忧国变量我们以后打算存储为对象，但没想好放啥，这个时候就给null</li>
+<li>放到栈</li>
+</ul>
+<h4 id="复杂数据类型（引用类型）"><a href="#复杂数据类型（引用类型）" class="headerlink" title="复杂数据类型（引用类型）"></a>复杂数据类型（引用类型）</h4><ul>
+<li>在存储变量中存储的仅仅是地址（引用）</li>
+<li>通过new关键字创建的对象（系统对象、自定义对象），如Object、Array、Date等</li>
+<li>放到堆</li>
+</ul>
+<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><h5 id="DOM树"><a href="#DOM树" class="headerlink" title="DOM树"></a>DOM树</h5><ul>
+<li>文档：一个页面就是一个文档，DOM中使用document表示</li>
+<li>元素：页面中的所有标签都是元素，DOM中使用element表示</li>
+<li>节点：网页中的所有内容都是节点（标签、属性、文本、注释等），DOM中使用node表示</li>
+<li>DOM把以上元素都看成对象</li>
+</ul>
+<h4 id="获取页面元素"><a href="#获取页面元素" class="headerlink" title="获取页面元素"></a>获取页面元素</h4><h5 id="根据ID获取"><a href="#根据ID获取" class="headerlink" title="根据ID获取"></a>根据ID获取</h5><ul>
+<li><p>```JavaScript</p>
+<div id="time">2019-9-9</div>
+<script>
+    var timer =document.getElementById('time');
+    console.log(timer);
+    console.log(typeof timer);
+    console.dir(timer);
+</script>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 注意：</span><br><span class="line"></span><br><span class="line">  1. 因为我们文档页面从上往下加载，所以先得有标签，所以我们script写到标签的下面</span><br><span class="line">  2. get 获得element 元素by通过        驼峰命名法      getElementById</span><br><span class="line">  3. 参数id是大小写敏感的字符串</span><br><span class="line">  4. 返回的是一个元素对象</span><br><span class="line">  5. console.dir()打印我们返回的元素对象  更好的查看里面的属性和方法</span><br><span class="line"></span><br><span class="line">##### 根据标签名获取</span><br><span class="line"></span><br><span class="line">- 使用getElementsByTagName()方法可以返回带有指定标签名的**对象的集合**</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  document.getElementsByTagName(&#x27;标签名&#x27;);</span><br></pre></td></tr></table></figure></li>
+<li><p>注意：</p>
+<ol>
+<li>因为得到的是一个对象的集合，以伪数组的形式存储的，所以我们想要操作里面的元素就需要遍历</li>
+<li>得到元素对象是动态的</li>
+<li>如果页面中只有一个此标签，返回的还是伪数组的形式</li>
+<li>如果页面中没有此标签，返回的是空的伪数组的形式</li>
+</ol>
+</li>
+</ul>
+<h5 id="通过HTML5新增的方法获取-类名"><a href="#通过HTML5新增的方法获取-类名" class="headerlink" title="通过HTML5新增的方法获取(类名)"></a>通过HTML5新增的方法获取(类名)</h5><ul>
+<li><p>```javascript<br>var dox1=document.getElementsByClassName(‘类名’);</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  - 返回的也是伪数组</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  var firstBox=document.querySelector(&#x27;选择器&#x27;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>返回指定选择器的第一个元素对象</li>
+<li>选择器必须要加符号</li>
+</ul>
+</li>
+<li><p>```javascript<br>var AlltBox=document.querySelectorAll(‘选择器’);</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  - 返回指定选择器的所有元素对象集合</span><br><span class="line">  - 选择器必须要加符号</span><br><span class="line"></span><br><span class="line">##### 获取特殊元素</span><br><span class="line"></span><br><span class="line">###### 获取body元素</span><br><span class="line"></span><br><span class="line">```javascript</span><br><span class="line">doucument.body//返回body元素对象</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h6 id="获取html元素"><a href="#获取html元素" class="headerlink" title="获取html元素"></a>获取html元素</h6><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">doucument.doucumentElement<span class="comment">//返回html元素对象</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="window-getComputedStyle"><a href="#window-getComputedStyle" class="headerlink" title="window.getComputedStyle()"></a>window.getComputedStyle()</h5><ul>
+<li><p><code>Window.getComputedStyle()</code>方法返回一个对象，该对象在应用活动样式表并解析这些值可能包含的任何基本计算后报告元素的所有CSS属性的值。 私有的CSS属性值可以通过对象提供的API或通过简单地使用CSS属性名称进行索引来访问。</p>
+</li>
+<li><p>语法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> style = <span class="built_in">window</span>.getComputedStyle(element, [pseudoElt]);</span><br></pre></td></tr></table></figure></li>
+<li><p>element</p>
+<p>用于获取计算样式的<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element"><code>Element</code></a>。</p>
+</li>
+<li><p>pseudoElt 可选</p>
+<p>指定一个要匹配的伪元素的字符串。必须对普通元素省略（或<code>null</code>）。</p>
+</li>
+<li><p>返回的<code>style</code>是一个实时的 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/CSSStyleDeclaration"><code>CSSStyleDeclaration</code></a> 对象，当元素的样式更改时，它会自动更新本身。</p>
+</li>
+</ul>
+<h4 id="事件基础"><a href="#事件基础" class="headerlink" title="事件基础"></a>事件基础</h4><p>触发—响应机制</p>
+<h5 id="事件三元素"><a href="#事件三元素" class="headerlink" title="事件三元素"></a>事件三元素</h5><ol>
+<li>事件源</li>
+</ol>
+<ul>
+<li>事件被触发的对象</li>
+</ul>
+<ol start="2">
+<li><p>事件类型</p>
+<ul>
+<li>如何触发 什么事件 比如：鼠标点击（onclick）还是鼠标经过还是键盘按下</li>
+</ul>
+</li>
+<li><p>事件处理程序</p>
+</li>
+</ol>
+<ul>
+<li>通过一个函数赋值的方式完成</li>
+</ul>
+<ol start="4">
+<li><p>例：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;button id=<span class="string">&quot;btn&quot;</span>&gt;唐伯虎&lt;/button&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">	<span class="keyword">var</span> btn = domcument.getElementById(<span class="string">&#x27;btn&#x27;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">	btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    	alart(<span class="string">&#x27;点秋香&#x27;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">	&#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h5 id="执行事件的步骤"><a href="#执行事件的步骤" class="headerlink" title="执行事件的步骤"></a>执行事件的步骤</h5><ol>
+<li>获取事件源</li>
+<li>注册事件（绑定事件）</li>
+<li>添加事件处理程序（采用函数赋值形式）</li>
+</ol>
+<h4 id="操作元素"><a href="#操作元素" class="headerlink" title="操作元素"></a>操作元素</h4><h5 id="改变元素的内容"><a href="#改变元素的内容" class="headerlink" title="改变元素的内容"></a>改变元素的内容</h5><ul>
+<li><p>从起始位置到终止位置的内容，但他去除一个html标签，同时空格和换行也会去掉</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">element.innerText</span><br></pre></td></tr></table></figure></li>
+<li><p>起始位置到终止位置的全部内容，包括html标签，同时保留空格和换行</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">element.innerHTML</span><br></pre></td></tr></table></figure></li>
+<li><p>区别：</p>
+<ol>
+<li><p>innerText不能识别HTML标签   分标准         去除空格和换行</p>
+</li>
+<li><p>innerHTML能识别HTML标签   W3C标准      保留空格和换行</p>
+</li>
+<li><p>这两个属性都是可读写的 可以获取元素</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> p = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;p&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(p.innerText);</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<h5 id="常用元素的属性操作"><a href="#常用元素的属性操作" class="headerlink" title="常用元素的属性操作"></a>常用元素的属性操作</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> innerText 、innerHTML   改变元素内容</span><br><span class="line"><span class="number">2.</span> src 、herf</span><br><span class="line"><span class="number">3.</span> id、alt、title</span><br></pre></td></tr></table></figure>
+
+<h5 id="表单元素的属性操作"><a href="#表单元素的属性操作" class="headerlink" title="表单元素的属性操作"></a>表单元素的属性操作</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">type、value、checked、selected、disabled</span><br></pre></td></tr></table></figure>
+
+<h5 id="样式属性操作"><a href="#样式属性操作" class="headerlink" title="样式属性操作"></a>样式属性操作</h5><ul>
+<li><p>我们可以通过JS修改元素的大小、颜色、位置等样式</p>
+</li>
+<li><p>```javascript<br>element.style       //行内样式操作<br>element.className   //类名样式操作</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 里面的样式采用驼峰命名法</span><br><span class="line"></span><br><span class="line">- Js修改style样式操作，产生的是行内样式，CSS权重比较高</span><br><span class="line"></span><br><span class="line">- 注意：</span><br><span class="line"></span><br><span class="line">  1. 如果样式修改较多，可以采用操作类名方式更改元素样式</span><br><span class="line">  2. class因为是个保留字，因此使用className来操作元素类名属性</span><br><span class="line">  3. className会直接更改元素的类名，会覆盖原来的类名</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  &lt;style&gt;</span><br><span class="line">          div &#123;</span><br><span class="line">              width: 100px;</span><br><span class="line">              height: 100px;</span><br><span class="line">              background-color: pink;</span><br><span class="line">          &#125;</span><br><span class="line">          </span><br><span class="line">          .change &#123;</span><br><span class="line">              background-color: purple;</span><br><span class="line">              color: #fff;</span><br><span class="line">              font-size: 25px;</span><br><span class="line">              margin-top: 100px;</span><br><span class="line">          &#125;</span><br><span class="line">      &lt;/style&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;body&gt;</span><br><span class="line">      &lt;div class=&quot;first&quot;&gt;文本&lt;/div&gt;</span><br><span class="line">      &lt;script&gt;</span><br><span class="line">          // 1. 使用 element.style 获得修改元素样式  如果样式比较少 或者 功能简单的情况下使用</span><br><span class="line">          var test = document.querySelector(&#x27;div&#x27;);</span><br><span class="line">          test.onclick = function() &#123;</span><br><span class="line">              // this.style.backgroundColor = &#x27;purple&#x27;;</span><br><span class="line">              // this.style.color = &#x27;#fff&#x27;;</span><br><span class="line">              // this.style.fontSize = &#x27;25px&#x27;;</span><br><span class="line">              // this.style.marginTop = &#x27;100px&#x27;;</span><br><span class="line">              // 让我们当前元素的类名改为了 change</span><br><span class="line">  </span><br><span class="line">              // 2. 我们可以通过 修改元素的className更改元素的样式 适合于样式较多或者功能复杂的情况</span><br><span class="line">              // 3. 如果想要保留原先的类名，我们可以这么做 多类名选择器</span><br><span class="line">              // this.className = &#x27;change&#x27;;</span><br><span class="line">              this.className = &#x27;first change&#x27;;</span><br><span class="line">          &#125;</span><br><span class="line">      &lt;/script&gt;</span><br><span class="line">  &lt;/body&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="排它思想"><a href="#排它思想" class="headerlink" title="排它思想"></a>排它思想</h5><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;button&gt;按钮<span class="number">1</span>&lt;/button&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">button</span>&gt;</span>按钮2<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">button</span>&gt;</span>按钮3<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">button</span>&gt;</span>按钮4<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">button</span>&gt;</span>按钮5<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="comment">// 1. 获取所有按钮元素</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="keyword">var</span> btns = <span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;button&#x27;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="comment">// btns得到的是伪数组  里面的每一个元素 btns[i]</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; btns.length; i++) &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        btns[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="comment">// (1) 我们先把所有的按钮背景颜色去掉  干掉所有人</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; btns.length; i++) &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">             btns[i].style.backgroundColor = <span class="string">&#x27;&#x27;</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">         &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="comment">// (2) 然后才让当前的元素背景颜色为pink 留下我自己</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">         <span class="built_in">this</span>.style.backgroundColor = <span class="string">&#x27;pink&#x27;</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">        &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">     &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="comment">//2. 首先先排除其他人，然后才设置自己的样式 这种排除其他人的思想我们成为排他思想</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h5 id="自定义属性的操作"><a href="#自定义属性的操作" class="headerlink" title="自定义属性的操作"></a>自定义属性的操作</h5><ul>
+<li><p>目的：是为了保存并使用数据，有些数据可以保存到页面而不用保存到数据库中</p>
+</li>
+<li><p>获取属性值</p>
+<ol>
+<li>element.属性         获取属性值</li>
+<li>element.getAttribute(‘属性’);</li>
+</ol>
+</li>
+<li><p>区别</p>
+<ol>
+<li>element.属性            获取内置属性值（元素本身自带的属性）</li>
+<li>element.getAttribute(‘属性’);主要获得自定义的属性（标准）我们程序员自定义的属性    自定义属性如：index=”1”；</li>
+</ol>
+</li>
+<li><p>设置属性值</p>
+<ol>
+<li>element.属性=’值’;         设置内置属性值</li>
+<li>element.setAttribute(‘属性’,’值’);//主要针对于自定义属性，也可以设置其他的属性，class特殊，这里面就写class，不是className</li>
+</ol>
+</li>
+<li><p>移除属性</p>
+</li>
+</ul>
+<ol>
+<li>element.removeAttribute(‘属性’);</li>
+</ol>
+<ul>
+<li><p>H5自定义属性</p>
+<ol>
+<li><p>设置</p>
+<ul>
+<li><p>H5规定自定义属性data开头作为属性名并且赋值</p>
+</li>
+<li><p>比如<div data-index="1"></div>或者使用JS设置</p>
+<p>element.setAttribute(‘data-index’,2)</p>
+</li>
+</ul>
+</li>
+<li><p>获取</p>
+<ul>
+<li>兼容性获取element.getAttribute(‘data-index’)</li>
+<li>H5新增element.dataset.index或者element.dataset[‘index’]   ie11才开始支持</li>
+<li>如果自定义属性里面有多个-链接的单词，我们获取的时候采取<em>驼峰命名法</em></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h4><h5 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h5><ul>
+<li>利用DOM提供的方法逻辑性不强、繁琐</li>
+<li>使用节点层级关系获取元素<ul>
+<li>利用父子节点关系获取元素</li>
+<li>逻辑性强、但兼容性稍差</li>
+</ul>
+</li>
+</ul>
+<h5 id="节点概述"><a href="#节点概述" class="headerlink" title="节点概述"></a>节点概述</h5><ul>
+<li>一般的节点有三个基本属性<ul>
+<li>节点类型：nodeType<ol>
+<li>元素节点   1</li>
+<li>属性节点    2</li>
+<li>文本节点    3（文本节点包括文字、空格、换行等）</li>
+</ol>
+</li>
+<li>节点名称：nodeName</li>
+<li>节点值：nodeValue</li>
+</ul>
+</li>
+</ul>
+<h5 id="节点层级"><a href="#节点层级" class="headerlink" title="节点层级"></a>节点层级</h5><ul>
+<li><p>父子兄层级关系</p>
+<ol>
+<li><p>父级节点</p>
+<ul>
+<li><p>```javascript<br>node.parentNode</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">   - parentNode属性可返回某节点的父节点，注意是最近的一个父节点</span><br><span class="line"></span><br><span class="line">   - 如果指定的节点没有父节点则返回null</span><br><span class="line"></span><br><span class="line">2. 子节点</span><br><span class="line"></span><br><span class="line">   ```javascript</span><br><span class="line">   1.parentNode.childNodes(标准)</span><br></pre></td></tr></table></figure></li>
+<li><p>parentNode.childNodes返回包含指定节点的子节点的集合（元素节点、文本节点），该集合为及时更新的集合</p>
+</li>
+<li><p>换行是文本节点</p>
+</li>
+<li><p>如果想要获得里面的元素节点，就需要专门处理，所以我们一般不提倡使用childNodes</p>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> ul = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;ul&#x27;</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;ul.childNodes.length;i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(ul.childNodes[i].nodeType == <span class="number">1</span>)&#123;</span><br><span class="line">        <span class="comment">//ul.childNodes[i]是元素节点</span></span><br><span class="line">        <span class="built_in">console</span>.log(ul.childNodes[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="number">2.</span>parentNode.children(非标准)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>parentNode.children是一个只读属性，返回所有的子元素节点，他只会返回子元素的节点。他只会返回子元素的节点，其余节点，其余节点不返回（这是我们重点掌握的）</li>
+<li>虽然children是一个非标准，但得到了各个浏览器的支持，因此我门可以放心使用</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="number">3.</span>parentNode.firstChild</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>firstChild返回第一个子节点，找不到则返回null。同样，也是包含所有的节点</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="number">4.</span>parentNode.lastChild</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>lastChild返回第一个子节点，找不到则返回null。同样，也是包含所有的节点</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="number">5.</span>parentNode.firstElemenChild</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>firstElemenChild返回第一个子元素节点，找不到则返回null</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="number">6</span>,parentNode.lastElemenChild</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>lastElemenChild返回第一个子元素节点，找不到则返回nul</li>
+<li><strong>注意：这两个方法有兼容性问题，IE9以上才支持</strong></li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="number">7.</span> children[<span class="number">0</span>]     <span class="comment">//返回第一个元素</span></span><br><span class="line"><span class="number">8.</span> ol.chiildren[ol.children.length-<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>实际写法，既没有兼容性问题还可以返回第一个和最后一个元素</li>
+</ul>
+</li>
+<li><p>兄弟节点</p>
+<ol>
+<li><p>```javascript<br>node.nextSibling</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">   nextSibling返回当前元素的下一个兄弟节点，找不到则返回null。同样，也包含所有节点（文本节点、元素节点等等）</span><br><span class="line"></span><br><span class="line">2. ```javascript</span><br><span class="line">   node.previousSibling</span><br></pre></td></tr></table></figure>
+
+<p>previousSibling返回当前元素上一个兄弟节点，找不到则返回null。同样，也包含所有的节点（文本节点、元素节点等等）</p>
+</li>
+<li><p>```javascript<br>node.nextElementSibling</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">   nextElementSibling返回当前元素下一个兄弟元素节点，找不到则返回null</span><br><span class="line"></span><br><span class="line">4. ```javascript</span><br><span class="line">   node.previouslementSibling</span><br></pre></td></tr></table></figure>
+
+<p>previouslementSibling返回当前元素下一个兄弟元素节点，找不到则返回null</p>
+<p><strong>注意：这3.4方法有兼容性问题，IE9以上才支持</strong></p>
+</li>
+<li><p>解决方法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getNextElementSibling</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> el = element;</span><br><span class="line">    <span class="keyword">while</span> (el = el.nextSibling) &#123;</span><br><span class="line">        <span class="keyword">if</span>(el.nodeType == <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> el;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<h5 id="创建节点"><a href="#创建节点" class="headerlink" title="创建节点"></a>创建节点</h5><ul>
+<li><p>```javascript<br>document.createElement(‘tagName’)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- document.createElement()方法创建由tagName指定的HTML元素 。因为这些元素原来不存在，是根据我们的需求动态生成的，所以我们也称为动态创建元素节点</span><br><span class="line"></span><br><span class="line">##### 添加节点</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  node.appendChild(child)</span><br></pre></td></tr></table></figure>
+
+<p>node.appendChild()方法将一个节点添加到指定父节点的子节点列表的末尾。类似于CSS里面的after伪元素</p>
+</li>
+<li><p>```javascript<br>node.insertBefore(child,指定元素)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  node.insertBefore(child,指定元素)    方法将一个节点添加到指定父节点的子节点列表的前面</span><br><span class="line"></span><br><span class="line">##### 删除节点</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  node.removeChild(child)</span><br></pre></td></tr></table></figure>
+
+<p>node.removeChild()方法从DOM中删除一个子节点，返回删除的节点</p>
+</li>
+<li><p>```javascript</p>
+<pre><code>// 1.获取元素
+   var ul = document.querySelector(&#39;ul&#39;);
+   var btn = document.querySelector(&#39;button&#39;);
+   // 2. 删除元素  node.removeChild(child)
+   // ul.removeChild(ul.children[0]);
+   // 3. 点击按钮依次删除里面的孩子
+     //小技巧:当li删除完之后禁用删除键    
+   btn.onclick = function() &#123;
+       if (ul.children.length == 0) &#123;
+           this.disabled = true;//禁用删除键
+       &#125; else &#123;
+           ul.removeChild(ul.children[0]);
+       &#125;
+   &#125;
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">##### for   in 复习</span><br><span class="line"></span><br><span class="line">```javascript</span><br><span class="line"> for(var k in obj) &#123;</span><br><span class="line">//     k 得到的是属性名</span><br><span class="line">//     obj[k] 得到是属性值</span><br><span class="line">// &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="三种动态串创建元素的区别"><a href="#三种动态串创建元素的区别" class="headerlink" title="三种动态串创建元素的区别"></a>三种动态串创建元素的区别</h5><ul>
+<li><p>document.write()</p>
+<ul>
+<li>创建元素 如果页面文档流加载完毕，在调用这句话会导致页面重绘</li>
+</ul>
+</li>
+<li><p>element.innerHTNL</p>
+<ul>
+<li><p>innerHTML 是将内容写入某个DOM节点，不会导致页面全部重绘</p>
+</li>
+<li><p>innerHTML创建多个元素效率更高（不要拼接字符串，采用数组的形式拼接），结构稍微复杂</p>
+</li>
+<li><p>```javascript<br>function fn(){</p>
+<pre><code>var array=[];
+for(var i=0;i&lt;1000;i++)&#123;
+    array.push(&#39;&lt;div&gt;&lt;/div&gt;&#39;);
+&#125;
+document.body.innerHTML=array.join(&#39;&#39;);
+</code></pre>
+<p>}          </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- document.createElement()</span><br><span class="line"></span><br><span class="line">  - createElement()创建多个元素效率稍微低低一点点，但结构更清晰</span><br><span class="line"></span><br><span class="line">#### DOM重点核心</span><br><span class="line"></span><br><span class="line">#### 事件高级导读</span><br><span class="line"></span><br><span class="line">##### 注册事件（绑定属性）</span><br><span class="line"></span><br><span class="line">###### 概述</span><br><span class="line"></span><br><span class="line">- 注册事件分为两种：传统方式和方法监听注册</span><br><span class="line"></span><br><span class="line">- | 传统注册方式                                                 | 方法监听注册方式                                 |</span><br><span class="line">  | ------------------------------------------------------------ | ------------------------------------------------ |</span><br><span class="line">  | 利用on开头的事件onclick                                      | W3C标准  推荐方式                                |</span><br><span class="line">  | &lt;button onclick=&#x27;alart(&quot;hi~&quot;)&#x27;&gt;&lt;/button&gt;                     | addEventListener()它是一个方法                   |</span><br><span class="line">  | btn.onclick=function()&#123;&#125;                                     | IE9之前的IE不支持此方法，可使用attackEvent()代替 |</span><br><span class="line">  | 特点：注册事件的唯一性                                       | 特点：同一个元素同一个事件可以注册多个监听器     |</span><br><span class="line">  | 同一个元素同一个事件只能设置一个处理函数，最后注册的处理函数将会覆盖前面注册的处理函数 |                                                  |</span><br><span class="line"></span><br><span class="line">###### addEventListener事件监听方式</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  eventTarget.addEventListener(type,listener[,useCapturel])</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>eventTarget.addEventListener()方法将指定的监听器注册到eventTarge(目标对象)上，当该对象触发指定的事件是，就会执行事件处理函数</p>
+</li>
+<li><p>该方法接受三个参数：</p>
+<ol>
+<li>type：事件类型字符串，比如click、mouseover，注意这里不要带on</li>
+<li>listener：事件处理函数，事件发生时，会调用该监听函数</li>
+<li>useCapture:可选参数，是一个布尔值，默认值是false，学完DOM事件流后，我们在进一步学习</li>
+</ol>
+</li>
+<li><p>I9以上支持</p>
+</li>
+<li><p>事件处理函数，如果写函数名的话，不用加（）</p>
+</li>
+<li><p>useCapture:</p>
+<ol>
+<li>为 true 时：处于捕获阶段</li>
+<li>为false 或者  省略  时：处于冒泡阶段</li>
+</ol>
+</li>
+</ul>
+<h6 id="attachEvent事件监听方式"><a href="#attachEvent事件监听方式" class="headerlink" title="attachEvent事件监听方式"></a>attachEvent事件监听方式</h6><ul>
+<li><p>非标准，不建议使用，I9以前版本执行，了解知道</p>
+</li>
+<li><p>```javascript<br>eventTarget.attachEvent(eventNameWithOn,callback)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- eventTarget.attachEvent()方法将指定的监听器注册到eventTarge（目标对象）上，当该对象触发指定的事件时，指定的回调函数就会被执行</span><br><span class="line"></span><br><span class="line">- 该方法接受两个参数</span><br><span class="line"></span><br><span class="line">  - eventNameWithOn:事件类型字符串，比如onclick、onmouseover,这里要带on</span><br><span class="line">  - callback：事件处理函数，当目标触发事件的时回调函数被调用</span><br><span class="line"></span><br><span class="line">##### 删除事件</span><br><span class="line"></span><br><span class="line">- 传统注册方式</span><br><span class="line">  - eventTarget.onclick=null;</span><br><span class="line"></span><br><span class="line">- 方法监听注册方式</span><br><span class="line">  - eventTarget.removeEventListner(type,Listner[,useCapture]);</span><br><span class="line">  - eventTarget.datachEvent(eventNameWithOn,callback);</span><br><span class="line">    - eventNameWithOn这里要带on</span><br><span class="line"></span><br><span class="line">##### DOM事件流</span><br><span class="line"></span><br><span class="line">- 事件流描述的是从页面中接受事件的顺序</span><br><span class="line">- 事件发生时会在元素节点之间按照特定的顺序传播，这传播过程即DOM事件流</span><br><span class="line">- DOM事件流分为3个阶段</span><br><span class="line">  1. 捕获阶段</span><br><span class="line">  2. 当前目标阶段</span><br><span class="line">  3. 冒泡阶段</span><br><span class="line"></span><br><span class="line">- 事件冒泡：IE最早提出，事件开始时由具体的元素接受，然后逐级向上传播到DOM最顶层节点的过程</span><br><span class="line">  - onblur、onfocus、onmouseenter、onmouseleave是没有冒泡的</span><br><span class="line">- 事件捕获：网易最早提出，由DOM最顶层节点开始，然后逐级向下传播到具体的元素接受的过程</span><br><span class="line"></span><br><span class="line">##### 事件对象</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  div.onclick=function(event)&#123;</span><br><span class="line">      </span><br><span class="line">  &#125;</span><br><span class="line">  div.addEventListener(&#x27;click&#x27;,function(event)&#123;</span><br><span class="line">    </span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure></li>
+<li><p>event 就是一个事件对象，写到我们我们监听函数的小括号里面 当形参来看</p>
+</li>
+<li><p>事件对象只有有了是事件才会存在，他是系统给我们自动创建的，不需要我们传递参数</p>
+</li>
+<li><p>事件对象是我们事件的一系列相关数据的集合跟集合相关的，比如鼠标点击里面就包含了鼠标的相关信息，</p>
+</li>
+<li><p>事件对象可以自己命名，比如event、evt、e</p>
+</li>
+<li><p>事件对象也有兼容性问题IE678通过window.event</p>
+</li>
+<li><p>兼容性处理</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">div.onclick=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//console.log(e);</span></span><br><span class="line">    <span class="comment">//console.log(window.event);</span></span><br><span class="line">    e=e||<span class="built_in">window</span>.event;</span><br><span class="line">    <span class="built_in">console</span>.log(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>当我们注册事件时，event对象就会被系统自动创建，并依次传递给事件监听器（事件处理函数）</p>
+</li>
+<li><p>常用属性方法：</p>
+<table>
+<thead>
+<tr>
+<th>事件对象属性方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>e.target</td>
+<td>返回触发事件的对象           标准</td>
+</tr>
+<tr>
+<td>e.srcElement</td>
+<td>返回触发事件的对象            非标准ie6·8使用</td>
+</tr>
+<tr>
+<td>e.type</td>
+<td>返回事件的类型，比如click、mouserover不带on</td>
+</tr>
+<tr>
+<td>e.cancelBubble</td>
+<td>该属性组织冒泡，非标准ie6·8使用</td>
+</tr>
+<tr>
+<td>e.returnValue</td>
+<td>该属性阻止默认事件（默认行为）非标准ie6·8使用比如不让链接跳转</td>
+</tr>
+<tr>
+<td>e.preventDafault()</td>
+<td>该方法阻止默认事件（默认行为）标准 不让链接跳转</td>
+</tr>
+<tr>
+<td>e.stopPropagation()</td>
+<td>阻止冒泡标准</td>
+</tr>
+</tbody></table>
+<ul>
+<li>e.target  返回<strong>触发</strong>事件的对象   this返回的是<strong>绑定</strong>事件的对象（元素）</li>
+<li>了解：跟this有个非常相似的属性currentTarget   ie678不认识</li>
+<li>return false也能组织默认行为，且没有兼容性问题，<strong>return后面的代码不执行了</strong>而且只限于传统注册方式</li>
+</ul>
+</li>
+</ul>
+<h5 id="阻止事件冒泡"><a href="#阻止事件冒泡" class="headerlink" title="阻止事件冒泡"></a>阻止事件冒泡</h5><h6 id="标准写法"><a href="#标准写法" class="headerlink" title="标准写法"></a>标准写法</h6><ul>
+<li><p>利用事件对象里面的stopPropagation()方法   stop停止 Propagation传播</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">e.stopPropagation()</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h6 id="非标准写法"><a href="#非标准写法" class="headerlink" title="非标准写法"></a>非标准写法</h6><ul>
+<li><p>IE6-8利用事件对象cancelBubble属性</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">e.cancelBubble = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+
+<p>cancel  取消   bubble泡泡</p>
+</li>
+</ul>
+<h6 id="兼容性解决方案"><a href="#兼容性解决方案" class="headerlink" title="兼容性解决方案"></a>兼容性解决方案</h6><ul>
+<li><p>```javascript<br>if(e &amp;&amp; e.stopPropagation){</p>
+<pre><code>e.stopPropagation();
+</code></pre>
+<p>}else{</p>
+<pre><code>window.event.cancelBubble = true;
+</code></pre>
+<p>}</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">##### 事件委托</span><br><span class="line"></span><br><span class="line">- 事件委托</span><br><span class="line">  - 事件委托也称为事件代理，在jQuery里面被称为事件委派</span><br><span class="line"></span><br><span class="line">- 事件委托的原理</span><br><span class="line">  - 不是每个子节点单独设置事件监听器，而且事件监听器设置在其父节点上，然后利用冒泡原理影响设置每个子节点</span><br><span class="line"></span><br><span class="line">#### 常用的鼠标事件</span><br><span class="line"></span><br><span class="line">| 鼠标事件    | 触发条件                                                   |</span><br><span class="line">| :---------- | ---------------------------------------------------------- |</span><br><span class="line">| onclick     | 鼠标点击左键触发                                           |</span><br><span class="line">| onmouseover | 鼠标经过触发                                               |</span><br><span class="line">| onmouseout  | 鼠标离开触发                                               |</span><br><span class="line">| onfocus     | 获得鼠标焦点触发                                           |</span><br><span class="line">| onblur      | 失去鼠标焦点触发                                           |</span><br><span class="line">| onmousemove | 鼠标移动触发                                               |</span><br><span class="line">| onmouseup   | 鼠标弹去触发                                               |</span><br><span class="line">| onmousedown | 鼠标按下触发                                               |</span><br><span class="line">| mouseleave  | 鼠标离开，不会冒泡，和mouseenter搭配                       |</span><br><span class="line">| mouseenter  | 当鼠标移动到元素上就触发，不过只经过自身盒子触发，不会冒泡 |</span><br><span class="line">| mouseover   | 鼠标经过自身盒子和子盒子会触发                             |</span><br><span class="line"></span><br><span class="line">- 禁止鼠标右键菜单</span><br><span class="line"></span><br><span class="line">  - contextmenu主要控制应该何时显示上下文菜单，主要用于程序员取消默认的上下文菜单</span><br><span class="line"></span><br><span class="line">  - ```javascript</span><br><span class="line">    document.addEventListener(&#x27;contextmenu&#x27;,function(e)&#123;</span><br><span class="line">        e.preventDefault();</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure></li>
+<li><p>禁止鼠标选中</p>
+<ul>
+<li><p>selectstart开始选中</p>
+</li>
+<li><p>```javascript<br>document.addEventListener(‘selectstart’,function(e){</p>
+<pre><code>e.preventDefault();
+</code></pre>
+<p>})</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">###### 鼠标事件对象</span><br><span class="line"></span><br><span class="line">- event对象代表事件的状态，跟事件相关的一系列信息的集合，现阶段我们主要是用鼠标事件对象MouseEvent和键盘对象KeyboardEvent</span><br><span class="line"></span><br><span class="line">- | 鼠标事件对象 | 说明                                                      |</span><br><span class="line">  | ------------ | --------------------------------------------------------- |</span><br><span class="line">  | e.clientX    | 返回鼠标相对于浏览器窗口可视区的X坐标，不随页面滚动而变化 |</span><br><span class="line">  | e.clientY    | 返回鼠标相对于浏览器窗口可视区的Y坐标                     |</span><br><span class="line">  | e.pageX      | 返回鼠标相对于文档页面的X坐标  IE9+支持                   |</span><br><span class="line">  | e.pageY      | 返回鼠标相对于文档页面的Y坐标  IE9+支持                   |</span><br><span class="line">  | e.screenX    | 返回鼠标相对于电脑屏幕的X坐标                             |</span><br><span class="line">  | e.screenY    | 返回鼠标相对于电脑屏幕的Y坐标                             |</span><br><span class="line"></span><br><span class="line">#### 常用的键盘事件</span><br><span class="line"></span><br><span class="line">| 键盘事件   | 触发条件                                                     |</span><br><span class="line">| ---------- | ------------------------------------------------------------ |</span><br><span class="line">| onkeyup    | 某个键盘按键被松开时触发                                     |</span><br><span class="line">| onkeydown  | 某个键盘按键被按下时触发                                     |</span><br><span class="line">| onkeypress | 某个键盘按键被按下时触发，但是它不识别功能键，比如ctrl shift 箭头等 |</span><br><span class="line"></span><br><span class="line">-  注意：三个事件的执行顺序是onkeydown----onkeypress----onkeyup</span><br><span class="line">-  keydown：当用户按下键盘上的任意键时触发，如果按住不放的话，会重复触发此事件；</span><br><span class="line">-  keypress：当用户按下键盘上的**字符键**时触发，如果按住不让的话，会重复触发此事件；</span><br><span class="line">-  keyup：当用户**释放**键盘上的字符键时触发。</span><br><span class="line"></span><br><span class="line">##### 键盘事件对象</span><br><span class="line"></span><br><span class="line">| 键盘事件对象属性 | 说明              |</span><br><span class="line">| ---------------- | ----------------- |</span><br><span class="line">| keyCode          | 返回该键的ASCll值 |</span><br><span class="line"></span><br><span class="line">- 我们的keyup和keydown事件不区分大小写  a和 A得到的都是65</span><br><span class="line">- 我们的keypress事件区分大小写 </span><br><span class="line">- 利用keyCode返回的ASCll码判断按下的是那个键</span><br><span class="line">- 属性：</span><br><span class="line">  - element.altKey    element.strlKey    element.shiftKey</span><br><span class="line"></span><br><span class="line">### BOM</span><br><span class="line"></span><br><span class="line">#### BOM概述</span><br><span class="line"></span><br><span class="line">##### 什么是BOM</span><br><span class="line"></span><br><span class="line">- BOM即浏览器对象模型，他提供了独立于内容而与浏览器窗口进行交会的对象，其核心对象是window</span><br><span class="line">- BOM由一系列相关的对象有关，并且每个对象都提供了而很多的方法和属性</span><br><span class="line"></span><br><span class="line">- BOM是将浏览器看作一个对象来看待的</span><br><span class="line">- BOM由个浏览器厂商在各自浏览器上定义的，兼容性较差</span><br><span class="line"></span><br><span class="line">##### BOM的构成</span><br><span class="line"></span><br><span class="line">- window对象是浏览器的顶级窗口，它具有双重角色</span><br><span class="line">  1. 他是JS访问浏览器窗口的一个接口</span><br><span class="line">  2. 他是一个全局对象，定义在全局作用域中的变量，函数会变成window对象的属性和方法</span><br><span class="line">  3. 调用的时候可以省略window，前面学习的对话框都属于window对象方法，如alart()、prompt()等</span><br><span class="line">  4. 注意：window下一个特殊属性是window.name</span><br><span class="line"></span><br><span class="line">#### window对象的常见事件</span><br><span class="line"></span><br><span class="line">##### 窗口加载事件</span><br><span class="line"></span><br><span class="line">###### load</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  window.onload = function()&#123;&#125;</span><br><span class="line">  //或者</span><br><span class="line">  window.addEventListener(&quot;load&quot;，function()&#123;&#125;);</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>window.onload是窗口（页面）加载事件，当文档内容完全加载完成会触发该事件（包括图像、脚本文档、CSS文件等），就调用的处理函数</p>
+</li>
+<li><p>注意：</p>
+<ol>
+<li>有了window.onload就可以吧JS代码写到页面元素的上方，因为onload是等页面内容全部加载完毕，再去执行处理函数</li>
+<li>window.onload传统注册事件的方式只能写一次，如果有多个，以最后一个为准</li>
+<li>如果使用addEventListener，则没有限制</li>
+</ol>
+</li>
+</ul>
+<h6 id="DOMContentLoaded"><a href="#DOMContentLoaded" class="headerlink" title="DOMContentLoaded"></a>DOMContentLoaded</h6><ul>
+<li><p>```javascript<br>domcument.addEventListener(‘DOMContentLoaded’,function(){})</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- DOMContentLoaded事件触发时，仅当DOM加载完成，不包括样式表，图片，flash等等 IE以上才支持</span><br><span class="line"></span><br><span class="line">- 如果页面的图片很多的话，从用户访问到onload触发可能需要较长的时间，交互效果就不能实现，必然影响用户体验，此时用DOMContentLoaded事件比较合适</span><br><span class="line"></span><br><span class="line">- 区别：</span><br><span class="line"></span><br><span class="line">  - load是等页面内容全部加载完毕，再去执行处理函数</span><br><span class="line">  - DOMContentLoaded是DOM加载完毕，不包含图片、falsh css等就可以执行</span><br><span class="line"></span><br><span class="line">##### 调整窗口大小事件</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  window.onresize = function()&#123;&#125;;</span><br><span class="line">  window.addEventListener(&#x27;resize&#x27;,function()&#123;&#125;);</span><br></pre></td></tr></table></figure></li>
+<li><p>window.onresize是调整窗口大小加载事件，当触发时就调用的处理函数</p>
+</li>
+<li><p>注意：</p>
+<ol>
+<li>只要窗口大小像素发生变化，就会触发整个事件</li>
+<li>我们经常利用这个事件完成响应式布局，window.innerWidth当前屏幕的宽度</li>
+</ol>
+</li>
+</ul>
+<h4 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h4><h5 id="两种定时器"><a href="#两种定时器" class="headerlink" title="两种定时器"></a>两种定时器</h5><ol>
+<li><p>setTimeout()    </p>
+<ul>
+<li>```javascript<br>window.setTimeout(调用函数,[延迟的毫秒数]);         <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- setTimeout()方法用于设置一个定时器，该定时器在**定时器到期后执行调用函数**</span><br><span class="line"></span><br><span class="line">- 调用函数可以直接写函数也可以写函数名</span><br><span class="line"></span><br><span class="line">- 这个调用函数，需要等待时间，时间到了才会去调用这个函数，因此称为**回调函数**。简单理解，回调就是回头调用的意思，下一件干完，再回头调用这个函数</span><br><span class="line"></span><br><span class="line">- 延迟的毫秒数省略默认是0，如果写，必须是毫秒</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  function callback()&#123;</span><br><span class="line">      </span><br><span class="line">  &#125;</span><br><span class="line">  setTimeout(callback,3000);</span><br><span class="line">   setTimeout(&#x27;callback()&#x27;,3000);//不提倡</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>停止setTimeout()定时器</p>
+<ul>
+<li><p>window.clearTimeout(timeoutID)</p>
+</li>
+<li><p>```javascript<br><button>点击停止</button></p>
+<pre><code>&lt;script&gt;
+    var btn = document.querySelector(&#39;button&#39;);
+    var timer = setTimeout(function() &#123;
+        console.log(&#39;爆炸了&#39;);
+    &#125;, 3000);
+    btn.addEventListener(&#39;click&#39;, function() &#123;
+        clearTimeout(timer);
+    &#125;)
+&lt;/script&gt;
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">3. setInterval()定时器</span><br><span class="line"></span><br><span class="line">   - ```javascript</span><br><span class="line">     window.setlnterval(回调函数,[间隔的毫秒数]);</span><br></pre></td></tr></table></figure></li>
+<li><p>setInterval()方法<strong>重复调用一个函数</strong>，每隔一个函数，每隔这个时间，就去调用一次回调函数</p>
+</li>
+<li><p>注意：</p>
+<ol>
+<li>window可以省略</li>
+<li>这个调用函数可以直接写函数，或者写函数名或者采取字符串’函数名()’三种形式</li>
+<li>间隔的毫秒数默认为0，如果写，必须是毫秒，表示每隔多少毫秒就自动调用这个函数</li>
+<li>因为定时器可能有很多，所以我们经常给定时器赋值一个标识符</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>停止setInterval()定时器</p>
+<ul>
+<li>```javascript<br>window.clearInterval(intervalID);<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">   - clearInterval()方法取消了先前通过调用setInterval()建立的定时器</span><br><span class="line"></span><br><span class="line">   - 注意：</span><br><span class="line"></span><br><span class="line">     1. window可以省略</span><br><span class="line">     2. 里面的参数就是定时器的标识符</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### this指向问题</span><br><span class="line"></span><br><span class="line">- this的指向在函数定义的时候是确定不了的，只要在函数执行的时候才能确定this到底指向谁，一般情况this的最终指向的是那个调用它的对象</span><br><span class="line">- 在全局作用域或者普通函数中this的指向全局对象window（注意定时器里面的this指向window）</span><br><span class="line">- 方法调用中谁调用this指向谁</span><br><span class="line">- 构造函数中this指向构造函数的实例</span><br><span class="line">- 定时器里面的this指向window</span><br><span class="line"></span><br><span class="line">#### JS执行机制</span><br><span class="line"></span><br><span class="line">##### JS是单线程</span><br><span class="line"></span><br><span class="line">- JS最大的特点是单线程，同一时间只能做一件事</span><br><span class="line">- 若JS执行时间过长，这样就会造成页面渲染不连贯，导致页面渲染加载阻塞的感觉</span><br><span class="line"></span><br><span class="line">##### 同步和异步</span><br><span class="line"></span><br><span class="line">为了解决这个问题，利用多核CPU的计算能力</span><br><span class="line"></span><br><span class="line">###### 同步</span><br><span class="line"></span><br><span class="line">前一个任务结束后再去执行后一个任务，程序的执行顺序于任务排列顺序是一致的、同步的，比如做饭的同步做法：我们要烧水做饭，等水开了（十分种后），再去切菜、炒菜</span><br><span class="line"></span><br><span class="line">###### 异步</span><br><span class="line"></span><br><span class="line">你在做一件事时，因为这件事会花费很长时间，在做这件事的同时，你还可以去处理其他事，比如做饭的异步做法，我们在烧水的同时，利用这10分钟，去切菜，炒菜</span><br><span class="line"></span><br><span class="line">###### 本质区别</span><br><span class="line"></span><br><span class="line">这条流水线上各个流程的执行顺序不同</span><br><span class="line"></span><br><span class="line">###### 同步任务</span><br><span class="line"></span><br><span class="line">同步任务都在主线程上执行，形成一个执行栈</span><br><span class="line"></span><br><span class="line">###### 异步任务</span><br><span class="line"></span><br><span class="line">- JS异步是通过回调函数实现的</span><br><span class="line">- 一般而言，异步任务有以下三种类型</span><br><span class="line">  1. 普通事件，如click、resize</span><br><span class="line">  2. 资源加载，如load、error</span><br><span class="line">  3. 定时器，包括setInterval、setTimeout</span><br><span class="line"></span><br><span class="line">- 异步任务相关回调函数添加到任务列表中（任务队列也称为消息队列）</span><br><span class="line"></span><br><span class="line">##### JS执行机制</span><br><span class="line"></span><br><span class="line">- 先执行执行栈中的同步任务</span><br><span class="line">- 异步任务（回调函数）放在任务队列</span><br><span class="line">- 一旦执行栈中的所有同步任务执行完毕，系统会按次序读取任务队列中的异步任务，于是被读取的异步任务结束等待状态，进入执行栈，开始执行</span><br><span class="line"></span><br><span class="line">#### open对象</span><br><span class="line"></span><br><span class="line">- window.open()    &amp;open()</span><br><span class="line"></span><br><span class="line">- 内容：</span><br><span class="line"></span><br><span class="line">  1. 加载URL</span><br><span class="line">  2. 窗口的名称或者窗口的目标</span><br><span class="line">  3. 一串具有特殊意义的字符串</span><br><span class="line"></span><br><span class="line">- 注：</span><br><span class="line"></span><br><span class="line">  - 如果只有第一个参数，调用open方法会打开新窗口，加载url</span><br><span class="line"></span><br><span class="line">  - 第二个参数，是给打开的新窗口起一个名字然后以后，再去加载url</span><br><span class="line"></span><br><span class="line">  - 第三个参数是字符串</span><br><span class="line"></span><br><span class="line">    - | 名称   | 值   | 说明                      |</span><br><span class="line">      | ------ | ---- | ------------------------- |</span><br><span class="line">      | width  | 数值 | 新窗口的宽度，不能小于100 |</span><br><span class="line">      | height | 数值 | 新窗口的高度，不能小于100 |</span><br><span class="line">      | top    | 数值 | 新窗口的Y坐标，不能是负值 |</span><br><span class="line">      | left   | 数值 | 新窗口的X坐标，不能是负值 |</span><br><span class="line"></span><br><span class="line">    - 设置当前打开窗口的参数</span><br><span class="line"></span><br><span class="line">  - opener是打开当前窗口的父窗口的window对象(**IE不支持**)</span><br><span class="line"></span><br><span class="line">#### location对象</span><br><span class="line"></span><br><span class="line">window对象给我们提供了一个location属性用于获取或设置窗体的URL，并且可以用于解析URL。因为这个属性返回的是一个对象，我们将这个属性也成为location对象</span><br><span class="line"></span><br><span class="line">###### URL</span><br><span class="line"></span><br><span class="line">- 统一资源定位符是互联网上标准资源的地址。互联网上的每个文件都有唯一的URL，它包含的信息指出文件的位置以及浏览器应该怎么处理它</span><br><span class="line"></span><br><span class="line">- 一般语法格式</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+protocol://host[:post]/path/[?quary]#fragmrnt<br><a target="_blank" rel="noopener" href="http://www.itcast.cn/index.html?name=andy&amp;age=18#link">http://www.itcast.cn/index.html?name=andy&amp;age=18#link</a><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">| 组成     | 说明                                                         |</span><br><span class="line">| -------- | ------------------------------------------------------------ |</span><br><span class="line">| protocol | 通信协议 常用的http,ftp,maito等                              |</span><br><span class="line">| host     | 主机（域名）www.itheima.com                                  |</span><br><span class="line">| port     | 端口号 可选，省略时使用方案的默认接口，如http的默认端口为80  |</span><br><span class="line">| path     | 路径 由 零或多个&#x27;/&#x27;符号隔开的字符串，一般用来表示主机上的一个目录或文件地址 |</span><br><span class="line">| query    | 参数 以键值对的形式，通过&amp;符号分隔开                         |</span><br><span class="line">| fragment | 片段  #后面的内容常用于链接 锚点                             |</span><br><span class="line"></span><br><span class="line">###### location对象属性</span><br><span class="line"></span><br><span class="line">| location对象属性    | 返回值                               |</span><br><span class="line">| ------------------- | ------------------------------------ |</span><br><span class="line">| location.herf       | 获取或着设置整个URL                  |</span><br><span class="line">| location.host       | 返回主机（域名）www.itheima.com      |</span><br><span class="line">| location.port       | 返回端口号 如果未写返回空字符串      |</span><br><span class="line">| falocation.pathname | 返回路径                             |</span><br><span class="line">| location.search     | 返回参数                             |</span><br><span class="line">| location.hash       | 返回片段 #后面的内容 常见于链接 锚点 |</span><br><span class="line"></span><br><span class="line">- 给location.href赋值，可以跳转到其他页面</span><br><span class="line">- window.location==window.document.location</span><br><span class="line"></span><br><span class="line">###### location常见方法</span><br><span class="line"></span><br><span class="line">- | location对象方法   | 返回值                                                       |</span><br><span class="line">  | ------------------ | ------------------------------------------------------------ |</span><br><span class="line">  | location.assign()  | 跟href一样，可以跳转页面（也称重定向页面）                   |</span><br><span class="line">  | location.replace() | 替换当前页面，因为不记录历史，所以不能后退页面               |</span><br><span class="line">  | location.reload()  | 重新加载页面，相当于刷新按钮或者f5,如果参数为true强制刷新ctrl+f5 |</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### nevigator对象</span><br><span class="line"></span><br><span class="line">- navigator对象吧包含有关浏览器的信息，他有很多属性，我们最常用的是userAgent，该属性可以返回由客户机发送服务器的user-agent头部的值</span><br><span class="line"></span><br><span class="line">- 下面前端代码可以判断用户那个终端打开页面，实现跳转</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+if((navigator.userAgent.match(/(phone|pad|pod|iphone|ipod|ios|ipad|Android|Mobile|BlackBeery|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|Webos|Symbian|window Phone)/i))) {<br> window.location.href = “”;//手机<br>}else {<br> window.location.href = “”;//电脑<br>}<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### history对象</span><br><span class="line"></span><br><span class="line">- window对象给我们提供了一个history对象，与浏览器历史记录进行交互，该对象包含用户（在浏览器窗口中）访问过的URL</span><br><span class="line"></span><br><span class="line">- | history对象方法 | 作用                                                    |</span><br><span class="line">  | --------------- | ------------------------------------------------------- |</span><br><span class="line">  | back()          | 可以后退功能                                            |</span><br><span class="line">  | forward()       | 前进功能                                                |</span><br><span class="line">  | go(参数)        | 前进后退功能 参数如果是1前进1个页面如果是-1后退一个页面 |</span><br><span class="line"></span><br><span class="line">#### search处理</span><br><span class="line"></span><br><span class="line">- search.indexOf(key)//找不到目标返回值就是-1</span><br><span class="line"></span><br><span class="line">### PC端网络特效</span><br><span class="line"></span><br><span class="line">#### 元素偏移量offset系列</span><br><span class="line"></span><br><span class="line">##### offset概述</span><br><span class="line"></span><br><span class="line">- offset翻译过来就是偏移量，我们使用offset系列相关属性可以动态的得到该元素的位置（偏移）、大小等</span><br><span class="line"></span><br><span class="line">  - 获得元素距离带有定位父元素的位置</span><br><span class="line">  - 获得元素自身大小（宽度高度）</span><br><span class="line">  - 注意：返回的数值不带单位</span><br><span class="line"></span><br><span class="line">- offset系列常用属性：</span><br><span class="line"></span><br><span class="line">  | offset系列属性       | 作用                                                         |</span><br><span class="line">  | -------------------- | ------------------------------------------------------------ |</span><br><span class="line">  | element.offsetParent | 返回作为该元素带有定位的父级元素 如果父级元素都没有定位则返回body |</span><br><span class="line">  | element.offsetTop    | 返回元素相对带有定位父元素上方的偏移                         |</span><br><span class="line">  | element.offsetLeft   | 返回元素相对带有定位元素左边框的偏移                         |</span><br><span class="line">  | element.offsetWidth  | 返回自身包括padding、边框、内容区的高度，返回数值不带单位    |</span><br><span class="line">  | element.offsetHeight | 返回自身包括padding、边框、内容区的高度，返回数值不带单位    |</span><br><span class="line"></span><br><span class="line">##### offset与style区别</span><br><span class="line"></span><br><span class="line">- offset</span><br><span class="line">  - offset可以得到任意样式表中的样式值</span><br><span class="line">  - offset系列获得的数值是没有单位的</span><br><span class="line">  - offsetWidth包含padding+border+width</span><br><span class="line">  - offsetWidthde等属性是只读属性，只能获取不能赋值</span><br><span class="line">  - 所以，我们想要获取元素大小位置，用offset更合适</span><br><span class="line"></span><br><span class="line">- style</span><br><span class="line">  - style只能得到行内样式表中的样式值</span><br><span class="line">  - style.width获得的是带单位的字符串</span><br><span class="line">  - style.widyh获得不包含padding和border的值</span><br><span class="line">  - style.width是可读写属性，可以获取也可以赋值</span><br><span class="line">  - 所以，我们想要给元素更改值，则需要用style改变</span><br><span class="line"></span><br><span class="line">#### 元素可视区client系列</span><br><span class="line"></span><br><span class="line">- client翻译过来就是客户端，我们使用client系列的相关信息，通过client系列的相关属性可以动态的得到该元素的边框大小，元素大小等。</span><br><span class="line"></span><br><span class="line">- | client系列属性       | 作用                                                         |</span><br><span class="line">  | -------------------- | ------------------------------------------------------------ |</span><br><span class="line">  | element.clientTop    | 返回元素的上边框的大小                                       |</span><br><span class="line">  | element.clientLeft   | 返回元素左边框的的大小                                       |</span><br><span class="line">  | element.clientWidth  | 返回自身包括padding，内容区的宽度，不含边框，返回数值不带单位 |</span><br><span class="line">  | element.clientHeight | 返回自身包括padding，内容区的高度，不含边框，返回数值不带单位 |</span><br><span class="line"></span><br><span class="line">##### 立即执行函数</span><br><span class="line"></span><br><span class="line">- 定义：不需要带哦有，立马能够自己执行的函数</span><br><span class="line"></span><br><span class="line">- 写法：(function () &#123;&#125; ) ()     或者       （function () &#123;&#125; () );</span><br><span class="line">- 主要作用：创建一个独立的作用域0，避免命名冲突问题</span><br><span class="line">- 第二个小括号可以看作是调用函数</span><br><span class="line">- 也可以写函数名</span><br><span class="line"></span><br><span class="line">#### 元素滚动sroll系列</span><br><span class="line"></span><br><span class="line">##### 元素sroll系列属性</span><br><span class="line"></span><br><span class="line">- sroll翻译过来就是滚动的，我们使用sroll系列的相关属性可以动态的得到该元素的大小，滚动距离等</span><br><span class="line"></span><br><span class="line">- | sroll系列属性       | 作用                                           |</span><br><span class="line">  | ------------------- | ---------------------------------------------- |</span><br><span class="line">  | element.srollTop    | 返回被卷去的上侧距离，返回数值不带单位         |</span><br><span class="line">  | element.srollLeft   | 返回被卷去的左侧距离，返回数值不带单位         |</span><br><span class="line">  | element.srollWidth  | 返回自身的实际宽度，不含边框，返回数值不带单位 |</span><br><span class="line">  | element.srollHeight | 返回自身的实际高度，不含边框，返回数值不带单位 |</span><br><span class="line"></span><br><span class="line">##### 页面被卷去 的头部兼容性解决方案</span><br><span class="line"></span><br><span class="line">- 需要注意的是，页面被卷去的头部，有兼容性问题，因此被卷去的头部通常有以下几种写法</span><br><span class="line"></span><br><span class="line">  1. 声明了DTD，使用document.documentElement.scrollTop</span><br><span class="line">  2. 未声明DTD，使用document.body.srollTop</span><br><span class="line">  3. 新方法window.pageYOffset和window.pageXOffset,IE9开始 支持</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  function getScroll()&#123;</span><br><span class="line">  	return &#123;       				left:window.pageXOffset||document.documentElement.scrollLeft||document.body.srollLeft||0,</span><br><span class="line">  top:window.pageYOffset||document.documentElement.scrollTop||document.body.srollTop||0</span><br><span class="line">      &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  //使用的时候 </span><br><span class="line">  getSroll().left</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<h4 id="三大系类总结"><a href="#三大系类总结" class="headerlink" title="三大系类总结"></a>三大系类总结</h4><table>
+<thead>
+<tr>
+<th>三大系列大小对比</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>element.offsetWidth</td>
+<td>返回自身包括padding，边框，内容区的高度，返回数值不带单位</td>
+</tr>
+<tr>
+<td>element.clientWidth</td>
+<td>返回自身包含padding，内容区的宽度，不含边框，返回数值不带单位</td>
+</tr>
+<tr>
+<td>element.srollWidth</td>
+<td>返回自身实际的宽度，不含边框，返回数值不带单位</td>
+</tr>
+</tbody></table>
+<ul>
+<li>主要用法<ol>
+<li>offset系列经常用于获得元素位置 offsetLeft、ofFsetTop</li>
+<li>client经常用于获取元素大小clientWidth、clientHeight</li>
+<li>scroll经常用于获取滚动距离scrollTop、scrollLeft</li>
+<li>注意页面滚动距离通过window.pageXOffset获得</li>
+</ol>
+</li>
+</ul>
+<h4 id="小知识点"><a href="#小知识点" class="headerlink" title="小知识点"></a>小知识点</h4><h5 id="dpr-物理像素比"><a href="#dpr-物理像素比" class="headerlink" title="dpr  物理像素比"></a>dpr  物理像素比</h5><ul>
+<li>var dpr=window.devicePixelRatio ||  1</li>
+<li>如果有自身的像素比，如有就用本身的，没有就用1</li>
+<li>PC端是1</li>
+<li>iphone678是2</li>
+</ul>
+<h5 id="pageshow事件"><a href="#pageshow事件" class="headerlink" title="pageshow事件"></a>pageshow事件</h5><ul>
+<li><p>我们重新加载页面触发的事件</p>
+</li>
+<li><p>e.persisted 返回的是true 就是说如果这个页面是从缓存取过来的页面，也需要重新计算一下rem的大小</p>
+</li>
+</ul>
+<h4 id="动画函数封装"><a href="#动画函数封装" class="headerlink" title="动画函数封装"></a>动画函数封装</h4><h5 id="动画实现原理"><a href="#动画实现原理" class="headerlink" title="动画实现原理"></a>动画实现原理</h5><ul>
+<li><p>核心原理：通过定时器setInterval()不断移动盒子的位置</p>
+</li>
+<li><p>```javascript<br>//动画函数的封装<br>// 简单动画函数封装obj目标对象 target 目标位置<br>function animate(obj, target) {</p>
+<pre><code>//给不同元素指定了不同的定时器
+        obj.timer = setInterval(function() &#123;
+            if (obj.offsetLeft &gt;= target) &#123;
+                // 停止动画 本质是停止定时器
+                clearInterval(obj.timer);
+            &#125;
+            obj.style.left = obj.offsetLeft + 1 + &#39;px&#39;;
+
+        &#125;, 30);
+    &#125;
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">##### 缓动效果原理</span><br><span class="line"></span><br><span class="line">- 缓动动画就是让元素运动的速度有所变化，最常见的就是让速度慢慢停下来</span><br><span class="line"></span><br><span class="line">- 思路：</span><br><span class="line"></span><br><span class="line">  1. 让盒子每次移动的距离慢慢减小，速度就会慢慢落下来</span><br><span class="line">  2. 核心算法：(目标值-现在的位置)/10 作为每次移动的距离步长</span><br><span class="line">  3. 停止条件就是：让盒子当前位置等于目标位置就停止定时器</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  function animate(obj, target) &#123;</span><br><span class="line">              // 先清除以前的定时器，只保留当前的一个定时器执行</span><br><span class="line">              clearInterval(obj.timer);</span><br><span class="line">              obj.timer = setInterval(function() &#123;</span><br><span class="line">                  // 步长值写到定时器的里面</span><br><span class="line">                  // 把我们步长值改为整数 不要出现小数的问题</span><br><span class="line">                  // var step = Math.ceil((target - obj.offsetLeft) / 10);</span><br><span class="line">                  var step = (target - obj.offsetLeft) / 10;</span><br><span class="line">                  step = step &gt; 0 ? Math.ceil(step) : Math.floor(step);</span><br><span class="line">                  if (obj.offsetLeft == target) &#123;</span><br><span class="line">                      // 停止动画 本质是停止定时器</span><br><span class="line">                      clearInterval(obj.timer);</span><br><span class="line">                  &#125;</span><br><span class="line">                  // 把每次加1 这个步长值改为一个慢慢变小的值  步长公式：(目标值 - 现在的位置) / 10</span><br><span class="line">                  obj.style.left = obj.offsetLeft + step + &#x27;px&#x27;;</span><br><span class="line">  </span><br><span class="line">              &#125;, 15);</span><br><span class="line">          &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="动画函数添加回调函数"><a href="#动画函数添加回调函数" class="headerlink" title="动画函数添加回调函数"></a>动画函数添加回调函数</h5><ul>
+<li>回调函数原理：函数可以作为一个参数，将这个函数作为参数传到另一个函数里面，当那个函数执行完毕之后，再执行传进去的这个函数，这个过程称为<strong>回调</strong>。</li>
+<li>写到定时器结束里面</li>
+</ul>
+<h5 id="节流阀"><a href="#节流阀" class="headerlink" title="节流阀"></a>节流阀</h5><ul>
+<li><p>防止轮播图按钮连续点击造成播放太快</p>
+</li>
+<li><p>节流阀目的：当上一个函数动画内容执行完毕，再去执行下一个函数动画，让世界无法连续触发</p>
+</li>
+<li><p>核心实现思路：利用回调函数，添加一个变量来控制，锁住函数和解锁函数</p>
+</li>
+<li><p>开始设置一个变量var flag = true;</p>
+</li>
+<li><p>if(flag){</p>
+<p>​    flag=false;</p>
+<p>​    do something;</p>
+<p>}//关闭水龙头</p>
+</li>
+<li><p>利用回调函数 动画执行完毕，flag = true 打卡水龙头</p>
+</li>
+</ul>
+<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><h4 id="http协议"><a href="#http协议" class="headerlink" title="http协议"></a>http协议</h4><ul>
+<li>HTTP：超文本传输协议，用于从web服务器传输超文本到本地浏览器的传输协议，他是一个无状态的协议</li>
+</ul>
+<h4 id="cookie概述"><a href="#cookie概述" class="headerlink" title="cookie概述"></a>cookie概述</h4><ul>
+<li><p>cookie是指缓存在本地客户端的数据</p>
+</li>
+<li><p>cookie一般储存100多条数据</p>
+</li>
+<li><p>```javascript</p>
+<pre><code>//查询cookie
+   console.log(document.cookie);
+   //设置cookie
+   document.cookie = &quot;username=honny&quot;;
+   //设置存储时间
+   var oDate = new Date();
+   oDate.setDate(oDate.getDate() + 3);
+   document.cookie = &quot;username=honny;expires=&quot; + oDate;
+   //修改cookie
+   document.cookie = &quot;username=honny&quot;;
+   document.cookie = &quot;username=honny1&quot;;
+   //删除cookie
+   var oDate = new Date();
+   document.cookie = &quot;username=honny;expires=&quot; + oDate;
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### cookie函数的封装</span><br><span class="line"></span><br><span class="line">- </span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  //新建cookie</span><br><span class="line">  function setCookie(name, value, day) &#123;</span><br><span class="line">              var oDate = new Date();</span><br><span class="line">              oDate.setDate(oDate.getDate() + day);</span><br><span class="line">              document.cookie = name + &quot;=&quot; + value + &quot;;expires=&quot; + oDate;</span><br><span class="line">          &#125;</span><br><span class="line">          setCookie(&quot;name1&quot;, &quot;honney1&quot;, 1);</span><br><span class="line">          setCookie(&quot;name2&quot;, &quot;honney2&quot;, 1);</span><br><span class="line">  </span><br><span class="line">          console.log(document.cookie);</span><br><span class="line">  //获取cookie</span><br><span class="line">          function getCookie(name) &#123;</span><br><span class="line">              var str = document.cookie;</span><br><span class="line">              var arr = str.split(&quot;; &quot;);</span><br><span class="line">              for (var i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">                  var arr1 = arr[i].split(&quot;=&quot;);</span><br><span class="line">                  if (arr1[0] == name) &#123;</span><br><span class="line">                      return arr1[1];</span><br><span class="line">                  &#125;</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">  </span><br><span class="line">          console.log(getCookie(&quot;name2&quot;));</span><br><span class="line">  //消除cookie</span><br><span class="line">          function removeCookie(name) &#123;</span><br><span class="line">              setCookie(name, 1, -1);</span><br><span class="line">          &#125;</span><br><span class="line">  </span><br><span class="line">          removeCookie(&quot;name1&quot;);</span><br><span class="line">          console.log(getCookie(&quot;name1&quot;));</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><ul>
+<li>正则表达式是由普通字符及特殊字符组成的对字符串进行过滤的逻辑公式</li>
+</ul>
+<h4 id="创建方式-1"><a href="#创建方式-1" class="headerlink" title="创建方式"></a>创建方式</h4><ul>
+<li><p>字面量的方式</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/abc/</span>;</span><br></pre></td></tr></table></figure></li>
+<li><p>构造函数</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;ab&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> flag = reg.test(str);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>test方法：正则表达式的方法，用于检测字符串是否含有复合规则的子串，有返回true，没返回false</p>
+</li>
+<li><p>exec方法：正则表达式的方法，将匹配成功的内容放到数组里，如果没有在则返回null</p>
+</li>
+<li><p>match方法：字符串方法 str.match(reg);</p>
+</li>
+<li><p>search方法：用于查找符合规则的子串的位置只返回第一个匹配的位置</p>
+</li>
+<li><p>split方法：以。。。分隔</p>
+</li>
+<li><p>replace方法：用第二个字符串替换第一个</p>
+</li>
+<li><p>修饰符g   i</p>
+<ul>
+<li>g表示全局匹配</li>
+<li>i表示忽略大小写</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>特殊字符</p>
+<ul>
+<li><p>.代表除了换行符之外的所有单个字符</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/g..gle/gi</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;googleg--gle&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(rest.test(str));<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(str.match(reg));</span><br></pre></td></tr></table></figure></li>
+<li><p>*重复多次匹配，匹配任意次（0-n）</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/g*gle/gi</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;ggggle&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(str));<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(str.match(reg));</span><br></pre></td></tr></table></figure></li>
+<li><p>+至少有一次重复匹配</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/g+gle/gi</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;ggle&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(str));</span><br></pre></td></tr></table></figure></li>
+<li><p>? 进行0或者1次匹配</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/g?gle/gi</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;ggle&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(str));</span><br></pre></td></tr></table></figure></li>
+<li><p>[]表示可以出现的范围[0-9]</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/[a-z]/gi</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;123m4&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(str));</span><br></pre></td></tr></table></figure></li>
+<li><p>\w数字字母下划线等同于[0-9||a-z||A-Z||_ ]  \W非数字字母下划线</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/\w+/gi</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;abc13&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(str),str.match(reg));</span><br></pre></td></tr></table></figure></li>
+<li><p>\d表示数字[0-9]</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/\d+/gi</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;12345abc&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(str),str.match(reg));</span><br></pre></td></tr></table></figure></li>
+<li><p>\s 匹配空格</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/\s+/gi</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;good good   study&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.replace(reg,<span class="string">&quot;&quot;</span>));</span><br></pre></td></tr></table></figure></li>
+<li><p>{m,n}至少匹配m次，至多匹配n次</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/go&#123;3,6&#125;gle/gi</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;gooogle&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(str));</span><br></pre></td></tr></table></figure></li>
+<li><p>// /^ 匹配开始$/匹配结尾</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/^g.+g$/gi</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;gooogle&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(str));</span><br></pre></td></tr></table></figure></li>
+<li><p>|   或</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/google|baidu|bing|yahoo/gi</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;www.baidu.com&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(str));</span><br></pre></td></tr></table></figure></li>
+<li><p>() 分组 将内容作为一个整体进行匹配</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/(g.+gle)&#123;4,6&#125;/gi</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;googleaaagooglegooglegooglegoogle&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(str),str.match(reg));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">RegExp</span>.$1);<span class="comment">//获取里面的分组内容</span></span><br></pre></td></tr></table></figure></li>
+<li><p>$1 $2分组中的第一个元素和第二个</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/(.*)\s(.*)/</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;taobao baidu&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(str.replace(reg,<span class="string">&quot;$2 $1&quot;</span>));</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="ES6基础语法"><a href="#ES6基础语法" class="headerlink" title="ES6基础语法"></a>ES6基础语法</h3><h4 id="let的使用"><a href="#let的使用" class="headerlink" title="let的使用"></a>let的使用</h4><ul>
+<li>用于声明变量。他的用法类似于var，但是声明的变量，只在let命令所在的代码块内有效</li>
+<li>存在块级作用域{}</li>
+<li>不存在声明提升</li>
+<li>不允许重复声明（包括普通变量和函数参数）</li>
+</ul>
+<h4 id="const的使用"><a href="#const的使用" class="headerlink" title="const的使用"></a>const的使用</h4><ul>
+<li>用于声明常量，不要试图改变常量的值，其他语法参照let</li>
+</ul>
+<h4 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h4><ul>
+<li><p>按照一定模式，从数组和对象中提取值，对变量进行赋值</p>
+</li>
+<li><p>数组：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,b,c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br></pre></td></tr></table></figure></li>
+<li><p>默认赋值：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">[a,b=<span class="number">2</span>]=[<span class="number">3</span>];</span><br><span class="line"><span class="keyword">let</span> c;</span><br><span class="line">[a=<span class="number">3</span>]=[c];<span class="comment">//不会覆盖2</span></span><br></pre></td></tr></table></figure></li>
+<li><p>对象</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123;a,b&#125;=&#123;<span class="attr">a</span>:<span class="string">&quot;aaa&quot;</span>,<span class="attr">b</span>:<span class="string">&quot;bbb&quot;</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">a</span>:b&#125;=&#123;<span class="attr">a</span>:<span class="string">&quot;aaa&quot;</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> &#123;a,b=<span class="number">5</span>&#125;=&#123;<span class="attr">a</span>:<span class="number">1</span>&#125;;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h4><ul>
+<li><p>将变量或表达式直接嵌入字符串</p>
+</li>
+<li><p>使用反引号（``）拼接多行字符串</p>
+</li>
+<li><p>ES5</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    <span class="string">&quot;name&quot;</span>: <span class="string">&quot;john&quot;</span>,</span><br><span class="line">    <span class="attr">age</span>: <span class="number">18</span></span><br><span class="line">&#125;;</span><br><span class="line">    <span class="keyword">var</span> name = obj.name;</span><br><span class="line">    <span class="keyword">var</span> age = obj.age;</span><br><span class="line">    <span class="built_in">console</span>.log(name + <span class="string">&quot;的年龄是&quot;</span> + age);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="keyword">let</span> oUl=<span class="built_in">document</span>.getElementById(<span class="string">&quot;test&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> html=<span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> arr)&#123;</span><br><span class="line">    html+=<span class="string">&quot;&lt;li&gt;&quot;</span>+arr[i]+<span class="string">&quot;&lt;li&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line">oUl.innerHTML=html;</span><br></pre></td></tr></table></figure></li>
+<li><p>ES6</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;join&quot;</span>,<span class="string">&quot;age&quot;</span>:<span class="number">20</span>&#125;;</span><br><span class="line"><span class="keyword">let</span> &#123;name,age&#125;=obj;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;name&#125;</span>的年龄是<span class="subst">$&#123;age&#125;</span>`</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="keyword">let</span> oUl=<span class="built_in">document</span>.getElementById(<span class="string">&quot;test&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> html=<span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> arr)&#123;</span><br><span class="line">   	html+=<span class="string">`&lt;li&gt;</span></span><br><span class="line"><span class="string">		&lt;a herf=&quot;&quot;&gt;<span class="subst">$&#123;arr[i]&#125;</span>&lt;/a&gt;</span></span><br><span class="line"><span class="string">		</span></span><br><span class="line"><span class="string">	&lt;li&gt;`</span>;</span><br><span class="line">&#125;</span><br><span class="line">oUl.innerHTML=html;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h4><ul>
+<li><p>只含有一个表达式</p>
+</li>
+<li><p>含有多条语句</p>
+</li>
+<li><p>this的指向问题</p>
+</li>
+<li><p>没有自己的<code>this</code>，<code>arguments</code>，<code>super</code>或<code>new.target</code>。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。</p>
+</li>
+<li><p>不提供自身的this绑定</p>
+</li>
+<li><p>```javascript<br>//ES5<br>var foo = function (){</p>
+<pre><code>return 1;
+</code></pre>
+<p>}<br>console.log(foo());</p>
+<p>//ES6<br>let foo = () =&gt;1;<br>console.log(foo());<br>//传参进去<br>let foo = (a) =&gt;a;<br>console.log(foo(10));<br>//多条语句<br>let foo = (a) =&gt;{</p>
+<pre><code>let b=10;
+return a+b;
+</code></pre>
+<p>}<br>console.log(foo(10));</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### this的指向问题</span><br><span class="line"></span><br><span class="line">- ES5普通函数的this指针指向window</span><br><span class="line"></span><br><span class="line">- 箭头函数不提供自身的 this 绑定（`this` 的值将保持为闭合词法上下文的值）。</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  //ES6</span><br><span class="line">  var foo = () =&gt; &#123;</span><br><span class="line">      console.log(this);</span><br><span class="line">  &#125;</span><br><span class="line">  foo(); //this指向window</span><br></pre></td></tr></table></figure></li>
+<li><p>```javascript<br>//ES5写法</p>
+<pre><code>   var name = &quot;window&quot;;
+   var obj = &#123;
+       &quot;name&quot;: &quot;john&quot;,
+       &quot;sayHello&quot;: function() &#123;
+           console.log(this.name);
+       &#125;
+   &#125;
+   obj.sayHello();
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  //ES6 this指向定义时所在的作用域而不是执行时的作用域 </span><br><span class="line">          var obj = &#123;</span><br><span class="line">              &quot;name&quot;: &quot;john&quot;,</span><br><span class="line">              //普通的成员函数</span><br><span class="line">              &quot;sayHello&quot;: () =&gt; &#123;</span><br><span class="line">                  console.log(this.name);//this指向window</span><br><span class="line">              &#125;</span><br><span class="line">              //定时器版本</span><br><span class="line">              &quot;sayHello&quot;:function()&#123;</span><br><span class="line">                  setTimeout(()=&gt;&#123;console.log(this.name)&#125;,1000);</span><br><span class="line">              &#125;//john function是在obj里面定义的，所以this指向obj</span><br><span class="line">  			//ES6版本</span><br><span class="line">  			&quot;sayHello&quot;:()=&gt;&#123;</span><br><span class="line">                  setTimeout(()=&gt;&#123;console.log(this.name)&#125;,1000);//此时指向window</span><br><span class="line">          &#125;</span><br><span class="line">          obj.sayHello();</span><br><span class="line">  //相当于下面的代码		</span><br><span class="line">  		var obj = &#123;&#125;;</span><br><span class="line">          obj.name = &quot;john&quot;;</span><br><span class="line">          obj.sayHello = () =&gt; &#123;huan</span><br><span class="line">              console.log(this.name);</span><br><span class="line">          &#125;</span><br><span class="line">          obj.sayHello();</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="set结构"><a href="#set结构" class="headerlink" title="set结构"></a>set结构</h4><ul>
+<li>```javascript<br>let set = new Set([1,2,3,4,4]);//构造函数  默认删除相同元素[…set]//…扩展运算符，将类数组对象转换以逗号分隔的序列for of//遍历<br>console.log(arr);<br>for (let i of set) {<pre><code>console.log(i); 
+</code></pre>
+}set.size//长度<br>set.add(0)//加一个元素<br>set.delete(0)//删除一个元素<br>set.has(0)//判断是否含有一个元素<br>set.clear();//清空所有元素keys()//返回键名的遍历器<br>for(let item of set,keys())<br>{<pre><code>console.log(item);
+</code></pre>
+}values() //返回键值的遍历器<br>for(let item of set,values())<br>{<pre><code>console.log(item);
+</code></pre>
+}entries() //返回键值对的遍历器<br>for(let [key,item] of set,entries())<br>{<pre><code>console.log(key,item);
+</code></pre>
+}forEach()//返回回调函数遍历每个成员<br>set.forEach((value,key)=&gt;console.log(value<em>2))<br>/</em><br>2<br>4<br>6<br>8<br>*/<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">#### map结构</span><br><span class="line"></span><br><span class="line">```javascript</span><br><span class="line">let map = new Map([[&quot;name&quot;,&quot;john&quot;],[&quot;age&quot;,30]]);//设置键值对</span><br><span class="line"></span><br><span class="line">map.set(1,1);</span><br><span class="line"></span><br><span class="line">map.size//长度</span><br><span class="line"></span><br><span class="line">map.set(key,value);//添加键值对</span><br><span class="line">map.get(key);//获取键值对</span><br><span class="line">map.delete(key);</span><br><span class="line">map.has(key);</span><br><span class="line">map.clear();</span><br><span class="line"></span><br><span class="line">key();//返回键名的遍历器</span><br><span class="line"></span><br><span class="line">values();//返回键值的遍历器</span><br><span class="line"></span><br><span class="line">entries();//返回键值对的遍历器</span><br><span class="line"></span><br><span class="line">for(let [key,value] ofmap.entries())</span><br><span class="line">    &#123;</span><br><span class="line">        console.log(key,value);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">forEach();//使用回调函数遍历每个成员</span><br><span class="line">map.forEach((value,key)=&gt;console.log(value*2))</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="生成器函数（generator）"><a href="#生成器函数（generator）" class="headerlink" title="生成器函数（generator）"></a>生成器函数（generator）</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> * <span class="title">foo</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">yield</span> x+<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">yield</span> x+<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">return</span> x+<span class="number">3</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> f = foo(<span class="number">1</span>);</span><br><span class="line">f.next();</span><br><span class="line"><span class="built_in">console</span>.log(f.next());</span><br><span class="line"><span class="comment">//Object&#123;</span></span><br><span class="line">	done: <span class="literal">false</span><span class="comment">//表示该生成集函数是否含有相应的yield或者是否结束</span></span><br><span class="line">	<span class="attr">value</span>: <span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//想要继续运行</span></span><br><span class="line"><span class="built_in">console</span>.log(f.next(),f.next(),f.next());</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//面试题</span></span><br><span class="line"><span class="comment">//next()里面的参数表示上一级的返回值</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> * <span class="title">foo</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> y = <span class="number">2</span>*(<span class="keyword">yield</span>(x+<span class="number">1</span>));</span><br><span class="line">    <span class="keyword">var</span> z = <span class="keyword">yield</span>(y/<span class="number">3</span>);</span><br><span class="line">    <span class="keyword">return</span> (x+y+z);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> it = foo(<span class="number">5</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(it.next(<span class="number">3</span>));<span class="comment">//第一次无论传什么，都是6 即 5+1        value=6</span></span><br><span class="line"><span class="built_in">console</span>.log(it.next(<span class="number">12</span>));<span class="comment">//yield(x+1)为12，y=24,z=8即24/3	  value=8</span></span><br><span class="line"><span class="built_in">console</span>.log(it.next(<span class="number">13</span>));<span class="comment">//yield(y/3)为13，z=13			   value=42</span></span><br></pre></td></tr></table></figure>
+
+<p>利用生成器函数编写斐波拉契数列（0    1    1    2    3    5    8    13    21    34…）</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">feibo</span>(<span class="params">n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> b = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">yield</span> a;</span><br><span class="line">        <span class="keyword">let</span> tmp = a + b;</span><br><span class="line">        a = b;</span><br><span class="line">        b = tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//console.log(tmp);</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> f = feibo(<span class="number">10</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> f) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="类"><a href="#类" class="headerlink" title="类"></a>类</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span>()</span>&#123;</span><br><span class="line">    <span class="function"><span class="title">constructor</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.name=name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="title">sayHello</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//实例化</span></span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> Person(<span class="string">&quot;yyvsu&quot;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(person.name);</span><br><span class="line">person.sayHello();</span><br></pre></td></tr></table></figure>
+
+<h3 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h3><h4 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h4><ul>
+<li>Ajax全称：Asynchronous JavaScript And XML</li>
+<li>是一种异步加载数据的技术</li>
+<li>可以通过使用Ajax，实现页面的局部刷新</li>
+<li>可以不用刷新页面就可以从服务器取得数据，实现局部更新页面</li>
+</ul>
+<h4 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h4><ul>
+<li>Ajax的核心对象：XMLHttpRequest</li>
+<li>XHR就是Ajax</li>
+</ul>
+<h5 id="GET"><a href="#GET" class="headerlink" title="GET"></a>GET</h5><ul>
+<li><p>从服务器取得数据</p>
+</li>
+<li><p>```javascript</p>
+<h1></h1>
+    <script>
+        // 1.创建Ajax对象
+        var xhr = new XMLHttpRequest();
+        // 2.监听请求
+        xhr.onreadystatechange = function() {
+                //当xhr对象的readyState属性发生改变，这个事件就会触发
+                //readyState:
+                // 0 ===>xhr 对象已经创建，但还是没有进行初始化操作
+                // 1 ===>xhr对象已经调用了open
+                // 2 ===>xhr已经发出ajax请求
+                // 3 ===>已经返回了部分数据
+                // 4 ===>数据已经全部返回
+                if (xhr.readyState != 4) {
+                    return;
+                }
+                //在200到300之间证明请求是成功的
+                if (xhr.status > 200 & xhr.status <= 300) {
+                    //数据放在了xhr.responseText的属性中(string)
+                    document.querySelector('h1').innerHTML = xhr.responseText;
+                } else {
+                    console.log('请求失败');
+                }
+            }
+            // 3.打开这个对象
+        xhr.open('get', 'test.txt', true);
+        // 4.发送请求
+        xhr.send();
+    </script>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">   </span><br><span class="line"></span><br><span class="line">##### POST</span><br><span class="line"></span><br><span class="line">- 向服务器传输数据</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  // 1.创建一个xhr对象</span><br><span class="line">          var xhr = new XMLHttpRequest();</span><br><span class="line">          //5.监听数据返回</span><br><span class="line">          xhr.onreadystatechange = function() &#123;</span><br><span class="line">                  if (xhr.readyState != 4) &#123;</span><br><span class="line">                      return;</span><br><span class="line">                  &#125;</span><br><span class="line">                  //在200到300之间证明请求是成功的</span><br><span class="line">                  if (xhr.status &gt;= 200 &amp;&amp; xhr.status &lt;= 300) &#123;</span><br><span class="line">                      //数据放在了xhr.responseText的属性中(string)</span><br><span class="line">                      var resp = JSON.parse(xhr.responseText);</span><br><span class="line">                      if (resp.result) &#123;</span><br><span class="line">                          alert(&#x27;登录成功&#x27;);</span><br><span class="line">                      &#125; else &#123;</span><br><span class="line">                          alert(&#x27;运行错误&#x27;)</span><br><span class="line">                      &#125;</span><br><span class="line">  </span><br><span class="line">                  &#125; else &#123;</span><br><span class="line">                      console.log(&#x27;请求失败&#x27;);</span><br><span class="line">                  &#125;</span><br><span class="line">              &#125;</span><br><span class="line">              //2.配置这个对象</span><br><span class="line">          xhr.open(&#x27;post&#x27;, &#x27;./login.php&#x27;, true);</span><br><span class="line">          //true表示申请的是异步请求</span><br><span class="line">          //3.设定请求头，指明body中的数据是何格式</span><br><span class="line">          xhr.setRequestHeader(&#x27;Content-Type&#x27;, &#x27;application/x-www-form-urlencode&#x27;);</span><br><span class="line">          //发送数据</span><br><span class="line">          xhr.send(&#x27;user=gap&amp;password=123456&#x27;);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h5><ul>
+<li>GET数据放在url中，大小有限制</li>
+<li>POST放在请求体中，大小无限制，更安全</li>
+</ul>
+<h5 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h5><ul>
+<li>JavaScript Object Natation(JS对象简谱)是一种轻量级的数据交换格式</li>
+<li>JSON是ECMA制定的一个数据表示规范</li>
+<li>JS对象的子集，与JS无缝对接</li>
+<li>JSON数据与JS对象的转换<ul>
+<li>JSON-&gt;JS:JSON.parse(data)</li>
+<li>JS-&gt;JSON:JSON.stringify(JSObj)</li>
+</ul>
+</li>
+</ul>
+<h5 id="回调地狱"><a href="#回调地狱" class="headerlink" title="回调地狱"></a>回调地狱</h5><ul>
+<li><p>```javascript<br>//获取数据 </p>
+<pre><code>    //要使这三个函数成功前提是假设三个函数都是同步的
+    x = getData();
+    y = getMoreData(x);
+    z = getMoreData(y);
+
+
+    // 若三个函数是异步的
+    //x,y后面的函数就是回调函数
+    // 前一次的结果最后后i一次的输入
+    getData(function(x) &#123;
+        getMoreData(x, function(y) &#123;
+            getMoreData(y, function(z) &#123;
+                //process z,
+            &#125;)
+        &#125;)
+    &#125;)
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 一层层嵌套，这样会导致回调层级很深，导致开发和维护都很难，在ES6中提出了promise这样的对象来解决回调地狱的问题</span><br><span class="line"></span><br><span class="line">##### promise</span><br><span class="line"></span><br><span class="line">- ```javascript</span><br><span class="line">  //通过Promise这个构造函数来创建一个对象</span><br><span class="line">  //这个promise对象，有三种状态：padding(准备状态)，fulfill(promise返回满足条件的状态),reject(延时对象没有满足)</span><br><span class="line">  //promise构造函数，有一个参数，这个参数是一个回调函数。这个回调，接收两个参数，这两个参数，都能够改变promise对象的状态</span><br><span class="line">  //第一个参数可以将状态从pending===&gt;fulfill,而第二个参数，可以将状态从pending===&gt;reject</span><br><span class="line">  //fulfill表示调用成功，reject表示调用失败</span><br><span class="line">  // var promise = new Promise(function(resolve, reject) &#123;//回调参数</span><br><span class="line">  //     if ( /*成功*/ ) &#123;</span><br><span class="line">  //         resolve()</span><br><span class="line">  //     &#125; else &#123;</span><br><span class="line">  //         reject();</span><br><span class="line">  //     &#125;</span><br><span class="line">  // &#125;)</span><br></pre></td></tr></table></figure></li>
+<li><p>Ajax对调用顺序是有依赖性的</p>
+</li>
+<li><pre><code class="javascript">&lt;script src=&quot;jquery-3.2.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        var article = &#39; &#39;;
+        $.get(&#39;./p1.txt&#39;, function(p1) &#123;
+            article += p1 + &#39;&lt;br&gt;&#39;;
+            $.get(&#39;./p2.txt&#39;, function(p2) &#123;
+                article += p2 + &#39;&lt;br&gt;&#39;;
+                $.get(&#39;./p3.txt&#39;, function(p3) &#123;
+                    article += p3 + &#39;&lt;br&gt;&#39;;
+                    $.get(&#39;./p4.txt&#39;, function(p4) &#123;
+                        article += p4 + &#39;&lt;br&gt;&#39;;
+                        $(&#39;p&#39;).html(article);
+                    &#125;)
+                &#125;)
+            &#125;)
+        &#125;)
+    &lt;/script&gt;
+</code></pre>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">yangyufan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://yyf12345.github.io/2021/07/03/JS/">https://yyf12345.github.io/2021/07/03/JS/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://yyf12345.github.io" target="_blank">菜鸡庄园</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><a class="post-meta__tags" href="/tags/js/">js</a></div><div class="post_share"><div class="social-share" data-image="https://w.wallhaven.cc/full/96/wallhaven-96ylld.jpg" data-sites="wechat,weibo,qq,Google+"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.png" target="_blank"><img class="post-qr-code-img" src="/img/alipay.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/07/03/CSS/"><img class="prev-cover" src="https://w.wallhaven.cc/full/3k/wallhaven-3kdl13.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">CSS</div></div></a></div><div class="next-post pull-right"><a href="/2022/01/04/python%E7%88%AC%E8%99%AB/"><img class="next-cover" src="https://res.cloudinary.com/dqro6ugug/image/upload/v1641537742/blog/topIng/wallhaven-96ylld_or9zlk.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">python爬虫</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/07/03/CSS/" title="CSS"><img class="cover" src="https://w.wallhaven.cc/full/3k/wallhaven-3kdl13.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-03</div><div class="title">CSS</div></div></a></div><div><a href="/2022/01/06/HTML5/" title="常用HTML5"><img class="cover" src="https://res.cloudinary.com/dqro6ugug/image/upload/v1641537741/blog/topIng/wallhaven-4yjr5l_picxzq.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-06</div><div class="title">常用HTML5</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JS"><span class="toc-number">1.</span> <span class="toc-text">JS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text">编程语言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B"><span class="toc-number">1.1.1.</span> <span class="toc-text">编程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80"><span class="toc-number">1.1.2.</span> <span class="toc-text">计算机语言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80-1"><span class="toc-number">1.1.3.</span> <span class="toc-text">编程语言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%92%8C%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.1.4.</span> <span class="toc-text">编程语言和标记语言的区别</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80"><span class="toc-number">1.2.</span> <span class="toc-text">计算机基础</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E8%AF%86Javascript"><span class="toc-number">1.3.</span> <span class="toc-text">初识Javascript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Js%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.4.</span> <span class="toc-text">Js输入输出语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">1.5.</span> <span class="toc-text">变量</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">1.5.1.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%9E%8B"><span class="toc-number">1.5.1.0.1.</span> <span class="toc-text">字符串型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.5.2.</span> <span class="toc-text">获取数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E9%95%BF%E5%BA%A6"><span class="toc-number">1.5.3.</span> <span class="toc-text">数组的长度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E4%B8%AD%E6%96%B0%E5%A2%9E%E5%85%83%E7%B4%A0"><span class="toc-number">1.5.4.</span> <span class="toc-text">数组中新增元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">1.5.5.</span> <span class="toc-text">返回值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#arguments%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.5.6.</span> <span class="toc-text">arguments的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E6%96%B9%E5%BC%8F"><span class="toc-number">1.5.7.</span> <span class="toc-text">第二种函数表达方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.6.</span> <span class="toc-text">作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F-es5"><span class="toc-number">1.6.1.</span> <span class="toc-text">作用域(es5)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.6.2.</span> <span class="toc-text">变量作用域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%97%E7%BA%A7%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">1.6.3.</span> <span class="toc-text">块级作用域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE"><span class="toc-number">1.6.4.</span> <span class="toc-text">作用域链</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E8%A7%A3%E6%9E%90"><span class="toc-number">1.7.</span> <span class="toc-text">预解析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%84%E8%A7%A3%E6%9E%90-1"><span class="toc-number">1.7.1.</span> <span class="toc-text">预解析</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.8.</span> <span class="toc-text">对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%84%E6%88%90"><span class="toc-number">1.8.1.</span> <span class="toc-text">组成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F"><span class="toc-number">1.8.2.</span> <span class="toc-text">创建方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%81%8D%E5%8E%86%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.8.3.</span> <span class="toc-text">遍历对象</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Date%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.8.3.1.</span> <span class="toc-text">Date内置对象</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1Array"><span class="toc-number">1.8.3.2.</span> <span class="toc-text">数组对象Array</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.8.3.3.</span> <span class="toc-text">字符串对象</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.8.4.</span> <span class="toc-text">面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="toc-number">1.8.4.1.</span> <span class="toc-text">构造函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="toc-number">1.8.4.2.</span> <span class="toc-text">原型链</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%A4%8D%E6%9D%82%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.9.</span> <span class="toc-text">简单数据类型和复杂数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.9.1.</span> <span class="toc-text">简单数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%8D%E6%9D%82%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%88%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%EF%BC%89"><span class="toc-number">1.9.2.</span> <span class="toc-text">复杂数据类型（引用类型）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM"><span class="toc-number">1.10.</span> <span class="toc-text">DOM</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.10.1.</span> <span class="toc-text">简介</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#DOM%E6%A0%91"><span class="toc-number">1.10.1.1.</span> <span class="toc-text">DOM树</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0"><span class="toc-number">1.10.2.</span> <span class="toc-text">获取页面元素</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AEID%E8%8E%B7%E5%8F%96"><span class="toc-number">1.10.2.1.</span> <span class="toc-text">根据ID获取</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%9A%E8%BF%87HTML5%E6%96%B0%E5%A2%9E%E7%9A%84%E6%96%B9%E6%B3%95%E8%8E%B7%E5%8F%96-%E7%B1%BB%E5%90%8D"><span class="toc-number">1.10.2.2.</span> <span class="toc-text">通过HTML5新增的方法获取(类名)</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96html%E5%85%83%E7%B4%A0"><span class="toc-number">1.10.2.2.1.</span> <span class="toc-text">获取html元素</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#window-getComputedStyle"><span class="toc-number">1.10.2.3.</span> <span class="toc-text">window.getComputedStyle()</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E5%9F%BA%E7%A1%80"><span class="toc-number">1.10.3.</span> <span class="toc-text">事件基础</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BA%8B%E4%BB%B6%E4%B8%89%E5%85%83%E7%B4%A0"><span class="toc-number">1.10.3.1.</span> <span class="toc-text">事件三元素</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="toc-number">1.10.3.2.</span> <span class="toc-text">执行事件的步骤</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C%E5%85%83%E7%B4%A0"><span class="toc-number">1.10.4.</span> <span class="toc-text">操作元素</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%94%B9%E5%8F%98%E5%85%83%E7%B4%A0%E7%9A%84%E5%86%85%E5%AE%B9"><span class="toc-number">1.10.4.1.</span> <span class="toc-text">改变元素的内容</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%85%83%E7%B4%A0%E7%9A%84%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C"><span class="toc-number">1.10.4.2.</span> <span class="toc-text">常用元素的属性操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%A1%A8%E5%8D%95%E5%85%83%E7%B4%A0%E7%9A%84%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C"><span class="toc-number">1.10.4.3.</span> <span class="toc-text">表单元素的属性操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F%E5%B1%9E%E6%80%A7%E6%93%8D%E4%BD%9C"><span class="toc-number">1.10.4.4.</span> <span class="toc-text">样式属性操作</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8E%92%E5%AE%83%E6%80%9D%E6%83%B3"><span class="toc-number">1.10.4.5.</span> <span class="toc-text">排它思想</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">1.10.4.6.</span> <span class="toc-text">自定义属性的操作</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C"><span class="toc-number">1.10.5.</span> <span class="toc-text">节点操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8E%9F%E5%9B%A0"><span class="toc-number">1.10.5.1.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E6%A6%82%E8%BF%B0"><span class="toc-number">1.10.5.2.</span> <span class="toc-text">节点概述</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%8A%82%E7%82%B9%E5%B1%82%E7%BA%A7"><span class="toc-number">1.10.5.3.</span> <span class="toc-text">节点层级</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%8A%82%E7%82%B9"><span class="toc-number">1.10.5.4.</span> <span class="toc-text">创建节点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E5%8A%A8%E6%80%81%E4%B8%B2%E5%88%9B%E5%BB%BA%E5%85%83%E7%B4%A0%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.10.5.5.</span> <span class="toc-text">三种动态串创建元素的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#attachEvent%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%E6%96%B9%E5%BC%8F"><span class="toc-number">1.10.5.5.1.</span> <span class="toc-text">attachEvent事件监听方式</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%98%BB%E6%AD%A2%E4%BA%8B%E4%BB%B6%E5%86%92%E6%B3%A1"><span class="toc-number">1.10.5.6.</span> <span class="toc-text">阻止事件冒泡</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E5%86%99%E6%B3%95"><span class="toc-number">1.10.5.6.1.</span> <span class="toc-text">标准写法</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E9%9D%9E%E6%A0%87%E5%87%86%E5%86%99%E6%B3%95"><span class="toc-number">1.10.5.6.2.</span> <span class="toc-text">非标准写法</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%85%BC%E5%AE%B9%E6%80%A7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">1.10.5.6.3.</span> <span class="toc-text">兼容性解决方案</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#DOMContentLoaded"><span class="toc-number">1.10.5.6.4.</span> <span class="toc-text">DOMContentLoaded</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E6%97%B6%E5%99%A8"><span class="toc-number">1.10.6.</span> <span class="toc-text">定时器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%A4%E7%A7%8D%E5%AE%9A%E6%97%B6%E5%99%A8"><span class="toc-number">1.10.6.1.</span> <span class="toc-text">两种定时器</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E5%A4%A7%E7%B3%BB%E7%B1%BB%E6%80%BB%E7%BB%93"><span class="toc-number">1.10.7.</span> <span class="toc-text">三大系类总结</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B0%8F%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.10.8.</span> <span class="toc-text">小知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#dpr-%E7%89%A9%E7%90%86%E5%83%8F%E7%B4%A0%E6%AF%94"><span class="toc-number">1.10.8.1.</span> <span class="toc-text">dpr  物理像素比</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#pageshow%E4%BA%8B%E4%BB%B6"><span class="toc-number">1.10.8.2.</span> <span class="toc-text">pageshow事件</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E5%B0%81%E8%A3%85"><span class="toc-number">1.10.9.</span> <span class="toc-text">动画函数封装</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8A%A8%E7%94%BB%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-number">1.10.9.1.</span> <span class="toc-text">动画实现原理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E6%B7%BB%E5%8A%A0%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0"><span class="toc-number">1.10.9.2.</span> <span class="toc-text">动画函数添加回调函数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%8A%82%E6%B5%81%E9%98%80"><span class="toc-number">1.10.9.3.</span> <span class="toc-text">节流阀</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cookie"><span class="toc-number">1.11.</span> <span class="toc-text">cookie</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#http%E5%8D%8F%E8%AE%AE"><span class="toc-number">1.11.1.</span> <span class="toc-text">http协议</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cookie%E6%A6%82%E8%BF%B0"><span class="toc-number">1.11.2.</span> <span class="toc-text">cookie概述</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.12.</span> <span class="toc-text">正则表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">1.12.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F-1"><span class="toc-number">1.12.2.</span> <span class="toc-text">创建方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ES6%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-number">1.13.</span> <span class="toc-text">ES6基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#let%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.13.1.</span> <span class="toc-text">let的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#const%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.13.2.</span> <span class="toc-text">const的使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC"><span class="toc-number">1.13.3.</span> <span class="toc-text">解构赋值</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E6%9D%BF%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.13.4.</span> <span class="toc-text">模板字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0"><span class="toc-number">1.13.5.</span> <span class="toc-text">箭头函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#set%E7%BB%93%E6%9E%84"><span class="toc-number">1.13.6.</span> <span class="toc-text">set结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%99%A8%E5%87%BD%E6%95%B0%EF%BC%88generator%EF%BC%89"><span class="toc-number">1.13.7.</span> <span class="toc-text">生成器函数（generator）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-number">1.13.8.</span> <span class="toc-text">类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ajax"><span class="toc-number">1.14.</span> <span class="toc-text">Ajax</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B-1"><span class="toc-number">1.14.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-1"><span class="toc-number">1.14.2.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#GET"><span class="toc-number">1.14.2.1.</span> <span class="toc-text">GET</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number"></span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8C%BA%E5%88%AB"><span class="toc-number">0.0.0.1.</span> <span class="toc-text">区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JSON"><span class="toc-number">0.0.0.2.</span> <span class="toc-text">JSON</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9B%9E%E8%B0%83%E5%9C%B0%E7%8B%B1"><span class="toc-number">0.0.0.3.</span> <span class="toc-text">回调地狱</span></a></li></ol></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('https://w.wallhaven.cc/full/96/wallhaven-96ylld.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2022 By yangyufan</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="https://yyf12345.github.io/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'u1qD2yVk8AJpSljAIYkrruLE-gzGzoHsz',
+      appKey: 'AbFvt8hu2szQgGRRnnw995vF',
+      placeholder: '请开始你的表演，请文明发言哦！',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/valine/',
+      emojiMaps: "",
+      enableQQ: true,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="哇,呀,呀,呀" data-fontsize="10px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
