@@ -1,6 +1,1183 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>常用HTML5</title>
+    <url>/2022/01/06/HTML5/</url>
+    <content><![CDATA[<h1>HTML5</h1>
+<h3 id="新增语义化标签">新增语义化标签</h3>
+<p>以前布局，我们基本都是用div来做。div对于搜索引擎来说，是没有语义的、</p>
+<ul>
+<li>
+<pre><code class="language-html">&lt;header&gt;&lt;/header&gt; 		头部标签
+&lt;nav&gt;&lt;/nav&gt;				导航标签
+&lt;article&gt;&lt;/article&gt;		内容标签
+&lt;section&gt;&lt;/section&gt;		定义文档某个区域
+&lt;aside&gt;&lt;/aside&gt;			侧边栏标签
+&lt;footer&gt;&lt;/footer&gt;		尾部标签
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 注意</span><br><span class="line"></span><br><span class="line">  - 这些语义化标签主要是针对搜索引擎的</span><br><span class="line">  - 这些新标签页面中可以使用多次</span><br><span class="line">  - 在IE9,需要把这些元素转换为块级元素</span><br><span class="line">  - 其实，我们移动端更喜欢使用这些标签</span><br><span class="line">  - HTML5还增加了很多其他的标签，我们后面慢慢学</span><br><span class="line"></span><br><span class="line">### 新增的多媒体标签</span><br><span class="line"></span><br><span class="line">#### 视频：&lt;video&gt;</span><br><span class="line"></span><br><span class="line">| 浏览器            | MP4                                                  | WebM | Ogg  |</span><br><span class="line">| ----------------- | ---------------------------------------------------- | ---- | ---- |</span><br><span class="line">| Intermet Explorer | YES                                                  | NO   | NO   |</span><br><span class="line">| CHrome            | YES                                                  | YES  | YES  |</span><br><span class="line">| Firefox           | YES从Firefox 21版本开始    Linux系统从Firefox 30开始 | YES  | YES  |</span><br><span class="line">| Safari            | YES                                                  | NO   | NO   |</span><br><span class="line">| Opera             | YES     从Opera 25版本开始                           | YES  | YES  |</span><br><span class="line"></span><br><span class="line">语法：</span><br><span class="line"></span><br><span class="line">```html</span><br><span class="line">&lt;video src=&quot;文件地址&quot; controls=&quot;controls&quot;&gt;&lt;/video&gt;</span><br></pre></td></tr></table></figure>
+
+</code></pre>
+</li>
+</ul>
+<p>兼容性处理</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">width</span>=<span class="string">&quot;320&quot;</span> <span class="attr">height</span>=<span class="string">&quot;240&quot;</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;movie.mp4&quot;</span> <span class="attr">type</span>=<span class="string">&quot;video/mp4&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;movie.ogg&quot;</span> <span class="attr">type</span>=<span class="string">&quot;video/ogg&quot;</span>&gt;</span></span><br><span class="line">    您的浏览器不支持video标签</span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+<p>常见属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autoplay</td>
+<td>autoplay</td>
+<td>视频就绪自动播放(谷歌浏览器需要添加muted来解决自动播放问题)</td>
+</tr>
+<tr>
+<td>controls</td>
+<td>controls</td>
+<td>向用户显示播放控件</td>
+</tr>
+<tr>
+<td>width</td>
+<td>pixels(像素)</td>
+<td>设置播放器宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td>pixels(像素)</td>
+<td>设置播放器高度</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>loop</td>
+<td>播放完是否继续播放该视频，循环播放</td>
+</tr>
+<tr>
+<td>preload</td>
+<td>auto(预先加载视频) none(不应该预先加载视频)</td>
+<td>规定是否预加载视频(如果有了autoplay就忽略该属性)</td>
+</tr>
+<tr>
+<td>src</td>
+<td>url</td>
+<td>视频url地址</td>
+</tr>
+<tr>
+<td>poster</td>
+<td>Imgurl</td>
+<td>加载等待的画面图片</td>
+</tr>
+<tr>
+<td>muted</td>
+<td>muted</td>
+<td>静音播放</td>
+</tr>
+</tbody>
+</table>
+<h4 id="音频-audio">音频<audio></h4>
+<p>当前<audio>元素支持三种音频格式</p>
+<table>
+<thead>
+<tr>
+<th>浏览器</th>
+<th>MP3</th>
+<th>Wav</th>
+<th>Ogg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intermet Explorer</td>
+<td>YES</td>
+<td>NO</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>Chrome</td>
+<td>YES</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>YES</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>YES</td>
+<td>YES</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>Opera</td>
+<td>YES</td>
+<td>YES</td>
+<td>YES</td>
+</tr>
+</tbody>
+</table>
+<p>语法</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">&quot;&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>兼容性问题</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;horse.ogg&quot;</span> <span class="attr">type</span>=<span class="string">&quot;audio/ogg&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;horse.mp3&quot;</span> <span class="attr">type</span>=<span class="string">&quot;audio/mpeg&quot;</span>&gt;</span></span><br><span class="line">    您的浏览器不支持audio元素</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+<p>常见属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autoplay</td>
+<td>autoplay</td>
+<td>如果出现该属性，则音频在就绪后马上播放</td>
+</tr>
+<tr>
+<td>controls</td>
+<td>controls</td>
+<td>如果出现该属性，则向用户显示控件，比如播放按钮</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>loop</td>
+<td>如果出现该属性，则每当音频结束时重新开始播放</td>
+</tr>
+<tr>
+<td>src</td>
+<td>url</td>
+<td>要播放的音频的URL</td>
+</tr>
+</tbody>
+</table>
+<h4 id="多媒体标签总结">多媒体标签总结</h4>
+<ul>
+<li>音频标签和视频标签使用方法基本一致</li>
+<li>浏览器支持情况不同</li>
+<li>谷歌浏览器把视频和音频的自动播放禁止了</li>
+<li>我们可以给视频标签添加muted属性来静音播放视频，音频不可以(可以通过JS来解决)</li>
+<li>视频标签是重点，我们经常设置自动播放，不使用controls控件，循环和设置大小属性</li>
+</ul>
+<h3 id="新增的input类型">新增的input类型</h3>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type=“email”</td>
+<td>限制用户输入必须是Email类型</td>
+</tr>
+<tr>
+<td>type=“url”</td>
+<td>限制用户输入必须是URL类型</td>
+</tr>
+<tr>
+<td>type=“data”</td>
+<td>限制用户输入必须是日期类型</td>
+</tr>
+<tr>
+<td>type=“time”</td>
+<td>限制用户输入必须是时间类型</td>
+</tr>
+<tr>
+<td>type=“month”</td>
+<td>限制用户输入必须是月类型</td>
+</tr>
+<tr>
+<td>type=“week”</td>
+<td>限制用户输入必须是周类型</td>
+</tr>
+<tr>
+<td>type=“number”</td>
+<td>限制用户输入必须是数字类型</td>
+</tr>
+<tr>
+<td>type=“tel”</td>
+<td>手机号码</td>
+</tr>
+<tr>
+<td>type=“search”</td>
+<td>搜索框</td>
+</tr>
+<tr>
+<td>type=“color”</td>
+<td>生成一个颜色选择表单</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>required</td>
+<td>required</td>
+<td>表单拥有该属性表示其内容不能为空</td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td>提交文本</td>
+<td>表单的提示信息，存在默认值将不在显示</td>
+</tr>
+<tr>
+<td>autofocus</td>
+<td>autofocus</td>
+<td>自动聚焦属性，页面加载完成自动聚焦到指定表单</td>
+</tr>
+<tr>
+<td>autocomplete</td>
+<td>off/on</td>
+<td>当用户在字段开始键时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项                              默认已经打开了，如autocompete=“on”，关闭autocomplete=&quot;off&quot;需要放在表单内，同时加上name属性，同时成功提交</td>
+</tr>
+<tr>
+<td>multiple</td>
+<td>multiple</td>
+<td>可以多选文件提交</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*可以通过以下设置方式修改placeholder里面的字体颜色*/</span></span><br><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">::placeholder</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="classList-属性">classList 属性</h3>
+<p>classList属性是HTML5新增的一个属性，返回元素的类名。但是ie10以上版本支持。</p>
+<p>该属性用于在元素中添加，移除及切换 CSS 类。有以下方法</p>
+<p><strong>添加类：</strong></p>
+<p>element.classList.add(‘类名’);</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">focus.classList.add(<span class="string">&#x27;current&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>移除类：</strong></p>
+<p>element.classList.remmove(‘类名’)；</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">focus.classList.remove(<span class="string">&#x27;current&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p><strong>切换类：</strong></p>
+<p>element.classList.toggle(‘类名’)；</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">focus.classList.toggle(<span class="string">&#x27;current&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>注意以上方法里面，所有类名都不带点</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>html</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown文档</title>
+    <url>/2022/01/07/Markdown%E6%96%87%E6%A1%A3/</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>本文章主要是为了整理Markdown的书写格式，方便以后书写md文档，并整理一下butterfly主题的一些特殊标签的使用方法</p>
+<p>文章主要参考自：</p>
+<ol>
+<li><a href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程</a></li>
+<li><a href="https://butterfly.js.org/posts/4aa8abbe/#Note-Bootstrap-Callout">外挂标签</a></li>
+</ol>
+<h2 id="简介">简介</h2>
+<ol>
+<li>
+<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
+</li>
+<li>
+<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
+</li>
+<li>
+<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
+</li>
+<li>
+<p>Markdown 编写的文档后缀为 .md, .markdown。</p>
+</li>
+</ol>
+<h2 id="应用">应用</h2>
+<p>Markdown 能被使用来撰写电子书，如：Gitbook。</p>
+<p>当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge等。</p>
+<hr>
+<h2 id="标题">标题</h2>
+<p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
+<p>注：此主题内最好使用二级标题以下的标题</p>
+<h2 id="段落">段落</h2>
+<p>有两种段落换行方式</p>
+<ol>
+<li>使用两个以上的空格加上回车</li>
+<li>也可以使用一个空行表示重新开始一个段落</li>
+</ol>
+<h2 id="字体">字体</h2>
+<p>md文档有以下几种字体：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*斜体文本*</span><br><span class="line">_斜体文本_</span><br><span class="line">**粗体文本**</span><br><span class="line">__粗体文本__</span><br><span class="line">***加粗体文本***</span><br><span class="line">___加粗体文本___</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<p><em>斜体文本</em><br>
+<em>斜体文本</em><br>
+<strong>粗体文本</strong><br>
+<strong>粗体文本</strong><br>
+<em><strong>加粗体文本</strong></em><br>
+<em><strong>加粗体文本</strong></em></p>
+<h2 id="分隔线">分隔线</h2>
+<p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line"></span><br><span class="line">* * *</span><br><span class="line"></span><br><span class="line">*****</span><br><span class="line"></span><br><span class="line">- - -</span><br><span class="line"></span><br><span class="line">----------</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<h2 id="删除线">删除线</h2>
+<p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BAIDU.COM</span><br><span class="line">~~BAIDU.COM~~</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<p><a href="http://BAIDU.COM">BAIDU.COM</a><br>
+<s><a href="http://BAIDU.COM">BAIDU.COM</a></s></p>
+<h2 id="下划线">下划线</h2>
+<p>下划线可以通过 HTML 的 <code>&lt;u&gt;</code> 标签来实现：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;u&gt;带下划线文本&lt;/u&gt;</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<p><u>带下划线文本</u></p>
+<h2 id="脚注">脚注</h2>
+<p>脚注是对文本的补充说明。</p>
+<p>Markdown 脚注的格式如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[^要注明的文本]</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<p>创建脚注格式类似这样 <a href="%E5%95%A6%E5%95%A6%E5%95%A6!!!">^RUNOOB</a>。</p>
+<h2 id="列表">列表</h2>
+<h3 id="无序列表">无序列表</h3>
+<p>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记，这些标记后面要添加一个空格，然后再填写内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line"></span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+<h3 id="有序列表">有序列表</h3>
+<p>有序列表使用数字并加上 . 号来表示，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ol>
+<h3 id="列表嵌套">列表嵌套</h3>
+<p>列表嵌套只需在子列表中的选项前面添加四个空格即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套的第一个元素</span><br><span class="line">    - 第一项嵌套的第二个元素</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第二项嵌套的第一个元素</span><br><span class="line">    - 第二项嵌套的第二个元素</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<ol>
+<li>第一项：
+<ul>
+<li>第一项嵌套的第一个元素</li>
+<li>第一项嵌套的第二个元素</li>
+</ul>
+</li>
+<li>第二项：
+<ul>
+<li>第二项嵌套的第一个元素</li>
+<li>第二项嵌套的第二个元素</li>
+</ul>
+</li>
+</ol>
+<h2 id="区块">区块</h2>
+<h3 id="基础用法">基础用法</h3>
+<p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; 区块引用</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<blockquote>
+<p>区块引用</p>
+</blockquote>
+<h3 id="区块嵌套">区块嵌套</h3>
+<p>区块是可以嵌套的，一个 &gt; 符号是最外层，两个 &gt; 符号是第一层嵌套，以此类推：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; 最外层</span><br><span class="line">&gt; &gt; 第一层嵌套</span><br><span class="line">&gt; &gt; &gt; 第二层嵌套</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套</p>
+<blockquote>
+<p>第二层嵌套</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="区块中使用列表">区块中使用列表</h3>
+<p>区块中使用列表实例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; 区块中使用列表</span><br><span class="line">&gt; 1. 第一项</span><br><span class="line">&gt; 2. 第二项</span><br><span class="line">&gt; + 第一项</span><br><span class="line">&gt; + 第二项</span><br><span class="line">&gt; + 第三项</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<blockquote>
+<p>区块中使用列表</p>
+<ol>
+<li>第一项</li>
+<li>第二项</li>
+</ol>
+<ul>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
+</ul>
+</blockquote>
+<h3 id="列表中使用区块">列表中使用区块</h3>
+<p>如果要在列表项目内放进区块，那么就需要在 &gt; 前添加四个空格的缩进。</p>
+<p>列表中使用区块实例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">    &gt; 菜鸟教程</span><br><span class="line">    &gt; 学的不仅是技术更是梦想</span><br><span class="line">* 第二项</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<ul>
+<li>第一项
+<blockquote>
+<p>菜鸟教程<br>
+学的不仅是技术更是梦想</p>
+</blockquote>
+</li>
+<li>第二项</li>
+</ul>
+<h2 id="代码">代码</h2>
+<h3 id="片段代码">片段代码</h3>
+<p>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（`），例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`printf()` 函数</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<p><code>printf()</code> 函数</p>
+<h3 id="代码区块">代码区块</h3>
+<h4 id="Tab键表示法">Tab键表示法</h4>
+<p>代码区块使用 4 个空格或者一个制表符（Tab 键）。</p>
+<p>实例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &#x27;RUNOOB&#x27;;</span><br><span class="line">function test() &#123;</span><br><span class="line">  echo &#x27;test&#x27;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<pre><code>&lt;?php
+echo 'RUNOOB';
+function test() &#123;
+  echo 'test';
+&#125;
+</code></pre>
+<h4 id="表示">```表示</h4>
+<p>也可以用 ``` 包裹一段代码，并指定一种语言（也可以不指定）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```javascript</span><br><span class="line">$(document).ready(function () &#123;</span><br><span class="line">    alert(&#x27;RUNOOB&#x27;);</span><br><span class="line">&#125;);</span><br><span class="line">``` .</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">&#x27;RUNOOB&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="链接">链接</h2>
+<h3 id="一般链接">一般链接</h3>
+<p>链接使用方法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line">&lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80">链接名称</a></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是一个链接 [百度](https://www.baidu.com)</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<p>这是一个链接 <a href="https://www.baidu.com">百度</a></p>
+<ol start="2">
+<li>&lt;链接地址&gt;</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;https://www.baidu.com&gt;</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<p><a href="https://www.baidu.com">https://www.baidu.com</a></p>
+<h3 id="高级链接">高级链接</h3>
+<p>我们可以通过变量来设置一个链接，变量赋值在文档末尾进行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这个链接用 1 作为网址变量 [Google][1]</span><br><span class="line">这个链接用 runoob 作为网址变量 [Runoob][runoob]</span><br><span class="line">然后在文档的结尾为变量赋值（网址）</span><br><span class="line"></span><br><span class="line">  [1]: http://www.google.com/</span><br><span class="line">  [runoob]: http://www.runoob.com/</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<p>这个链接用 1 作为网址变量 <a href="http://www.google.com/">Google</a><br>
+这个链接用 runoob 作为网址变量 <a href="http://www.runoob.com/">Runoob</a><br>
+然后在文档的结尾为变量赋值（网址）</p>
+<h2 id="图片">图片</h2>
+<h3 id="普通用法">普通用法</h3>
+<p>Markdown 图片语法格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line"></span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure>
+<p>注意点：</p>
+<ul>
+<li>开头一个感叹号 !</li>
+<li>接着一个方括号，里面放上图片的替代文字</li>
+<li>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 ‘title’ 属性的文字。</li>
+</ul>
+<p>使用实例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png)</span><br><span class="line"></span><br><span class="line">![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png &quot;RUNOOB&quot;)</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<p><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标"></p>
+<p><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标" title="RUNOOB"></p>
+<h3 id="进阶用法">进阶用法</h3>
+<h4 id="使用变量">使用变量</h4>
+<p>如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这个链接用 1 作为网址变量 [RUNOOB][1].</span><br><span class="line">然后在文档的结尾为变量赋值（网址）</span><br><span class="line"></span><br><span class="line">[1]: http://static.runoob.com/images/runoob-logo.png</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<p>这个链接用 1 作为网址变量 <a href="http://www.google.com/">RUNOOB</a>.<br>
+然后在文档的结尾为变量赋值（网址）</p>
+<h4 id="设置图片的高度与宽度">设置图片的高度与宽度</h4>
+<p>Markdown 还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用普通的 <img> 标签。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;img src=&quot;http://static.runoob.com/images/runoob-logo.png&quot; width=&quot;70%&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;img src=&quot;http://static.runoob.com/images/runoob-logo.png&quot; width=&quot;50%&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<img src="http://static.runoob.com/images/runoob-logo.png" width="70%">
+<img src="http://static.runoob.com/images/runoob-logo.png" width="50%">
+<h2 id="表格">表格</h2>
+<h3 id="基础语法">基础语法</h3>
+<p>Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。</p>
+<p>语法格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody>
+</table>
+<h3 id="对齐方式">对齐方式</h3>
+<p>我们可以设置表格的对齐方式：</p>
+<ul>
+<li>-: 设置内容和标题栏居右对齐。</li>
+<li>:- 设置内容和标题栏居左对齐。</li>
+<li>:-: 设置内容和标题栏居中对齐。</li>
+</ul>
+<p>实例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">| 左对齐 | 右对齐 | 居中对齐 |</span><br><span class="line">| :-----| ----: | :----: |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:right">右对齐</th>
+<th style="text-align:center">居中对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">单元格</td>
+<td style="text-align:right">单元格</td>
+<td style="text-align:center">单元格</td>
+</tr>
+<tr>
+<td style="text-align:left">单元格</td>
+<td style="text-align:right">单元格</td>
+<td style="text-align:center">单元格</td>
+</tr>
+</tbody>
+</table>
+<h2 id="高级技巧">高级技巧</h2>
+<h3 id="支持的HTML元素">支持的HTML元素</h3>
+<p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p>
+<p>目前支持的 HTML 元素有：<code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">使用 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;Del&lt;/kbd&gt; 重启电脑</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p>
+<h3 id="转义">转义</h3>
+<p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">**文本加粗** </span><br><span class="line"></span><br><span class="line">\*\* 正常显示星号 \*\*</span><br></pre></td></tr></table></figure>
+<p>效果如下所示:</p>
+<p><strong>文本加粗</strong></p>
+<p>** 正常显示星号 **</p>
+<p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   下划线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  小括号</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   感叹号</span><br></pre></td></tr></table></figure>
+<h3 id="公式">公式</h3>
+<p>Markdown Preview Enhanced 使用 KaTeX 或者 MathJax 来渲染数学表达式。</p>
+<p>KaTeX 拥有比 MathJax 更快的性能，但是它却少了很多 MathJax 拥有的特性。你可以查看 KaTeX supported functions/symbols 来了解 KaTeX 支持那些符号和函数。</p>
+<p>默认下的分隔符：</p>
+<ul>
+<li><code>$...$</code> 或者 <code>\(...\)</code> 中的数学表达式将会在行内显示。</li>
+<li><code>$$...$$</code> 或者 <code>\[...\]</code> 或者 ````math` 中的数学表达式将会在块内显示。</li>
+</ul>
+<p>注：需要在文章Front-matter添加<code>katex: true</code>,对应的文章才会加载服务。本文章未配置好，因此还不能使用，了解就好</p>
+<h2 id="Front-matter">Front-matter</h2>
+<p>Front-matter是markdown文件最上方一<code>---</code>分割的区域，用于指定个别档案的变数。</p>
+<ul>
+<li>Page Front-matter用于<code>页面</code>配置</li>
+<li>Post Front-matter用于<code>文章页</code>配置</li>
+</ul>
+<blockquote>
+<p>如果标注可选参数，可根据自己需求添加，不用全部都写在markdown里</p>
+</blockquote>
+<ol>
+<li>page front-matter</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>写法</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>【必需】页面标题</td>
+</tr>
+<tr>
+<td>data</td>
+<td>【必需】页面创建日期</td>
+</tr>
+<tr>
+<td>type</td>
+<td>【必需】标题、分类和友情链接三个页面需要配置</td>
+</tr>
+<tr>
+<td>updated</td>
+<td>【可选】页面更新日期</td>
+</tr>
+<tr>
+<td>desciption</td>
+<td>【可选】页面描述</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>【可选】页面关键字</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>【可选】显示页面评论模块</td>
+</tr>
+<tr>
+<td>top_img</td>
+<td>【可选】显示顶部图片</td>
+</tr>
+<tr>
+<td>mathjax</td>
+<td>【可选】显示mathjax</td>
+</tr>
+<tr>
+<td>ketex</td>
+<td>【可选】显示katex</td>
+</tr>
+<tr>
+<td>aside</td>
+<td>【可选】显示侧边栏</td>
+</tr>
+<tr>
+<td>aplayer</td>
+<td>【可选】在需要的页面加载aplayer的js和css，请参考文章下面的音乐配置</td>
+</tr>
+<tr>
+<td>highlight_shrink</td>
+<td>【可选】配置代码框是否展来(true/false)</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>post front-matter</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>写法</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>【必需】文章标题</td>
+</tr>
+<tr>
+<td>data</td>
+<td>【必需】文章创建日期</td>
+</tr>
+<tr>
+<td>updated</td>
+<td>【可选】文章更新时间</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>【可选】文章标签</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>【可选】文章分类</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>【可选】文章关键字</td>
+</tr>
+<tr>
+<td>description</td>
+<td>【可选】文章描述</td>
+</tr>
+<tr>
+<td>top_img</td>
+<td>【可选】文章顶部图片</td>
+</tr>
+<tr>
+<td>cover</td>
+<td>【可选】文章缩略图/封面，后面跟着url</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>【可选】显示文章评论模块(默认 true)</td>
+</tr>
+<tr>
+<td>toc</td>
+<td>【可选】显示文章TOC（默认未设置中的toc的number配置）</td>
+</tr>
+<tr>
+<td>toc_number</td>
+<td>【可选】显示toc_nunmber（默认未设置中toc的number配置）</td>
+</tr>
+<tr>
+<td>copyright</td>
+<td>【可选】显示文章的版权模块（默认为设置中post_copyright的enable配置</td>
+</tr>
+<tr>
+<td>copyright_author</td>
+<td>【可选】文章版权模块的文章作者</td>
+</tr>
+<tr>
+<td>mathjax</td>
+<td>【可选】显示mathjax</td>
+</tr>
+<tr>
+<td>katex</td>
+<td>【可选】显示katex</td>
+</tr>
+<tr>
+<td>aplayer</td>
+<td>【可选】在需要的页面加载aplayer的js和css，请参考文章下面的音乐配置</td>
+</tr>
+<tr>
+<td>highlight_shrink</td>
+<td>【可选】配置代码框是否展开(true/false)</td>
+</tr>
+<tr>
+<td>aside</td>
+<td>【可选】显示侧边栏（默认true）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="外挂标签">外挂标签</h2>
+<h3 id="Note-Bootstrap-Callout">Note (Bootstrap Callout)</h3>
+<div class="note info flat"><p>标签外挂是Hexo独有的功能，并不是标准的Markdown格式</p>
+<p>以下的写法，只适用于Butterfly主题，用在其他主题上不会有效果，甚至可能会报错。使用请留意</p>
+</div>
+<div class="note warning flat"><p>标签外挂虽然能为主题带来一些额外的功能和UI功能，但是，标签外挂也有明显限制，使用时请留意</p>
+</div>
+<div class="note blue icon flat"><i class="note-icon fas fa-bullhorn"></i><p>参考链接来自：<a href="https://butterfly.js.org/posts/4aa8abbe/#%E6%A8%99%E7%B1%A4%E5%A4%96%E6%8E%9B%EF%BC%88Tag-Plugins%EF%BC%89">标签外挂</a></p>
+<p>如果不清除具体用法可以去里面查看</p>
+</div>
+<p>用法：</p>
+<ol>
+<li>用法1</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note [class] [no-icon] [style] %&#125;</span><br><span class="line">Any content (support inline tags too.io).</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>class</td>
+<td>【可选】标识，不同的标识有不同的配色（ default / primary / success / info / warning / danger ）</td>
+</tr>
+<tr>
+<td>no-icon</td>
+<td>【可选】不显示 icon</td>
+</tr>
+<tr>
+<td>style</td>
+<td>【可选】可以覆盖配置中的 style（simple/modern/flat/disabled）</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>用法2</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note [color] [icon] [style] %&#125;</span><br><span class="line">Any content (support inline tags too.io).</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>用法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>【可选】顔色(default / blue / pink / red / purple / orange / green)</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>【可选】可配置自定义 icon (只支持 fontawesome 图标, 也可以配置 no-icon )</td>
+</tr>
+<tr>
+<td>style</td>
+<td>【可选】可以覆盖配置中的 style（simple/modern/flat/disabled）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tag-hide">tag-hide</h3>
+<div class="note warning flat"><p>请注意，tag-hide内的标签外挂content内都不建议有h1 - h6 等标题。因为Toc会把隐藏内容标题也显示出来，而且当滚动屏幕时，如果隐藏内容没有显示出来，会导致Toc的滚动出现异常。</p>
+</div>
+<p>如果你想把一些文字、内容隐藏起来，并提供按钮让用户点击显示。可以使用这个标籤外挂。</p>
+<h4 id="inline">inline</h4>
+<p><code>inline</code> 在文本里面添加按钮隐藏内容，只限文字</p>
+<p>( content不能包含英文逗号，可用<code>&amp;sbquo;</code>)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% hideInline content,display,bg,color %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>content: 文本内容</p>
+</li>
+<li>
+<p>display: 按钮显示的文字(可选)</p>
+</li>
+<li>
+<p>bg: 按钮的背景颜色(可选)</p>
+</li>
+<li>
+<p>color: 按钮文字的颜色(可选)</p>
+</li>
+</ul>
+<p>例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">哪个英文字母最酷？ &#123;% hideInline 因为西装裤(C装酷),查看答案,#FF7242,#fff %&#125;</span><br><span class="line"></span><br><span class="line">门里站着一个人? &#123;% hideInline 🐖 %&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<p>哪个英文字母最酷？ <span class="hide-inline"><button type="button" class="hide-button button--animated" style="background-color: #FF7242;color: #fff">查看答案
+  </button><span class="hide-content">因为西装裤(C装酷)</span></span></p>
+<p>门里站着一个人? <span class="hide-inline"><button type="button" class="hide-button button--animated" style="">Click
+  </button><span class="hide-content">🐖</span></span></p>
+<h4 id="block">block</h4>
+<p><code>block</code>独立的block隐藏内容，可以隐藏很多内容，包括图片，代码块等等</p>
+<p>( display 不能包含英文逗号，可用<code>&amp;sbquo;</code>)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% hideBlock display,bg,color %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endhideBlock %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>content: 文本内容</p>
+</li>
+<li>
+<p>display: 按钮显示的文字(可选)</p>
+</li>
+<li>
+<p>bg: 按钮的背景颜色(可选)</p>
+</li>
+<li>
+<p>color: 按钮文字的颜色(可选)</p>
+</li>
+</ul>
+<p>例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看答案:</span><br><span class="line">&#123;% hideBlock 查看答案 %&#125;</span><br><span class="line">傻子，怎么可能有答案</span><br><span class="line">&#123;% endhideBlock %&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<p>查看答案:</p>
+<div class="hide-block"><button type="button" class="hide-button button--animated" style="">查看答案
+    </button><div class="hide-content"><p>傻子，怎么可能有答案</p>
+</div></div>
+<h4 id="toggle">toggle</h4>
+<p>如果你需要展示的内容太多，可以把它隐藏在收缩框里，需要时再把它展开。</p>
+<p>( display 不能包含英文逗号，可用<code>&amp;sbquo;</code>)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% hideToggle display,bg,color %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endhideToggle %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>display: 按钮显示的文字(可选)</p>
+</li>
+<li>
+<p>bg: 按钮的背景颜色(可选)</p>
+</li>
+<li>
+<p>color: 按钮文字的颜色(可选)</p>
+</li>
+</ul>
+<p>例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% hideToggle Butterfly安装方法 %&#125;</span><br><span class="line">在你的博客根目录里</span><br><span class="line"></span><br><span class="line">git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/Butterfly</span><br><span class="line"></span><br><span class="line">如果想要安装比较新的dev分支，可以</span><br><span class="line"></span><br><span class="line">git clone -b dev https://github.com/jerryc127/hexo-theme-butterfly.git themes/Butterfly</span><br><span class="line"></span><br><span class="line">&#123;% endhideToggle %&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<div class="hide-toggle" ><div class="hide-button toggle-title" style=""><i class="fas fa-caret-right fa-fw"></i><span>Butterfly安装方法</span></div>
+    <div class="hide-content"><p>在你的博客根目录里</p>
+<p>git clone -b master <a href="https://github.com/jerryc127/hexo-theme-butterfly.git">https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes/Butterfly</p>
+<p>如果想要安装比较新的dev分支，可以</p>
+<p>git clone -b dev <a href="https://github.com/jerryc127/hexo-theme-butterfly.git">https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes/Butterfly</p>
+</div></div>
+<h2 id="mermaid">mermaid</h2>
+<div class="note warning flat"><p>mermaid标籤不允许嵌套于一些隐藏属性的标籤外挂，例如: tag-hide内的标籤外挂和tabs标籤外挂，这会导致mermaid图示无法正常显示，使用时请留意。</p>
+<p>请不要压缩html代码，不然会导致mermaid显示异常</p>
+</div>
+<p>使用mermaid标籤可以绘製Flowchart（流程图）、Sequence diagram（时序图 ）、Class Diagram（类别图）、State Diagram（状态图）、Gantt（甘特图）和Pie Chart（圆形图），具体可以查看<a href="https://mermaid-js.github.io/mermaid/#/">mermaid文档</a></p>
+<p>写法：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endmermaid %&#125;</span><br></pre></td></tr></table></figure>
+<p>例：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% mermaid %&#125;</span><br><span class="line">pie</span><br><span class="line"><span class="code">    title Key elements in Product X</span></span><br><span class="line"><span class="code">    &quot;Calcium&quot; : 42.96</span></span><br><span class="line"><span class="code">    &quot;Potassium&quot; : 50.05</span></span><br><span class="line"><span class="code">    &quot;Magnesium&quot; : 10.01</span></span><br><span class="line"><span class="code">    &quot;Iron&quot; :  5</span></span><br><span class="line"><span class="code">&#123;% endmermaid %&#125;</span></span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<div class="mermaid">pie
+    title Key elements in Product X
+    &quot;Calcium&quot; : 42.96
+    &quot;Potassium&quot; : 50.05
+    &quot;Magnesium&quot; : 10.01
+    &quot;Iron&quot; :  5</div>
+<h3 id="Tabs">Tabs</h3>
+<p>使用方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% tabs Unique name, [index] %&#125;</span><br><span class="line">&lt;!-- tab [Tab caption] [@icon] --&gt;</span><br><span class="line">Any content (support inline tags too).</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br><span class="line"></span><br><span class="line">Unique name   : Unique name of tabs block tag without comma.</span><br><span class="line">                Will be used in #id&#x27;s as prefix for each tab with their index numbers.</span><br><span class="line">                If there are whitespaces in name, for generate #id all whitespaces will replaced by dashes.</span><br><span class="line">                Only for current url of post/page must be unique!</span><br><span class="line">[index]       : Index number of active tab.</span><br><span class="line">                If not specified, first tab (1) will be selected.</span><br><span class="line">                If index is -1, no tab will be selected. It&#x27;s will be something like spoiler.</span><br><span class="line">                Optional parameter.</span><br><span class="line">[Tab caption] : Caption of current tab.</span><br><span class="line">                If not caption specified, unique name with tab index suffix will be used as caption of tab.</span><br><span class="line">                If not caption specified, but specified icon, caption will empty.</span><br><span class="line">                Optional parameter.</span><br><span class="line">[@icon]       : FontAwesome icon name (full-name, look like &#x27;fas fa-font&#x27;)</span><br><span class="line">                Can be specified with or without space; e.g. &#x27;Tab caption @icon&#x27; similar to &#x27;Tab caption@icon&#x27;.</span><br><span class="line">                Optional parameter.</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Demo 1 - 预设选择第一个【默认】</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs test1 %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+<div class="tabs" id="test1"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test1-1">test1 1</button></li><li class="tab"><button type="button" data-href="#test1-2">test1 2</button></li><li class="tab"><button type="button" data-href="#test1-3">test1 3</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test1-1"><p><strong>This is Tab 1.</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-2"><p><strong>This is Tab 2.</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test1-3"><p><strong>This is Tab 3.</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<blockquote>
+<p>Demo 2 - 预设选择tabs</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs test2, 3 %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+<div class="tabs" id="test2"><ul class="nav-tabs"><li class="tab"><button type="button" data-href="#test2-1">test2 1</button></li><li class="tab"><button type="button" data-href="#test2-2">test2 2</button></li><li class="tab active"><button type="button" data-href="#test2-3">test2 3</button></li></ul><div class="tab-contents"><div class="tab-item-content" id="test2-1"><p><strong>This is Tab 1.</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test2-2"><p><strong>This is Tab 2.</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content active" id="test2-3"><p><strong>This is Tab 3.</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<blockquote>
+<p>Demo 3 - 没有预设值</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs test3, -1 %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 1.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 2.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line"><span class="strong">**This is Tab 3.**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+<div class="tabs" id="test3"><ul class="nav-tabs"><li class="tab"><button type="button" data-href="#test3-1">test3 1</button></li><li class="tab"><button type="button" data-href="#test3-2">test3 2</button></li><li class="tab"><button type="button" data-href="#test3-3">test3 3</button></li></ul><div class="tab-contents"><div class="tab-item-content" id="test3-1"><p><strong>This is Tab 1.</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test3-2"><p><strong>This is Tab 2.</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test3-3"><p><strong>This is Tab 3.</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<blockquote>
+<p>Demo 4 - 自定义Tab名 + 只有icon + icon和Tab名</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% tabs test4 %&#125;</span><br><span class="line">&lt;!-- tab 第一个Tab --&gt;</span><br><span class="line"><span class="strong">**tab名字为第一个Tab**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab @fab fa-apple-pay --&gt;</span><br><span class="line"><span class="strong">**只有图标 没有Tab名字**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab 炸弹@fas fa-bomb --&gt;</span><br><span class="line"><span class="strong">**名字+icon**</span></span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+<div class="tabs" id="test4"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test4-1">第一个Tab</button></li><li class="tab"><button type="button" data-href="#test4-2"><i class="fab fa-apple-pay" style="text-align: center;"></i></button></li><li class="tab"><button type="button" data-href="#test4-3"><i class="fas fa-bomb"></i>炸弹</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test4-1"><p><strong>tab名字为第一个Tab</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-2"><p><strong>只有图标 没有Tab名字</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test4-3"><p><strong>名字+icon</strong></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<h3 id="button">button</h3>
+<p>使用方法：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% btn [url],[text],[icon],[color] [style] [layout] [position] [size] %&#125;</span><br><span class="line"></span><br><span class="line">[url]         : 链接</span><br><span class="line">[text]        : 按钮文字</span><br><span class="line">[icon]        : [可选] 图标</span><br><span class="line">[color]       : [可选] 按钮背景顔色(默认style时）</span><br><span class="line"><span class="code">                      按钮字体和边框顔色(outline时)</span></span><br><span class="line"><span class="code">                      default/blue/pink/red/purple/orange/green</span></span><br><span class="line"><span class="code">[style]       : [可选] 按钮样式 默认实心</span></span><br><span class="line"><span class="code">                      outline/留空</span></span><br><span class="line"><span class="code">[layout]      : [可选] 按钮佈局 默认为line</span></span><br><span class="line"><span class="code">                      block/留空</span></span><br><span class="line"><span class="code">[position]    : [可选] 按钮位置 前提是设置了layout为block 默认为左边</span></span><br><span class="line"><span class="code">                      center/right/留空</span></span><br><span class="line"><span class="code">[size]        : [可选] 按钮大小</span></span><br><span class="line"><span class="code">                      larger/留空</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Demo</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">This is my website, click the button &#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly %&#125;</span><br><span class="line">This is my website, click the button &#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right %&#125;</span><br><span class="line">This is my website, click the button &#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,,outline %&#125;</span><br><span class="line">This is my website, click the button &#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,outline %&#125;</span><br><span class="line">This is my website, click the button &#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,larger %&#125;</span><br></pre></td></tr></table></figure>
+<p>This is my website, click the button <a class="btn-beautify button--animated " href="https://butterfly.js.org/" 
+  title="Butterfly"><span>Butterfly</span></a><br>
+This is my website, click the button <a class="btn-beautify button--animated " href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a><br>
+This is my website, click the button <a class="btn-beautify button--animated outline" href="https://butterfly.js.org/" 
+  title="Butterfly"><span>Butterfly</span></a><br>
+This is my website, click the button <a class="btn-beautify button--animated outline" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a><br>
+This is my website, click the button <a class="btn-beautify button--animated larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,block %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,block center larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,block right outline larger %&#125;</span><br></pre></td></tr></table></figure>
+<a class="btn-beautify button--animated block" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify button--animated block center larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify button--animated block right outline larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<p>more than one button in center</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,blue larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,pink larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,red larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,purple larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,orange larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,green larger %&#125;</span><br></pre></td></tr></table></figure>
+<a class="btn-beautify button--animated larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify button--animated blue larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify button--animated pink larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify button--animated red larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify button--animated purple larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify button--animated orange larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify button--animated green larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn-center&quot;</span>&gt;</span></span></span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,outline larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,outline blue larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,outline pink larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,outline red larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,outline purple larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,outline orange larger %&#125;</span><br><span class="line">&#123;% btn &#x27;https://butterfly.js.org/&#x27;,Butterfly,far fa-hand-point-right,outline green larger %&#125;</span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<div class="btn-center">
+<a class="btn-beautify button--animated outline larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify button--animated outline blue larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify button--animated outline pink larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify button--animated outline red larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify button--animated outline purple larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify button--animated outline orange larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+<a class="btn-beautify button--animated outline green larger" href="https://butterfly.js.org/" 
+  title="Butterfly"><i class="far fa-hand-point-right"></i><span>Butterfly</span></a>
+</div>
+<h3 id="inlineImg">inlineImg</h3>
+<p>主题中的图片都是默认以块级元素显示，如果你想以内联元素显示，可以使用这个标签外挂。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% inlineImg [src] [height] %&#125;</span><br><span class="line"></span><br><span class="line">[src]      :    图片链接</span><br><span class="line">[height]   ：   图片高度限制【可选】</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Demo</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">海贼王yyds</span><br><span class="line"></span><br><span class="line">![](https://gimg2.baidu.com/image<span class="emphasis">_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_</span>source%2Fd0%2F34%2Ffc%2Fd034fc6183731d078d1c1808ac9d6c5f.jpg&amp;refer=http%3A%2F%2Fup.enterdesk.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1644216012&amp;t=a7c10c9b4a723b87af4f1d5f93e7992a)</span><br><span class="line"></span><br><span class="line">你说的对 &#123;% inlineImg https://i.loli.net/2021/03/19/5M4jUB3ynq7ePgw.png 150px %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>海贼王yyds</p>
+<p><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic_source%2Fd0%2F34%2Ffc%2Fd034fc6183731d078d1c1808ac9d6c5f.jpg&amp;refer=http%3A%2F%2Fup.enterdesk.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1644216012&amp;t=a7c10c9b4a723b87af4f1d5f93e7992a" alt=""></p>
+<p>你说的对 <img class="inline-img" src="https://i.loli.net/2021/03/19/5M4jUB3ynq7ePgw.png" style="height:150px"/></p>
+<h3 id="label">label</h3>
+<p>高亮所需的文字</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">&#123;% label text color %&#125;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td>文字</td>
+</tr>
+<tr>
+<td>color</td>
+<td>【可选】背景颜色，默认<code>default</code>default/blue/pink/red/purple/orange/green</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Demo</p>
+</blockquote>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">臣亮言：&#123;% label 先帝 %&#125;创业未半，而&#123;% label 中道崩殂 blue %&#125;。今天下三分，&#123;% label 益州疲敝 pink %&#125;，此诚&#123;% label 危急存亡之秋 red %&#125;也！然侍衞之臣，不懈于内；&#123;% label 忠志之士 purple %&#125;，忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气；不宜妄自菲薄，引喻失义，以塞忠谏之路也。</span><br><span class="line">宫中、府中，俱为一体；陟罚臧否，不宜异同。若有&#123;% label 作奸 orange %&#125;、&#123;% label 犯科 green %&#125;，及为忠善者，宜付有司，论其刑赏，以昭陛下平明之治；不宜偏私，使内外异法也。</span><br></pre></td></tr></table></figure>
+<p>臣亮言：<mark class="hl-label default">先帝</mark> 创业未半，而<mark class="hl-label blue">中道崩殂</mark> 。今天下三分，<mark class="hl-label pink">益州疲敝</mark> ，此诚<mark class="hl-label red">危急存亡之秋</mark> 也！然侍衞之臣，不懈于内；<mark class="hl-label purple">忠志之士</mark> ，忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气；不宜妄自菲薄，引喻失义，以塞忠谏之路也。<br>
+宫中、府中，俱为一体；陟罚臧否，不宜异同。若有<mark class="hl-label orange">作奸</mark> 、<mark class="hl-label green">犯科</mark> ，及为忠善者，宜付有司，论其刑赏，以昭陛下平明之治；不宜偏私，使内外异法也。</p>
+]]></content>
+      <categories>
+        <category>文档</category>
+      </categories>
+      <tags>
+        <tag>md</tag>
+        <tag>文档</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python爬虫</title>
+    <url>/2022/01/04/python%E7%88%AC%E8%99%AB/</url>
+    <content><![CDATA[<h1>python爬虫</h1>
+<h2 id="准备阶段">准备阶段</h2>
+<h3 id="requests库">requests库</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>requests.request()</code></td>
+<td>构造一个请求，支撑以下各方法的基础方法</td>
+</tr>
+<tr>
+<td><code>requests.get()</code></td>
+<td>获取HTML网页的主要方法，对应于HTTP的GET</td>
+</tr>
+<tr>
+<td><code>requests.head()</code></td>
+<td>获取HTML网页头信息的方法，对应于HTTP的HEAD</td>
+</tr>
+<tr>
+<td><code>requests.post()</code></td>
+<td>向HTML网页提交POST请求的方法，对应于HTTP的POST</td>
+</tr>
+<tr>
+<td><code>requests.put()</code></td>
+<td>向HTML网页提交PUT请求的方法，对应于HTTP的PUT</td>
+</tr>
+<tr>
+<td><code>requests.patch()</code></td>
+<td>向HTML网页提交局部修改请求，对应于HTTP的PATCH</td>
+</tr>
+<tr>
+<td><code>requests.delete()</code></td>
+<td>向HTML页面提交删除请求，对应于HTTP的DELETE</td>
+</tr>
+</tbody>
+</table>
+<h4 id="requests-get"><code>requests.get()</code></h4>
+<p><code>requests.get(url, params=None, **kwargs)**</code></p>
+<ul>
+<li>url : 拟获取页面的url链接</li>
+<li>params : url中的额外参数，字典或字节流格式，可选</li>
+<li>**kwargs: 12个控制访问的参数</li>
+</ul>
+<h4 id="response对象的属性">response对象的属性</h4>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r.status_code</td>
+<td>HTTP请求的返回状态，200表示连接成功，404表示失败</td>
+</tr>
+<tr>
+<td>r.text</td>
+<td>HTTP响应内容的字符串形式，即url对应的页面内容</td>
+</tr>
+<tr>
+<td>r.encoding</td>
+<td>从HTTP header中猜测的响应内容编码方式</td>
+</tr>
+<tr>
+<td>r.apparent_encoding</td>
+<td>从内容分析出的响应内容编码方式（备选编码方式）</td>
+</tr>
+<tr>
+<td>r.content</td>
+<td>HTTP响应内容的二进制形式</td>
+</tr>
+</tbody>
+</table>
+<h4 id="requests库的异常">requests库的异常</h4>
+<table>
+<thead>
+<tr>
+<th>异常</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>requests.ConnectionError</td>
+<td>网络连接错误异常，如DNS查询失败、拒绝连接等</td>
+</tr>
+<tr>
+<td>requests.HTTPError</td>
+<td>HTTP错误异常</td>
+</tr>
+<tr>
+<td>requests.URLRequired</td>
+<td>URL缺失异常</td>
+</tr>
+<tr>
+<td>requests.TooManyRedirects</td>
+<td>超过最大重定向次数，产生重定向异常</td>
+</tr>
+<tr>
+<td>requests.ConnectTimeout</td>
+<td>连接远程服务器超时异常</td>
+</tr>
+<tr>
+<td>requests.Timeout</td>
+<td>请求URL超时，产生超时异常</td>
+</tr>
+<tr>
+<td>r.raise_for_status()</td>
+<td>如果不是200，产生异常 requests.HTTPError</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS</title>
     <url>/2021/07/03/CSS/</url>
     <content><![CDATA[<h2 id="CSS">CSS</h2>
@@ -2267,613 +3444,6 @@ display: -webkit-box;
       </tags>
   </entry>
   <entry>
-    <title>常用HTML5</title>
-    <url>/2022/01/06/HTML5/</url>
-    <content><![CDATA[<h1>HTML5</h1>
-<h3 id="新增语义化标签">新增语义化标签</h3>
-<p>以前布局，我们基本都是用div来做。div对于搜索引擎来说，是没有语义的、</p>
-<ul>
-<li>
-<pre><code class="language-html">&lt;header&gt;&lt;/header&gt; 		头部标签
-&lt;nav&gt;&lt;/nav&gt;				导航标签
-&lt;article&gt;&lt;/article&gt;		内容标签
-&lt;section&gt;&lt;/section&gt;		定义文档某个区域
-&lt;aside&gt;&lt;/aside&gt;			侧边栏标签
-&lt;footer&gt;&lt;/footer&gt;		尾部标签
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">- 注意</span><br><span class="line"></span><br><span class="line">  - 这些语义化标签主要是针对搜索引擎的</span><br><span class="line">  - 这些新标签页面中可以使用多次</span><br><span class="line">  - 在IE9,需要把这些元素转换为块级元素</span><br><span class="line">  - 其实，我们移动端更喜欢使用这些标签</span><br><span class="line">  - HTML5还增加了很多其他的标签，我们后面慢慢学</span><br><span class="line"></span><br><span class="line">### 新增的多媒体标签</span><br><span class="line"></span><br><span class="line">#### 视频：&lt;video&gt;</span><br><span class="line"></span><br><span class="line">| 浏览器            | MP4                                                  | WebM | Ogg  |</span><br><span class="line">| ----------------- | ---------------------------------------------------- | ---- | ---- |</span><br><span class="line">| Intermet Explorer | YES                                                  | NO   | NO   |</span><br><span class="line">| CHrome            | YES                                                  | YES  | YES  |</span><br><span class="line">| Firefox           | YES从Firefox 21版本开始    Linux系统从Firefox 30开始 | YES  | YES  |</span><br><span class="line">| Safari            | YES                                                  | NO   | NO   |</span><br><span class="line">| Opera             | YES     从Opera 25版本开始                           | YES  | YES  |</span><br><span class="line"></span><br><span class="line">语法：</span><br><span class="line"></span><br><span class="line">```html</span><br><span class="line">&lt;video src=&quot;文件地址&quot; controls=&quot;controls&quot;&gt;&lt;/video&gt;</span><br></pre></td></tr></table></figure>
-
-</code></pre>
-</li>
-</ul>
-<p>兼容性处理</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">width</span>=<span class="string">&quot;320&quot;</span> <span class="attr">height</span>=<span class="string">&quot;240&quot;</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;movie.mp4&quot;</span> <span class="attr">type</span>=<span class="string">&quot;video/mp4&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;movie.ogg&quot;</span> <span class="attr">type</span>=<span class="string">&quot;video/ogg&quot;</span>&gt;</span></span><br><span class="line">    您的浏览器不支持video标签</span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span> </span><br></pre></td></tr></table></figure>
-<p>常见属性</p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>autoplay</td>
-<td>autoplay</td>
-<td>视频就绪自动播放(谷歌浏览器需要添加muted来解决自动播放问题)</td>
-</tr>
-<tr>
-<td>controls</td>
-<td>controls</td>
-<td>向用户显示播放控件</td>
-</tr>
-<tr>
-<td>width</td>
-<td>pixels(像素)</td>
-<td>设置播放器宽度</td>
-</tr>
-<tr>
-<td>height</td>
-<td>pixels(像素)</td>
-<td>设置播放器高度</td>
-</tr>
-<tr>
-<td>loop</td>
-<td>loop</td>
-<td>播放完是否继续播放该视频，循环播放</td>
-</tr>
-<tr>
-<td>preload</td>
-<td>auto(预先加载视频) none(不应该预先加载视频)</td>
-<td>规定是否预加载视频(如果有了autoplay就忽略该属性)</td>
-</tr>
-<tr>
-<td>src</td>
-<td>url</td>
-<td>视频url地址</td>
-</tr>
-<tr>
-<td>poster</td>
-<td>Imgurl</td>
-<td>加载等待的画面图片</td>
-</tr>
-<tr>
-<td>muted</td>
-<td>muted</td>
-<td>静音播放</td>
-</tr>
-</tbody>
-</table>
-<h4 id="音频-audio">音频<audio></h4>
-<p>当前<audio>元素支持三种音频格式</p>
-<table>
-<thead>
-<tr>
-<th>浏览器</th>
-<th>MP3</th>
-<th>Wav</th>
-<th>Ogg</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Intermet Explorer</td>
-<td>YES</td>
-<td>NO</td>
-<td>NO</td>
-</tr>
-<tr>
-<td>Chrome</td>
-<td>YES</td>
-<td>YES</td>
-<td>YES</td>
-</tr>
-<tr>
-<td>Firefox</td>
-<td>YES</td>
-<td>YES</td>
-<td>YES</td>
-</tr>
-<tr>
-<td>Safari</td>
-<td>YES</td>
-<td>YES</td>
-<td>NO</td>
-</tr>
-<tr>
-<td>Opera</td>
-<td>YES</td>
-<td>YES</td>
-<td>YES</td>
-</tr>
-</tbody>
-</table>
-<p>语法</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">&quot;&quot;</span> &gt;</span><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>兼容性问题</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;horse.ogg&quot;</span> <span class="attr">type</span>=<span class="string">&quot;audio/ogg&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">&quot;horse.mp3&quot;</span> <span class="attr">type</span>=<span class="string">&quot;audio/mpeg&quot;</span>&gt;</span></span><br><span class="line">    您的浏览器不支持audio元素</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span> </span><br></pre></td></tr></table></figure>
-<p>常见属性</p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>值</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>autoplay</td>
-<td>autoplay</td>
-<td>如果出现该属性，则音频在就绪后马上播放</td>
-</tr>
-<tr>
-<td>controls</td>
-<td>controls</td>
-<td>如果出现该属性，则向用户显示控件，比如播放按钮</td>
-</tr>
-<tr>
-<td>loop</td>
-<td>loop</td>
-<td>如果出现该属性，则每当音频结束时重新开始播放</td>
-</tr>
-<tr>
-<td>src</td>
-<td>url</td>
-<td>要播放的音频的URL</td>
-</tr>
-</tbody>
-</table>
-<h4 id="多媒体标签总结">多媒体标签总结</h4>
-<ul>
-<li>音频标签和视频标签使用方法基本一致</li>
-<li>浏览器支持情况不同</li>
-<li>谷歌浏览器把视频和音频的自动播放禁止了</li>
-<li>我们可以给视频标签添加muted属性来静音播放视频，音频不可以(可以通过JS来解决)</li>
-<li>视频标签是重点，我们经常设置自动播放，不使用controls控件，循环和设置大小属性</li>
-</ul>
-<h3 id="新增的input类型">新增的input类型</h3>
-<table>
-<thead>
-<tr>
-<th>属性值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>type=“email”</td>
-<td>限制用户输入必须是Email类型</td>
-</tr>
-<tr>
-<td>type=“url”</td>
-<td>限制用户输入必须是URL类型</td>
-</tr>
-<tr>
-<td>type=“data”</td>
-<td>限制用户输入必须是日期类型</td>
-</tr>
-<tr>
-<td>type=“time”</td>
-<td>限制用户输入必须是时间类型</td>
-</tr>
-<tr>
-<td>type=“month”</td>
-<td>限制用户输入必须是月类型</td>
-</tr>
-<tr>
-<td>type=“week”</td>
-<td>限制用户输入必须是周类型</td>
-</tr>
-<tr>
-<td>type=“number”</td>
-<td>限制用户输入必须是数字类型</td>
-</tr>
-<tr>
-<td>type=“tel”</td>
-<td>手机号码</td>
-</tr>
-<tr>
-<td>type=“search”</td>
-<td>搜索框</td>
-</tr>
-<tr>
-<td>type=“color”</td>
-<td>生成一个颜色选择表单</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>required</td>
-<td>required</td>
-<td>表单拥有该属性表示其内容不能为空</td>
-</tr>
-<tr>
-<td>placeholder</td>
-<td>提交文本</td>
-<td>表单的提示信息，存在默认值将不在显示</td>
-</tr>
-<tr>
-<td>autofocus</td>
-<td>autofocus</td>
-<td>自动聚焦属性，页面加载完成自动聚焦到指定表单</td>
-</tr>
-<tr>
-<td>autocomplete</td>
-<td>off/on</td>
-<td>当用户在字段开始键时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项                              默认已经打开了，如autocompete=“on”，关闭autocomplete=&quot;off&quot;需要放在表单内，同时加上name属性，同时成功提交</td>
-</tr>
-<tr>
-<td>multiple</td>
-<td>multiple</td>
-<td>可以多选文件提交</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*可以通过以下设置方式修改placeholder里面的字体颜色*/</span></span><br><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">::placeholder</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="classList-属性">classList 属性</h3>
-<p>classList属性是HTML5新增的一个属性，返回元素的类名。但是ie10以上版本支持。</p>
-<p>该属性用于在元素中添加，移除及切换 CSS 类。有以下方法</p>
-<p><strong>添加类：</strong></p>
-<p>element.classList.add(‘类名’);</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">focus.classList.add(<span class="string">&#x27;current&#x27;</span>);</span><br></pre></td></tr></table></figure>
-<p><strong>移除类：</strong></p>
-<p>element.classList.remmove(‘类名’)；</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">focus.classList.remove(<span class="string">&#x27;current&#x27;</span>);</span><br></pre></td></tr></table></figure>
-<p><strong>切换类：</strong></p>
-<p>element.classList.toggle(‘类名’)；</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">focus.classList.toggle(<span class="string">&#x27;current&#x27;</span>);</span><br></pre></td></tr></table></figure>
-<p>注意以上方法里面，所有类名都不带点</p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>html</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown文档</title>
-    <url>/2022/01/07/Markdown%E6%96%87%E6%A1%A3/</url>
-    <content><![CDATA[<h2 id="前言">前言</h2>
-<p>本文章主要是为了整理Markdown的书写格式，方便以后书写md文档，并整理一下butterfly主题的一些特殊标签的使用方法</p>
-<p>文章主要参考自：</p>
-<h2 id="简介">简介</h2>
-<ol>
-<li>
-<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。</p>
-</li>
-<li>
-<p>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。</p>
-</li>
-<li>
-<p>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。</p>
-</li>
-<li>
-<p>Markdown 编写的文档后缀为 .md, .markdown。</p>
-</li>
-</ol>
-<h2 id="应用">应用</h2>
-<p>Markdown 能被使用来撰写电子书，如：Gitbook。</p>
-<p>当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如：GitHub、简书、reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge等。</p>
-<hr>
-<h2 id="标题">标题</h2>
-<p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
-<p>注：此主题内最好使用二级标题以下的标题</p>
-<h2 id="段落">段落</h2>
-<p>有两种段落换行方式</p>
-<ol>
-<li>使用两个以上的空格加上回车</li>
-<li>也可以使用一个空行表示重新开始一个段落</li>
-</ol>
-<h2 id="字体">字体</h2>
-<p>md文档有以下几种字体：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*斜体文本*</span><br><span class="line">_斜体文本_</span><br><span class="line">**粗体文本**</span><br><span class="line">__粗体文本__</span><br><span class="line">***加粗体文本***</span><br><span class="line">___加粗体文本___</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<p><em>斜体文本</em><br>
-<em>斜体文本</em><br>
-<strong>粗体文本</strong><br>
-<strong>粗体文本</strong><br>
-<em><strong>加粗体文本</strong></em><br>
-<em><strong>加粗体文本</strong></em></p>
-<h2 id="分隔线">分隔线</h2>
-<p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line"></span><br><span class="line">* * *</span><br><span class="line"></span><br><span class="line">*****</span><br><span class="line"></span><br><span class="line">- - -</span><br><span class="line"></span><br><span class="line">----------</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<hr>
-<hr>
-<hr>
-<hr>
-<hr>
-<h2 id="删除线">删除线</h2>
-<p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">BAIDU.COM</span><br><span class="line">~~BAIDU.COM~~</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<p><a href="http://BAIDU.COM">BAIDU.COM</a><br>
-<s><a href="http://BAIDU.COM">BAIDU.COM</a></s></p>
-<h2 id="下划线">下划线</h2>
-<p>下划线可以通过 HTML 的 <code>&lt;u&gt;</code> 标签来实现：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;u&gt;带下划线文本&lt;/u&gt;</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<p><u>带下划线文本</u></p>
-<h2 id="脚注">脚注</h2>
-<p>脚注是对文本的补充说明。</p>
-<p>Markdown 脚注的格式如下:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[^要注明的文本]</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<p>创建脚注格式类似这样 <a href="%E5%95%A6%E5%95%A6%E5%95%A6!!!">^RUNOOB</a>。</p>
-<h2 id="列表">列表</h2>
-<h3 id="无序列表">无序列表</h3>
-<p>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记，这些标记后面要添加一个空格，然后再填写内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line"></span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-<h3 id="有序列表">有序列表</h3>
-<p>有序列表使用数字并加上 . 号来表示，如：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<ol>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ol>
-<h3 id="列表嵌套">列表嵌套</h3>
-<p>列表嵌套只需在子列表中的选项前面添加四个空格即可：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套的第一个元素</span><br><span class="line">    - 第一项嵌套的第二个元素</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第二项嵌套的第一个元素</span><br><span class="line">    - 第二项嵌套的第二个元素</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<ol>
-<li>第一项：
-<ul>
-<li>第一项嵌套的第一个元素</li>
-<li>第一项嵌套的第二个元素</li>
-</ul>
-</li>
-<li>第二项：
-<ul>
-<li>第二项嵌套的第一个元素</li>
-<li>第二项嵌套的第二个元素</li>
-</ul>
-</li>
-</ol>
-<h2 id="区块">区块</h2>
-<h3 id="基础用法">基础用法</h3>
-<p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; 区块引用</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<blockquote>
-<p>区块引用</p>
-</blockquote>
-<h3 id="区块嵌套">区块嵌套</h3>
-<p>区块是可以嵌套的，一个 &gt; 符号是最外层，两个 &gt; 符号是第一层嵌套，以此类推：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; 最外层</span><br><span class="line">&gt; &gt; 第一层嵌套</span><br><span class="line">&gt; &gt; &gt; 第二层嵌套</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<blockquote>
-<p>最外层</p>
-<blockquote>
-<p>第一层嵌套</p>
-<blockquote>
-<p>第二层嵌套</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h3 id="区块中使用列表">区块中使用列表</h3>
-<p>区块中使用列表实例如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; 区块中使用列表</span><br><span class="line">&gt; 1. 第一项</span><br><span class="line">&gt; 2. 第二项</span><br><span class="line">&gt; + 第一项</span><br><span class="line">&gt; + 第二项</span><br><span class="line">&gt; + 第三项</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<blockquote>
-<p>区块中使用列表</p>
-<ol>
-<li>第一项</li>
-<li>第二项</li>
-</ol>
-<ul>
-<li>第一项</li>
-<li>第二项</li>
-<li>第三项</li>
-</ul>
-</blockquote>
-<h3 id="列表中使用区块">列表中使用区块</h3>
-<p>如果要在列表项目内放进区块，那么就需要在 &gt; 前添加四个空格的缩进。</p>
-<p>列表中使用区块实例如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">    &gt; 菜鸟教程</span><br><span class="line">    &gt; 学的不仅是技术更是梦想</span><br><span class="line">* 第二项</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<ul>
-<li>第一项
-<blockquote>
-<p>菜鸟教程<br>
-学的不仅是技术更是梦想</p>
-</blockquote>
-</li>
-<li>第二项</li>
-</ul>
-<h2 id="代码">代码</h2>
-<h3 id="片段代码">片段代码</h3>
-<p>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（`），例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`printf()` 函数</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<p><code>printf()</code> 函数</p>
-<h3 id="代码区块">代码区块</h3>
-<h4 id="Tab键表示法">Tab键表示法</h4>
-<p>代码区块使用 4 个空格或者一个制表符（Tab 键）。</p>
-<p>实例如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &#x27;RUNOOB&#x27;;</span><br><span class="line">function test() &#123;</span><br><span class="line">  echo &#x27;test&#x27;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<pre><code>&lt;?php
-echo 'RUNOOB';
-function test() &#123;
-  echo 'test';
-&#125;
-</code></pre>
-<h4 id="表示">```表示</h4>
-<p>也可以用 ``` 包裹一段代码，并指定一种语言（也可以不指定）：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">```javascript</span><br><span class="line">$(document).ready(function () &#123;</span><br><span class="line">    alert(&#x27;RUNOOB&#x27;);</span><br><span class="line">&#125;);</span><br><span class="line">``` .</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">&#x27;RUNOOB&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="链接">链接</h2>
-<h3 id="一般链接">一般链接</h3>
-<p>链接使用方法如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line">&lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80">链接名称</a></li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是一个链接 [百度](https://www.baidu.com)</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<p>这是一个链接 <a href="https://www.baidu.com">百度</a></p>
-<ol start="2">
-<li>&lt;链接地址&gt;</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;https://www.baidu.com&gt;</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<p><a href="https://www.baidu.com">https://www.baidu.com</a></p>
-<h3 id="高级链接">高级链接</h3>
-<p>我们可以通过变量来设置一个链接，变量赋值在文档末尾进行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这个链接用 1 作为网址变量 [Google][1]</span><br><span class="line">这个链接用 runoob 作为网址变量 [Runoob][runoob]</span><br><span class="line">然后在文档的结尾为变量赋值（网址）</span><br><span class="line"></span><br><span class="line">  [1]: http://www.google.com/</span><br><span class="line">  [runoob]: http://www.runoob.com/</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<p>这个链接用 1 作为网址变量 <a href="http://www.google.com/">Google</a><br>
-这个链接用 runoob 作为网址变量 <a href="http://www.runoob.com/">Runoob</a><br>
-然后在文档的结尾为变量赋值（网址）</p>
-<h2 id="图片">图片</h2>
-<h3 id="普通用法">普通用法</h3>
-<p>Markdown 图片语法格式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line"></span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure>
-<p>注意点：</p>
-<ul>
-<li>开头一个感叹号 !</li>
-<li>接着一个方括号，里面放上图片的替代文字</li>
-<li>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 ‘title’ 属性的文字。</li>
-</ul>
-<p>使用实例：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png)</span><br><span class="line"></span><br><span class="line">![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png &quot;RUNOOB&quot;)</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<p><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标"></p>
-<p><img src="http://static.runoob.com/images/runoob-logo.png" alt="RUNOOB 图标" title="RUNOOB"></p>
-<h3 id="进阶用法">进阶用法</h3>
-<h4 id="使用变量">使用变量</h4>
-<p>如下所示：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这个链接用 1 作为网址变量 [RUNOOB][1].</span><br><span class="line">然后在文档的结尾为变量赋值（网址）</span><br><span class="line"></span><br><span class="line">[1]: http://static.runoob.com/images/runoob-logo.png</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<p>这个链接用 1 作为网址变量 <a href="http://www.google.com/">RUNOOB</a>.<br>
-然后在文档的结尾为变量赋值（网址）</p>
-<h4 id="设置图片的高度与宽度">设置图片的高度与宽度</h4>
-<p>Markdown 还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用普通的 <img> 标签。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;img src=&quot;http://static.runoob.com/images/runoob-logo.png&quot; width=&quot;70%&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;img src=&quot;http://static.runoob.com/images/runoob-logo.png&quot; width=&quot;50%&quot;&gt;</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<img src="http://static.runoob.com/images/runoob-logo.png" width="70%">
-<img src="http://static.runoob.com/images/runoob-logo.png" width="50%">
-<h2 id="表格">表格</h2>
-<h3 id="基础语法">基础语法</h3>
-<p>Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。</p>
-<p>语法格式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<table>
-<thead>
-<tr>
-<th>表头</th>
-<th>表头</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-</tbody>
-</table>
-<h3 id="对齐方式">对齐方式</h3>
-<p>我们可以设置表格的对齐方式：</p>
-<ul>
-<li>-: 设置内容和标题栏居右对齐。</li>
-<li>:- 设置内容和标题栏居左对齐。</li>
-<li>:-: 设置内容和标题栏居中对齐。</li>
-</ul>
-<p>实例如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">| 左对齐 | 右对齐 | 居中对齐 |</span><br><span class="line">| :-----| ----: | :----: |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">左对齐</th>
-<th style="text-align:right">右对齐</th>
-<th style="text-align:center">居中对齐</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">单元格</td>
-<td style="text-align:right">单元格</td>
-<td style="text-align:center">单元格</td>
-</tr>
-<tr>
-<td style="text-align:left">单元格</td>
-<td style="text-align:right">单元格</td>
-<td style="text-align:center">单元格</td>
-</tr>
-</tbody>
-</table>
-<h2 id="高级技巧">高级技巧</h2>
-<h3 id="支持的HTML元素">支持的HTML元素</h3>
-<p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p>
-<p>目前支持的 HTML 元素有：<code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，如：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">使用 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;Del&lt;/kbd&gt; 重启电脑</span><br></pre></td></tr></table></figure>
-<p>效果如下所示：</p>
-<p>使用 <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Del</kbd> 重启电脑</p>
-<h3 id="转义">转义</h3>
-<p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">**文本加粗** </span><br><span class="line"></span><br><span class="line">\*\* 正常显示星号 \*\*</span><br></pre></td></tr></table></figure>
-<p>效果如下所示:</p>
-<p><strong>文本加粗</strong></p>
-<p>** 正常显示星号 **</p>
-<p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   下划线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  小括号</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   感叹号</span><br></pre></td></tr></table></figure>
-<h3 id="公式">公式</h3>
-<p>Markdown Preview Enhanced 使用 KaTeX 或者 MathJax 来渲染数学表达式。</p>
-<p>KaTeX 拥有比 MathJax 更快的性能，但是它却少了很多 MathJax 拥有的特性。你可以查看 KaTeX supported functions/symbols 来了解 KaTeX 支持那些符号和函数。</p>
-<p>默认下的分隔符：</p>
-<ul>
-<li><code>$...$</code> 或者 <code>\(...\)</code> 中的数学表达式将会在行内显示。</li>
-<li><code>$$...$$</code> 或者 <code>\[...\]</code> 或者 ````math` 中的数学表达式将会在块内显示。</li>
-</ul>
-<p>注：需要在文章Front-matter添加<code>katex: true</code>,对应的文章才会加载服务。本文章未配置好，因此还不能使用，了解就好</p>
-]]></content>
-      <categories>
-        <category>文档</category>
-      </categories>
-      <tags>
-        <tag>md</tag>
-        <tag>文档</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JS</title>
     <url>/2021/07/03/JS/</url>
     <content><![CDATA[<h2 id="JS">JS</h2>
@@ -4813,135 +5383,6 @@ set.forEach((value,key)=&gt;console.log(value*2))
       <tags>
         <tag>前端</tag>
         <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>python爬虫</title>
-    <url>/2022/01/04/python%E7%88%AC%E8%99%AB/</url>
-    <content><![CDATA[<h1>python爬虫</h1>
-<h2 id="准备阶段">准备阶段</h2>
-<h3 id="requests库">requests库</h3>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>requests.request()</code></td>
-<td>构造一个请求，支撑以下各方法的基础方法</td>
-</tr>
-<tr>
-<td><code>requests.get()</code></td>
-<td>获取HTML网页的主要方法，对应于HTTP的GET</td>
-</tr>
-<tr>
-<td><code>requests.head()</code></td>
-<td>获取HTML网页头信息的方法，对应于HTTP的HEAD</td>
-</tr>
-<tr>
-<td><code>requests.post()</code></td>
-<td>向HTML网页提交POST请求的方法，对应于HTTP的POST</td>
-</tr>
-<tr>
-<td><code>requests.put()</code></td>
-<td>向HTML网页提交PUT请求的方法，对应于HTTP的PUT</td>
-</tr>
-<tr>
-<td><code>requests.patch()</code></td>
-<td>向HTML网页提交局部修改请求，对应于HTTP的PATCH</td>
-</tr>
-<tr>
-<td><code>requests.delete()</code></td>
-<td>向HTML页面提交删除请求，对应于HTTP的DELETE</td>
-</tr>
-</tbody>
-</table>
-<h4 id="requests-get"><code>requests.get()</code></h4>
-<p><code>requests.get(url, params=None, **kwargs)**</code></p>
-<ul>
-<li>url : 拟获取页面的url链接</li>
-<li>params : url中的额外参数，字典或字节流格式，可选</li>
-<li>**kwargs: 12个控制访问的参数</li>
-</ul>
-<h4 id="response对象的属性">response对象的属性</h4>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>r.status_code</td>
-<td>HTTP请求的返回状态，200表示连接成功，404表示失败</td>
-</tr>
-<tr>
-<td>r.text</td>
-<td>HTTP响应内容的字符串形式，即url对应的页面内容</td>
-</tr>
-<tr>
-<td>r.encoding</td>
-<td>从HTTP header中猜测的响应内容编码方式</td>
-</tr>
-<tr>
-<td>r.apparent_encoding</td>
-<td>从内容分析出的响应内容编码方式（备选编码方式）</td>
-</tr>
-<tr>
-<td>r.content</td>
-<td>HTTP响应内容的二进制形式</td>
-</tr>
-</tbody>
-</table>
-<h4 id="requests库的异常">requests库的异常</h4>
-<table>
-<thead>
-<tr>
-<th>异常</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>requests.ConnectionError</td>
-<td>网络连接错误异常，如DNS查询失败、拒绝连接等</td>
-</tr>
-<tr>
-<td>requests.HTTPError</td>
-<td>HTTP错误异常</td>
-</tr>
-<tr>
-<td>requests.URLRequired</td>
-<td>URL缺失异常</td>
-</tr>
-<tr>
-<td>requests.TooManyRedirects</td>
-<td>超过最大重定向次数，产生重定向异常</td>
-</tr>
-<tr>
-<td>requests.ConnectTimeout</td>
-<td>连接远程服务器超时异常</td>
-</tr>
-<tr>
-<td>requests.Timeout</td>
-<td>请求URL超时，产生超时异常</td>
-</tr>
-<tr>
-<td>r.raise_for_status()</td>
-<td>如果不是200，产生异常 requests.HTTPError</td>
-</tr>
-</tbody>
-</table>
-]]></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
