@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>常用HTML5</title>
+    <title>HTML5</title>
     <url>/2022/01/06/HTML5/</url>
     <content><![CDATA[<h3 id="前言">前言</h3>
 <p>本文章主要是上传一下学习html5时的一些笔记，由于篇幅过长，里面的图片路径没时间处理，还有写一些格式存在问题，就将就着看吧</p>
@@ -2547,9 +2547,10 @@ display: -webkit-box;
   <entry>
     <title>python爬虫</title>
     <url>/2022/01/04/python%E7%88%AC%E8%99%AB/</url>
-    <content><![CDATA[<h1>python爬虫</h1>
-<h2 id="准备阶段">准备阶段</h2>
-<h3 id="requests库">requests库</h3>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>本文主要是为了记录自学python爬虫的一些笔记和简单感想</p>
+<h2 id="requests库">requests库</h2>
+<h3 id="7个主要方法">7个主要方法</h3>
 <table>
 <thead>
 <tr>
@@ -2588,14 +2589,130 @@ display: -webkit-box;
 </tr>
 </tbody>
 </table>
-<h4 id="requests-get"><code>requests.get()</code></h4>
-<p><code>requests.get(url, params=None, **kwargs)**</code></p>
+<blockquote>
+<p>下面六种方法本质上都是将第一种方法进行包装,如下所示的get方法</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get</span>(<span class="params">url, parmas=<span class="literal">None</span>, **kwargs</span>):</span></span><br><span class="line">  kwargs.setdefault(<span class="string">&#x27;allow redirects&#x27;</span>, <span class="literal">True</span>)</span><br><span class="line">  <span class="keyword">return</span> request(<span class="string">&#x27;get&#x27;</span>, url, params=params, **kwargs)</span><br></pre></td></tr></table></figure>
+<h3 id="request-方法">request()方法</h3>
+<p><code>requests.request(method, url, **kwargs)</code></p>
+<ul>
+<li>method : 请求方式，对应get/put/post等7种</li>
+<li>url : 拟获取页面的url链接</li>
+<li>**kwargs: 控制访问的参数，共13个</li>
+</ul>
+<blockquote>
+<p>以下为 **kwargs（控制访问的参数，均为可选项）</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>params</td>
+<td>字典或字节序列，作为参数增加到url中</td>
+</tr>
+<tr>
+<td>data</td>
+<td>字典、字节序列或文件对象，作为Request的内容</td>
+</tr>
+<tr>
+<td>json</td>
+<td>JSON格式的数据，作为Request的内容</td>
+</tr>
+<tr>
+<td>headers</td>
+<td>字典，HTTP定制头</td>
+</tr>
+<tr>
+<td>cookies</td>
+<td>字典或CookieJar，Request中的cookie</td>
+</tr>
+<tr>
+<td>auth</td>
+<td>元组，支持HTTP认证功能</td>
+</tr>
+<tr>
+<td>files</td>
+<td>字典类型，传输文件</td>
+</tr>
+<tr>
+<td>timeout</td>
+<td>设定超时时间，秒为单位</td>
+</tr>
+<tr>
+<td>proxies</td>
+<td>字典类型，设定访问代理服务器，可以增加登录认证</td>
+</tr>
+<tr>
+<td>allow_redirects</td>
+<td>True/False，默认为True，重定向开关</td>
+</tr>
+<tr>
+<td>stream</td>
+<td>True/False，默认为True，获取内容立即下载开关</td>
+</tr>
+<tr>
+<td>verify</td>
+<td>True/False，默认为True，认证SSL证书开关</td>
+</tr>
+<tr>
+<td>cert</td>
+<td>本地SSL证书路径</td>
+</tr>
+</tbody>
+</table>
+<h4 id="get-方法">get()方法</h4>
+<p><code>requests.get(url, params=None, **kwargs)</code></p>
 <ul>
 <li>url : 拟获取页面的url链接</li>
 <li>params : url中的额外参数，字典或字节流格式，可选</li>
 <li>**kwargs: 12个控制访问的参数</li>
 </ul>
-<h4 id="response对象的属性">response对象的属性</h4>
+<h4 id="head-方法">head()方法</h4>
+<p><code>requests.head(url, **kwargs)</code></p>
+<ul>
+<li>url : 拟获取页面的url链接</li>
+<li>**kwargs: 12个控制访问的参数</li>
+</ul>
+<h4 id="post-方法">post()方法</h4>
+<p><code>requests.post(url, data=None, json=None, **kwargs)</code></p>
+<ul>
+<li>url : 拟更新页面的url链接</li>
+<li>data : 字典、字节序列或文件，Request的内容</li>
+<li>json : JSON格式的数据，Request的内容</li>
+<li>**kwargs: 12个控制访问的参数</li>
+</ul>
+<h4 id="put-方法">put()方法</h4>
+<p><code>requests.put(url, data=None, **kwargs)</code></p>
+<ul>
+<li>url : 拟更新页面的url链接</li>
+<li>data : 字典、字节序列或文件，Request的内容</li>
+<li>**kwargs: 12个控制访问的参数</li>
+</ul>
+<h4 id="patch-方法">patch()方法</h4>
+<p><code>requests.patch(url, data=None, **kwargs)</code></p>
+<ul>
+<li>url : 拟更新页面的url链接</li>
+<li>data : 字典、字节序列或文件，Request的内容</li>
+<li>**kwargs: 12个控制访问的参数</li>
+</ul>
+<h4 id="delete-方法">delete()方法</h4>
+<p><code>requests.delete(url, **kwargs)</code></p>
+<ul>
+<li>url : 拟删除页面的url链接</li>
+<li>**kwargs: 12个控制访问的参数</li>
+</ul>
+<h3 id="requests库的2个重要对象">requests库的2个重要对象</h3>
+<img src="https://res.cloudinary.com/dqro6ugug/image/upload/v1641645394/blog/python/image-20220103145207771_voqcuq.png" width="70%">
+<h4 id="Response对象">Response对象</h4>
+<p>Response对象包含服务器返回的所以信息，页包含请求的Request信息</p>
+<blockquote>
+<p>Response对象的属性</p>
+</blockquote>
 <table>
 <thead>
 <tr>
@@ -2622,11 +2739,36 @@ display: -webkit-box;
 </tr>
 <tr>
 <td>r.content</td>
-<td>HTTP响应内容的二进制形式</td>
+<td>HTTP响应内容的二进制形</td>
 </tr>
 </tbody>
 </table>
-<h4 id="requests库的异常">requests库的异常</h4>
+<img src="https://res.cloudinary.com/dqro6ugug/image/upload/v1641645394/blog/python/image-20220103150132355_mjsezv.png" width="70%">
+<blockquote>
+<p>理解Response的编码</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r.encoding</td>
+<td>从HTTP header中猜测的响应内容编码方式</td>
+</tr>
+<tr>
+<td>r.apparent_encoding</td>
+<td>从内容中分析出的响应内容编码方式（备选编码方式）</td>
+</tr>
+</tbody>
+</table>
+<div class="note warning flat"><p>r.encoding：如果header中不存在charset，则认为编码为ISO‐8859‐1，r.text根据r.encoding显示网页内容</p>
+<p>r.apparent_encoding：根据网页内容分析出的编码方式，可以看作是r.encoding的备选</p>
+</div>
+<h3 id="requests库的异常">requests库的异常</h3>
 <table>
 <thead>
 <tr>
@@ -2665,6 +2807,766 @@ display: -webkit-box;
 </tr>
 </tbody>
 </table>
+<p>r.raise_for_status()在方法内部判断r.status_code是否等于200，不需要增加额外的if语句，该语句便于利用try‐except进行异常处理</p>
+<h3 id="爬取网页的通用代码框架">爬取网页的通用代码框架</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getHTMLText</span>(<span class="params">url</span>):</span></span><br><span class="line">  <span class="keyword">try</span>:</span><br><span class="line">    r = requests.get(url, timeout = <span class="number">30</span>)</span><br><span class="line">    r.raise_for_status() <span class="comment">#如果状态不是200，引发HTTPError异常</span></span><br><span class="line">    r.encoding = r.apparent_encoding</span><br><span class="line">    <span class="keyword">return</span> r.text</span><br><span class="line">  <span class="keyword">except</span>:</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;产生异常&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">  url = <span class="string">&quot;http://www.baidu.com&quot;</span></span><br><span class="line">  <span class="built_in">print</span>(getHTMLText(url))</span><br></pre></td></tr></table></figure>
+<h2 id="HTTP协议">HTTP协议</h2>
+<h3 id="简介">简介</h3>
+<ul>
+<li>HTTP，Hypertext Transfer Protocol，超文本传输协议</li>
+<li>HTTP是一个基于“请求与响应”模式的、无状态的应用层协议</li>
+<li>HTTP协议采用URL作为定位网络资源的标识，URL格式如下：<br>
+<code>http://host[:port][path]</code>
+<ul>
+<li>host: 合法的Internet主机域名或IP地址</li>
+<li>port: 端口号，缺省端口为80</li>
+<li>path: 请求资源的路径</li>
+</ul>
+</li>
+<li>url的理解：URL是通过HTTP协议存取资源的Internet路径，一个URL对应一个数据资源</li>
+</ul>
+<h3 id="方法">方法</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>请求获取URL位置的资源</td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>请求获取URL位置资源的响应消息报告，即获得该资源的头部信息</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>请求向URL位置的资源后附加新的数据</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>请求向URL位置存储一个资源，覆盖原URL位置的资源</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>请求局部更新URL位置的资源，即改变该处资源的部分内容</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>请求删除URL位置存储的资源</td>
+</tr>
+</tbody>
+</table>
+<img src="https://res.cloudinary.com/dqro6ugug/image/upload/v1641797695/blog/python/Snipaste_2022-01-10_14-53-38_xpnico.png" width="70%">
+<blockquote>
+<p>理解patch和put的区别</p>
+</blockquote>
+<p>假设URL位置有一组数据UserInfo，包括UserID、UserName等20个字段</p>
+<p>需求：用户修改了UserName，其他不变</p>
+<ul>
+<li>采用PATCH，仅向URL提交UserName的局部更新请求</li>
+<li>采用PUT，必须将所有20个字段一并提交到URL，未提交字段被删除</li>
+</ul>
+<p>PATCH的最主要好处：节省网络带宽</p>
+<h3 id="HTTP和requests库的区别">HTTP和requests库的区别</h3>
+<table>
+<thead>
+<tr>
+<th>HTTP协议方法</th>
+<th>Requests库方法</th>
+<th>功能一致性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>requests.get()</td>
+<td>一致</td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>requests.head()</td>
+<td>一致</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>requests.post()</td>
+<td>一致</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>requests.put()</td>
+<td>一致</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>requests.patch()</td>
+<td>一致</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>requests.delete()</td>
+<td>一致</td>
+</tr>
+</tbody>
+</table>
+<div class="note warning flat"><p>时间有限，HTTP七种方法的具体使用情况请去<a href="http://baidu.com">百度</a></p>
+</div>
+<h2 id="Beautiful-Soup库">Beautiful Soup库</h2>
+<h3 id="理解">理解</h3>
+<p>Beautiful Soup库是解析、遍历、维护“标签树”的功能库</p>
+<h3 id="引用">引用</h3>
+<p>Beautiful Soup库，也叫 beautifulsoup4 或 bs4，约定引用方式如下，即主要是用BeautifulSoup类</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> bs4</span><br></pre></td></tr></table></figure>
+<h3 id="解析器">解析器</h3>
+<blockquote>
+<p>作用：将爬取下来的HTML代码解析为标签树，使HTML内容友好的显示，更易于寻找爬取路径</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>解析器</th>
+<th>使用方法</th>
+<th>条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bs4的HTML解析器</td>
+<td>BeautifulSoup(mk,‘html.parser’)</td>
+<td>安装bs4库</td>
+</tr>
+<tr>
+<td>lxml的HTML解析器</td>
+<td>BeautifulSoup(mk,‘lxml’)</td>
+<td>pip install lxml</td>
+</tr>
+<tr>
+<td>lxml的XML解析器</td>
+<td>BeautifulSoup(mk,‘xml’)</td>
+<td>pip install lxml</td>
+</tr>
+<tr>
+<td>html5lib的解析器</td>
+<td>BeautifulSoup(mk,‘html5lib’)</td>
+<td>pip install html5lib</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>bs4库的prettify()方法</p>
+</blockquote>
+<ul>
+<li>.prettify()为HTML文本&lt;&gt;及其内容增加更加’\n’</li>
+<li>.prettify()可用于标签，方法：<code>&lt;tag&gt;.prettify()</code></li>
+</ul>
+<h3 id="基本元素">基本元素</h3>
+<table>
+<thead>
+<tr>
+<th>基本元素</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tag</td>
+<td>标签，最基本的信息组织单元，分别用&lt;&gt;和&lt;/&gt;标明开头和结尾</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>标签的名字，<code>&lt;p&gt;…&lt;/p&gt;</code>的名字是’p’，格式：<code>&lt;tag&gt;.name</code></td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>标签的属性，字典形式组织，格式：<code>&lt;tag&gt;.attrs</code></td>
+</tr>
+<tr>
+<td>NavigableString</td>
+<td>标签内非属性字符串，&lt;&gt;…&lt;/&gt;中字符串，格式：<code>&lt;tag&gt;.string</code></td>
+</tr>
+<tr>
+<td>Comment</td>
+<td>标签内字符串的注释部分，一种特殊的Comment类型</td>
+</tr>
+</tbody>
+</table>
+<img src="https://res.cloudinary.com/dqro6ugug/image/upload/v1641897143/blog/python/Snipaste_2022-01-11_16-28-43_ioijnq.png" width="70%">
+<ul>
+<li>任何存在于HTML语法中的标签都可以用soup.<tag>访问获得,当HTML文档中存在多个相同<tag>对应内容时，soup.<tag>返回第一个</li>
+<li>每个<tag>都有自己的名字，通过<tag>.name获取，字符串类型</li>
+<li>一个<tag>可以有0或多个属性，字典类型</li>
+</ul>
+<h3 id="标签树的遍历">标签树的遍历</h3>
+<img src="https://res.cloudinary.com/dqro6ugug/image/upload/v1641897729/blog/python/Snipaste_2022-01-11_18-41-44_vurjm3.png" width="90%">
+<h4 id="下行遍历">下行遍历</h4>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.contents</td>
+<td>子节点的列表，将<code>&lt;tag&gt;</code>所有儿子节点存入列表</td>
+</tr>
+<tr>
+<td>.children</td>
+<td>子节点的迭代类型，与.contents类似，用于循环遍历儿子节点</td>
+</tr>
+<tr>
+<td>.descendants</td>
+<td>子孙节点的迭代类型，包含所有子孙节点，用于循环遍历</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>BeautifulSoup类型是标签树的根节点</p>
+</blockquote>
+<h4 id="上行遍历">上行遍历</h4>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.parent</td>
+<td>节点的父亲标签</td>
+</tr>
+<tr>
+<td>.parents</td>
+<td>节点先辈标签的迭代类型，用于循环遍历先辈节点</td>
+</tr>
+</tbody>
+</table>
+<h4 id="平行标签">平行标签</h4>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.next_sibling</td>
+<td>返回按照HTML文本顺序的下一个平行节点标签</td>
+</tr>
+<tr>
+<td>.previous_sibling</td>
+<td>返回按照HTML文本顺序的上一个平行节点标签</td>
+</tr>
+<tr>
+<td>.next_siblings</td>
+<td>迭代类型，返回按照HTML文本顺序的后续所有平行节点标签</td>
+</tr>
+<tr>
+<td>.previous_siblings</td>
+<td>迭代类型，返回按照HTML文本顺序的前续所有平行节点标签</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bs4库的编码">bs4库的编码</h3>
+<ul>
+<li>
+<p>bs4库将任何HTML输入都变成utf‐8编码</p>
+</li>
+<li>
+<p>Python 3.x默认支持编码是utf‐8,解析无障碍</p>
+</li>
+</ul>
+<h2 id="信息标记与提取方法">信息标记与提取方法</h2>
+<h3 id="信息的标记">信息的标记</h3>
+<ul>
+<li>标记后的信息可形成信息组织结构，增加了信息维度</li>
+<li>标记的结构与信息一样具有重要价值</li>
+<li>标记后的信息可用于通信、存储或展示</li>
+<li>标记后的信息更利于程序理解和运用</li>
+</ul>
+<h3 id="信息标记的三种形式">信息标记的三种形式</h3>
+<h4 id="XML">XML</h4>
+<img src="https://res.cloudinary.com/dqro6ugug/image/upload/v1641906858/blog/python/Snipaste_2022-01-11_19-14-15_e3ykre.png" width="70%">
+<p>例：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">全写：<span class="tag">&lt;<span class="name">name</span>&gt;</span> ... <span class="tag">&lt;/<span class="name">name</span>&gt;</span> </span><br><span class="line">缩写：<span class="tag">&lt;<span class="name">name</span>/&gt;</span></span><br><span class="line">注释：<span class="comment">&lt;!-- --&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="JSON">JSON</h4>
+<img src="https://res.cloudinary.com/dqro6ugug/image/upload/v1641908881/blog/python/Snipaste_2022-01-11_21-47-46_sy9d8r.png" width="70%">
+<blockquote>
+<p>使用键值对的形式表示数据</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 单值：</span></span><br><span class="line"><span class="string">&quot;key&quot;</span> : <span class="string">&quot;value&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 多值:</span></span><br><span class="line"><span class="string">&quot;key&quot;</span> : [<span class="string">&quot;value1&quot;</span>, <span class="string">&quot;value2&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;key&quot;</span> : &#123;</span><br><span class="line">  <span class="attr">&quot;key1&quot;</span> : <span class="string">&quot;value1&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;key2&quot;</span> : <span class="string">&quot;value2&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="YAML">YAML</h4>
+<img src="https://res.cloudinary.com/dqro6ugug/image/upload/v1641909207/blog/python/Snipaste_2022-01-11_21-53-09_qx3i3s.png" width="70%">
+<blockquote>
+<p>使用缩进关系表示所属关系，# 表示注释</p>
+</blockquote>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 所属关系</span></span><br><span class="line"><span class="attr">name:</span></span><br><span class="line">  <span class="attr">newName :</span> <span class="string">李明</span></span><br><span class="line">  <span class="attr">oldName :</span> <span class="string">李狗剩</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 并列关系</span></span><br><span class="line"><span class="attr">name:</span></span><br><span class="line"><span class="string">-李明</span></span><br><span class="line"><span class="string">-李狗剩</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 整块数据</span></span><br><span class="line"><span class="attr">text:</span> <span class="string">|</span></span><br><span class="line"><span class="string">vwnoiuvarenubeuyvabnobegyaebhpnpioqwnofbarygbf</span></span><br></pre></td></tr></table></figure>
+<h4 id="比较">比较</h4>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>XML</td>
+<td>最早的通用信息标记语言，可扩展性好，但繁琐；Internet上的信息交互与传递</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>信息有类型，适合程序处理(js)，较XML简洁；移动应用云端和节点的信息通信，无注释</td>
+</tr>
+<tr>
+<td>YAML</td>
+<td>信息无类型，文本信息比例最高，可读性好；各类系统的配置文件，有注释易读</td>
+</tr>
+</tbody>
+</table>
+<h3 id="信息提取">信息提取</h3>
+<blockquote>
+<p>方法一：：完整解析信息的标记形式，再提取关键信息</p>
+</blockquote>
+<p>需要标记解析器，例如：bs4库的标签树遍历</p>
+<ul>
+<li>优点：信息解析准确</li>
+<li>缺点：提取过程繁琐，速度慢</li>
+</ul>
+<blockquote>
+<p>方法二：无视标记形式，直接搜索关键信息</p>
+</blockquote>
+<p>对信息的文本查找函数即可</p>
+<ul>
+<li>优点：提取过程简洁，速度较快</li>
+<li>缺点：提取结果准确性与信息内容相关</li>
+</ul>
+<blockquote>
+<p>融合方法：结合形式解析与搜索方法，提取关键信息</p>
+</blockquote>
+<p>需要标记解析器及文本查找函数</p>
+<h3 id="内容查找方法">内容查找方法</h3>
+<p><code>&lt;&gt;.find_all(name, attrs, recursive, string, **kwargs)</code><br>
+返回一个列表类型，存储查找的结果</p>
+<ul>
+<li>name : 对标签名称的检索字符串</li>
+<li>attrs : 对标签属性值的检索字符串，可标注属性检索</li>
+<li>recursive : 是否对子孙全部检索，默认True</li>
+<li>string : &lt;&gt;…&lt;/&gt;中字符串区域的检索字符串</li>
+</ul>
+<p>语法糖写法:<br>
+<code>&lt;tag&gt;(..)</code> 等价于 <code>&lt;tag&gt;.find_all(..)</code><br>
+<code>soup(..)</code> 等价于 <code>soup.find_all(..)</code></p>
+<blockquote>
+<p>扩展方法</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;&gt;.find()</td>
+<td>搜索且只返回一个结果，同.find_all()参数</td>
+</tr>
+<tr>
+<td>&lt;&gt;.find_parents()</td>
+<td>在先辈节点中搜索，返回列表类型，同.find_all()参数</td>
+</tr>
+<tr>
+<td>&lt;&gt;.find_parent()</td>
+<td>在先辈节点中返回一个结果，同.find()参数</td>
+</tr>
+<tr>
+<td>&lt;&gt;.find_next_siblings()</td>
+<td>在后续平行节点中搜索，返回列表类型，同.find_all()参数</td>
+</tr>
+<tr>
+<td>&lt;&gt;.find_next_sibling()</td>
+<td>在后续平行节点中返回一个结果，同.find()参数</td>
+</tr>
+<tr>
+<td>&lt;&gt;.find_previous_siblings()</td>
+<td>在前序平行节点中搜索，返回列表类型，同.find_all()参数</td>
+</tr>
+<tr>
+<td>&lt;&gt;.find_previous_sibling()</td>
+<td>在前序平行节点中返回一个结果，同.find()参数</td>
+</tr>
+</tbody>
+</table>
+<h2 id="正则表达式">正则表达式</h2>
+<h3 id="简介-2">简介</h3>
+<ul>
+<li>正则表达式是用来简洁表达一组字符串的表达式</li>
+<li>正则表达式最大的优点就是<mark class="hl-label pink">简洁</mark> ,能够一行胜千言</li>
+<li>正则表达式是一种针对字符串表达“简洁”和“特征”思想的工具，正则表达式可以用来判断某字符串的特征归属</li>
+</ul>
+<h3 id="使用">使用</h3>
+<img src="https://res.cloudinary.com/dqro6ugug/image/upload/v1642211575/blog/python/Snipaste_2022-01-15_09-50-42_lrwtau.png" width="80%">
+<h3 id="语法">语法</h3>
+<p>正则表达式语法由字符和操作符构成</p>
+<blockquote>
+<p>常用操作符：</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>操作符</th>
+<th>说明</th>
+<th>实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.</td>
+<td>表示任何单个字符</td>
+<td></td>
+</tr>
+<tr>
+<td>[ ]</td>
+<td>字符集，对单个字符给出取值范围</td>
+<td>[abc]表示a、b、c，[a‐z]表示a到z单个字符</td>
+</tr>
+<tr>
+<td>[^ ]</td>
+<td>非字符集，对单个字符给出排除范围</td>
+<td>[^abc]表示非a或b或c的单个字符</td>
+</tr>
+<tr>
+<td>*</td>
+<td>前一个字符0次或无限次扩展</td>
+<td>abc* 表示 ab、abc、abcc、abccc等</td>
+</tr>
+<tr>
+<td>+</td>
+<td>前一个字符1次或无限次扩展</td>
+<td>abc+ 表示 abc、abcc、abccc等</td>
+</tr>
+<tr>
+<td>?</td>
+<td>前一个字符0次或1次扩展</td>
+<td>abc? 表示 ab、abc</td>
+</tr>
+<tr>
+<td><code>|</code></td>
+<td>左右表达式任意一个</td>
+<td>abc</td>
+</tr>
+<tr>
+<td>{m}</td>
+<td>扩展前一个字符m次</td>
+<td>ab{2}c表示abbc</td>
+</tr>
+<tr>
+<td>{m,n}</td>
+<td>扩展前一个字符m至n次（含n）</td>
+<td>ab{1,2}c表示abc、abbc</td>
+</tr>
+<tr>
+<td>^</td>
+<td>匹配字符串开头</td>
+<td>^abc表示abc且在一个字符串的开头</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配字符串结尾</td>
+<td>abc$表示abc且在一个字符串的结尾</td>
+</tr>
+<tr>
+<td>( )</td>
+<td>分组标记，内部只能使用 <code>|</code> 操作符</td>
+<td>(abc)表示abc，(abc</td>
+</tr>
+<tr>
+<td>\d</td>
+<td>数字，等价于[0‐9]</td>
+<td></td>
+</tr>
+<tr>
+<td>\w</td>
+<td>单词字符，等价于[A‐Za‐z0‐9_]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>实例</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>正则表达式</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^[A‐Za‐z]+$</td>
+<td>由26个字母组成的字符串</td>
+</tr>
+<tr>
+<td>^[A‐Za‐z0‐9]+$</td>
+<td>由26个字母和数字组成的字符串</td>
+</tr>
+<tr>
+<td>^‐?\d+$</td>
+<td>整数形式的字符串</td>
+</tr>
+<tr>
+<td>^[0‐9]<em>[1‐9][0‐9]</em>$</td>
+<td>正整数形式的字符串</td>
+</tr>
+<tr>
+<td>[1‐9]\d{5}</td>
+<td>中国境内邮政编码，6位</td>
+</tr>
+<tr>
+<td>[\u4e00‐\u9fa5]</td>
+<td>匹配中文字符</td>
+</tr>
+<tr>
+<td>\d{3}‐\d{8}</td>
+<td>\d{4}‐\d{7}</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Re库">Re库</h3>
+<h4 id="介绍">介绍</h4>
+<p>Re库是Python的标准库，主要用于字符串匹配</p>
+<p>调用方式为：<code>import re</code></p>
+<h4 id="正则表达式的表示形式">正则表达式的表示形式</h4>
+<div class="tabs" id="re"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#re-1">raw string类型（原生字符串类型）</button></li><li class="tab"><button type="button" data-href="#re-2">string</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="re-1"><p>re库采用raw string类型表示正则表达式，表示为：<code>r'text'</code></p>
+<p>例如：</p>
+<ul>
+<li><code>r'[1‐9]\d{5}'</code></li>
+<li><code>r'\d{3}‐\d{8}|\d{4}‐\d{7}</code></li>
+</ul>
+<p>raw string是不包含对转义符再次转义的字符串</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="re-2"><p>re库也可以采用string类型表示正则表达式，但更繁琐</p>
+<p>例如：</p>
+<ul>
+<li><code>'[1‐9]\\d{5}'</code></li>
+<li><code>'\\d{3}‐\\d{8}|\\d{4}‐\\d{7}'</code></li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<div class="note warning flat"><p>建议：当正则表达式包含转义符时，使用raw string</p>
+</div>
+<h4 id="Re库主要功能函数">Re库主要功能函数</h4>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>re.search()</td>
+<td>在一个字符串中搜索匹配正则表达式的第一个位置，返回match对象</td>
+</tr>
+<tr>
+<td>re.match()</td>
+<td>从一个字符串的开始位置起匹配正则表达式，返回match对象</td>
+</tr>
+<tr>
+<td>re.findall()</td>
+<td>搜索字符串，以列表类型返回全部能匹配的子串</td>
+</tr>
+<tr>
+<td>re.split()</td>
+<td>将一个字符串按照正则表达式匹配结果进行分割，返回列表类型</td>
+</tr>
+<tr>
+<td>re.finditer()</td>
+<td>搜索字符串，返回一个匹配结果的迭代类型，每个迭代元素是match对象</td>
+</tr>
+<tr>
+<td>re.sub()</td>
+<td>在一个字符串中替换所有匹配正则表达式的子串，返回替换后的字符串</td>
+</tr>
+</tbody>
+</table>
+<div class="tabs" id="def"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#def-1">search</button></li><li class="tab"><button type="button" data-href="#def-2">match</button></li><li class="tab"><button type="button" data-href="#def-3">findall</button></li><li class="tab"><button type="button" data-href="#def-4">split</button></li><li class="tab"><button type="button" data-href="#def-5">finditer</button></li><li class="tab"><button type="button" data-href="#def-6">sub</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="def-1"><p><code>re.search(pattern, string, flags=0)</code></p>
+<p>在一个字符串中搜索匹配正则表达式的第一个位置返回match对象</p>
+<ul>
+<li>pattern : 正则表达式的字符串或原生字符串表示</li>
+<li>string : 待匹配字符串</li>
+<li>flags : 正则表达式使用时的控制标记</li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="def-2"><p><code>re.match(pattern, string, flags=0)</code></p>
+<p>从一个字符串的开始位置起匹配正则表达式返回match对象</p>
+<ul>
+<li>pattern : 正则表达式的字符串或原生字符串表示</li>
+<li>string : 待匹配字符串</li>
+<li>flags : 正则表达式使用时的控制标记</li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="def-3"><p><code>re.findall(pattern, string, flags=0)</code></p>
+<p>搜索字符串，以列表类型返回全部能匹配的子串</p>
+<ul>
+<li>pattern : 正则表达式的字符串或原生字符串表示</li>
+<li>string : 待匹配字符串</li>
+<li>flags : 正则表达式使用时的控制标记</li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="def-4"><p><code>re.split(pattern, string, maxsplit=0, flags=0)</code></p>
+<p>将一个字符串按照正则表达式匹配结果进行分割返回列表类型</p>
+<ul>
+<li>pattern : 正则表达式的字符串或原生字符串表示</li>
+<li>string : 待匹配字符串</li>
+<li>maxsplit: 最大分割数，剩余部分作为最后一个元素输出</li>
+<li>flags : 正则表达式使用时的控制标记</li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="def-5"><p><code>re.finditer(pattern, string, flags=0)</code></p>
+<p>搜索字符串，返回一个匹配结果的迭代类型，每个迭代元素是match对象</p>
+<ul>
+<li>pattern : 正则表达式的字符串或原生字符串表示</li>
+<li>string : 待匹配字符串</li>
+<li>flags : 正则表达式使用时的控制标记</li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="def-6"><p><code>re.sub(pattern, repl, string, count=0, flags=0)</code></p>
+<p>在一个字符串中替换所有匹配正则表达式的子串返回替换后的字符串</p>
+<ul>
+<li>pattern : 正则表达式的字符串或原生字符串表示</li>
+<li>repl : 替换匹配字符串的字符串</li>
+<li>string : 待匹配字符串</li>
+<li>count : 匹配的最大替换次数</li>
+<li>flags : 正则表达式使用时的控制标记</li>
+</ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
+<p>flags: 正则表达式使用时的控制标记</p>
+<table>
+<thead>
+<tr>
+<th>常用标记</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>re.I re.IGNORECASE</td>
+<td>忽略正则表达式的大小写，[A‐Z]能够匹配小写字符</td>
+</tr>
+<tr>
+<td>re.M re.MULTILINE</td>
+<td>正则表达式中的^操作符能够将给定字符串的每行当作匹配开始</td>
+</tr>
+<tr>
+<td>re.S re.DOTALL</td>
+<td>正则表达式中的.操作符能够匹配所有字符，默认匹配除换行外的所有字符</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Re库的另一种等级用法">Re库的另一种等级用法</h4>
+<img src="https://res.cloudinary.com/dqro6ugug/image/upload/v1642223388/blog/python/Snipaste_2022-01-15_13-09-21_aefw09.png" width="100%">
+<p><code>regex = re.compile(pattern, flags=0)</code></p>
+<p>将正则表达式的字符串形式编译成正则表达式对象</p>
+<ul>
+<li>pattern : 正则表达式的字符串或原生字符串表示</li>
+<li>flags : 正则表达式使用时的控制标记</li>
+</ul>
+<p>函数和第一种用法差不多，唯一不同的就是第二种方法先将正则表达式编译，之后用处理后的正则表达式调用函数</p>
+<img src="https://res.cloudinary.com/dqro6ugug/image/upload/v1642230065/blog/python/Snipaste_2022-01-15_14-59-59_wqgdvi.png" width="80%">
+<h4 id="Re库的Match对象">Re库的Match对象</h4>
+<blockquote>
+<p>介绍</p>
+</blockquote>
+<img src="https://res.cloudinary.com/dqro6ugug/image/upload/v1642224292/blog/python/Snipaste_2022-01-15_13-24-36_i45jst.png" width="80%">
+<blockquote>
+<p>属性</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.string</td>
+<td>待匹配的文本</td>
+</tr>
+<tr>
+<td>.re</td>
+<td>匹配时使用的patter对象（正则表达式）</td>
+</tr>
+<tr>
+<td>.pos</td>
+<td>正则表达式搜索文本的开始位置</td>
+</tr>
+<tr>
+<td>.endpos</td>
+<td>正则表达式搜索文本的结束位置</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>方法</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.group(0)</td>
+<td>获得匹配后的字符串</td>
+</tr>
+<tr>
+<td>.start()</td>
+<td>匹配字符串在原始字符串的开始位置</td>
+</tr>
+<tr>
+<td>.end()</td>
+<td>匹配字符串在原始字符串的结束位置</td>
+</tr>
+<tr>
+<td>.span()</td>
+<td>返回(.start(), .end())</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Re库的贪婪匹配和最小匹配">Re库的贪婪匹配和最小匹配</h4>
+<blockquote>
+<p>贪婪匹配</p>
+</blockquote>
+<p>Re库默认采用贪婪匹配，即输出匹配最长的子串</p>
+<blockquote>
+<p>最小匹配</p>
+</blockquote>
+<p>最小匹配操作符：</p>
+<table>
+<thead>
+<tr>
+<th>操作符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*?</td>
+<td>前一个字符0次或无限次扩展，最小匹配</td>
+</tr>
+<tr>
+<td>+?</td>
+<td>前一个字符1次或无限次扩展，最小匹配</td>
+</tr>
+<tr>
+<td>??</td>
+<td>前一个字符0次或1次扩展，最小匹配</td>
+</tr>
+<tr>
+<td>{m,n}?</td>
+<td>扩展前一个字符m至n次（含n），最小匹配</td>
+</tr>
+</tbody>
+</table>
+<p>只要长度输出可能不同的，都可以通过在操作符后增加?变成最小匹配</p>
 ]]></content>
       <categories>
         <category>python</category>

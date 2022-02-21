@@ -38,11 +38,11 @@
   </entry>
   
   <entry>
-    <title>常用HTML5</title>
+    <title>HTML5</title>
     <link href="https://yyf12345.github.io/2022/01/06/HTML5/"/>
     <id>https://yyf12345.github.io/2022/01/06/HTML5/</id>
     <published>2022-01-06T15:24:54.560Z</published>
-    <updated>2022-01-08T10:14:30.144Z</updated>
+    <updated>2022-01-08T12:14:15.114Z</updated>
     
     
     <summary type="html">本文章主要是上传一下学习html5时的一些笔记，由于篇幅过长，里面的图片路径没时间处理，还有写一些格式存在问题，就将就着看吧</summary>
@@ -63,7 +63,7 @@
     <link href="https://yyf12345.github.io/2022/01/06/%E6%9B%B4%E6%96%B0Blog%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B3%A8%E6%84%8F%E7%82%B9/"/>
     <id>https://yyf12345.github.io/2022/01/06/%E6%9B%B4%E6%96%B0Blog%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B3%A8%E6%84%8F%E7%82%B9/</id>
     <published>2022-01-06T06:42:25.000Z</published>
-    <updated>2022-01-08T10:14:30.144Z</updated>
+    <updated>2022-01-08T12:14:41.149Z</updated>
     
     
     <summary type="html">此文章主要记录一些更新博客时遇见的问题和解决方法，记录并不全面</summary>
@@ -80,18 +80,10 @@
     <link href="https://yyf12345.github.io/2022/01/04/python%E7%88%AC%E8%99%AB/"/>
     <id>https://yyf12345.github.io/2022/01/04/python%E7%88%AC%E8%99%AB/</id>
     <published>2022-01-04T04:39:43.000Z</published>
-    <updated>2022-01-08T10:14:50.360Z</updated>
+    <updated>2022-01-15T07:01:17.943Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;python爬虫&lt;/h1&gt;
-&lt;h2 id=&quot;准备阶段&quot;&gt;准备阶段&lt;/h2&gt;
-&lt;h3</summary>
-        
-      
+    <summary type="html">本文主要是为了记录自学python爬虫的一些笔记和简单感想</summary>
     
     
     
@@ -128,7 +120,7 @@
     <link href="https://yyf12345.github.io/2021/07/03/CSS/"/>
     <id>https://yyf12345.github.io/2021/07/03/CSS/</id>
     <published>2021-07-03T07:43:40.000Z</published>
-    <updated>2022-01-08T10:14:30.144Z</updated>
+    <updated>2022-01-08T12:15:45.678Z</updated>
     
     
     <summary type="html">本文章主要是上传一下学习css时的一些笔记，由于篇幅过长，里面的图片路径没时间处理，还有写一些格式存在问题，就将就着看吧</summary>
