@@ -6451,6 +6451,10 @@ set.forEach((value,key)=&gt;console.log(value*2))
 <p>渲染静态网站</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
 </li>
+<li>
+<p>提交网站</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 <h2 id="评论模块">评论模块</h2>
 <p>emoji是借用其他人的emojiCDN，网址为：<a href="https://cungudafa.blog.csdn.net/article/details/105548858">https://cungudafa.blog.csdn.net/article/details/105548858</a></p>
@@ -6482,5 +6486,24 @@ set.forEach((value,key)=&gt;console.log(value*2))
       <categories>
         <category>更新</category>
       </categories>
+  </entry>
+  <entry>
+    <title>稀奇古怪的css样式</title>
+    <url>/2022/04/03/%E7%A8%80%E5%A5%87%E5%8F%A4%E6%80%AA%E7%9A%84css%E6%A0%B7%E5%BC%8F/</url>
+    <content><![CDATA[<h2 id="accent-color">accent-color</h2>
+<p><code>accent-color</code>是一个css样式，可以改变复选框(checkbox)、单选框(randio)、范围滑块(range)、进度元素(progress)的颜色</p>
+<p>其余表单元素的样式改变请参考：<a href="https://web.dev/accent-color/#range">参考网址</a></p>
+<div class="note warning flat"><ol>
+<li>直接使用accent-color样式时，原来样式中的白色部分会变为黑色，目前我不知道解决办法</li>
+<li>如果设置的颜色比较浅的时候，鼠标经过复选框…的颜色会变浅(有可能会变为白色)，颜色比较深的时候，鼠标经过复选框…的颜色会变深</li>
+</ol>
+</div>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
   </entry>
 </search>

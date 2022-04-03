@@ -6,7 +6,7 @@
   <link href="https://yyf12345.github.io/atom.xml" rel="self"/>
   
   <link href="https://yyf12345.github.io/"/>
-  <updated>2022-01-08T09:39:43.387Z</updated>
+  <updated>2022-04-03T09:25:30.622Z</updated>
   <id>https://yyf12345.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>稀奇古怪的css样式</title>
+    <link href="https://yyf12345.github.io/2022/04/03/%E7%A8%80%E5%A5%87%E5%8F%A4%E6%80%AA%E7%9A%84css%E6%A0%B7%E5%BC%8F/"/>
+    <id>https://yyf12345.github.io/2022/04/03/%E7%A8%80%E5%A5%87%E5%8F%A4%E6%80%AA%E7%9A%84css%E6%A0%B7%E5%BC%8F/</id>
+    <published>2022-04-03T08:36:12.000Z</published>
+    <updated>2022-04-03T09:25:30.622Z</updated>
+    
+    
+    <summary type="html">记录一些不常用的css样式</summary>
+    
+    
+    
+    <category term="前端" scheme="https://yyf12345.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="css" scheme="https://yyf12345.github.io/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>Markdown文档</title>
@@ -63,7 +82,7 @@
     <link href="https://yyf12345.github.io/2022/01/06/%E6%9B%B4%E6%96%B0Blog%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B3%A8%E6%84%8F%E7%82%B9/"/>
     <id>https://yyf12345.github.io/2022/01/06/%E6%9B%B4%E6%96%B0Blog%E6%97%B6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%B3%A8%E6%84%8F%E7%82%B9/</id>
     <published>2022-01-06T06:42:25.000Z</published>
-    <updated>2022-01-08T12:14:41.149Z</updated>
+    <updated>2022-03-04T06:25:58.126Z</updated>
     
     
     <summary type="html">此文章主要记录一些更新博客时遇见的问题和解决方法，记录并不全面</summary>
